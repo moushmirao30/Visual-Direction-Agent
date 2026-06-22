@@ -1,0 +1,171 @@
+BRAND POSITIONING FRAMEWORKS — VISUAL LANGUAGE SIGNALS
+Source: Brand Strategy Research, Design Industry Analysis — Multi-Aesthetic Reference
+Category: Design Theory — Brand Positioning
+
+================================================================================
+CORE PRINCIPLE
+================================================================================
+
+Visual language is the fastest brand communication system.
+Before a consumer reads a word, they have already categorised the brand.
+This happens in under 200ms based on colour, layout density, type choice, and image quality.
+
+The designer's job: ensure the visual categorisation matches the intended positioning.
+
+================================================================================
+PRIMARY POSITIONING TERRITORIES
+================================================================================
+
+--- QUIET LUXURY / PREMIUM RESTRAINED ---
+Definition: High quality, design-intelligent, exclusive without overt status signalling.
+Consumer decodes the quality; it is never explained.
+
+Visual codes:
+- Colour: Muted, 2–3 tones max. Warm neutrals, stone, off-white, deep charcoal.
+- Type: Serif display + geometric sans body. Generous tracking. Near-black not pure black.
+- Layout: Generous negative space. High margin ratios. Content floating, not filling.
+- Photography: Material-focused. Surface and texture. Low-key lighting. Matte surfaces.
+- Packaging: Minimal text. Material quality signals value (paper weight, emboss, finish).
+- Language: Restrained. Evidence-based. Never exclamatory. No !
+
+Benchmark: The Row, Bottega Veneta, Aesop, Cos, Bamford, Flamingos Life, AURU
+Avoids: Bright white, coloured graphic elements, competing typography, "fun" or "energetic" language.
+
+--- ACCESSIBLE PREMIUM ---
+Definition: Elevated above mass-market but approachable, non-intimidating.
+Quality signals present but the brand does not exclude through aesthetics.
+
+Visual codes:
+- Colour: Clean neutrals with one accent. White backgrounds common.
+- Type: Sans-serif dominant, perhaps one serif headline face.
+- Layout: Clean but not sparse. Organised but not austere.
+- Photography: Real people in lifestyle contexts. Natural light. Relatable.
+- Language: Warm, direct, informative, some personality.
+
+Benchmark: Glossier, Everlane, Patagonia, Muji, Lush, Away
+Key distinction from quiet luxury: INTENTION is visible. The brand explains itself.
+
+--- CLINICAL / SCIENTIFIC ---
+Definition: Positioned on efficacy, evidence, and precision.
+Trust from credentials, not aesthetics.
+
+Visual codes:
+- Colour: White, cool grey, one credential colour (blue, teal, clinical green).
+- Type: Sans-serif throughout. Clean, functional, no decorative elements.
+- Layout: High information density. Data prominent. Charts, percentages visible.
+- Photography: Lab context, ingredients, clinical lighting, before/after.
+- Packaging: Ingredients-forward. Certifications and percentages prominent.
+- Language: Technical, specific, percentages, clinical terminology.
+
+Benchmark: The Ordinary, Paula's Choice, pharmaceutical brands, Nerd Skincare
+Risk: Communicates precision but not warmth. Premium brands leaning too clinical lose the ritual dimension.
+
+--- DARK LUXURY / MODERN VOID ---
+Definition: Premium through visual inaccessibility. Communicates exclusivity through restraint and shadow.
+
+Visual codes:
+- Colour: Near-black dominant. One warm or metallic accent maximum.
+- Type: Light weight serif or sans on dark ground. High contrast. Spacious.
+- Layout: Extreme negative space. Single elements floating in dark fields.
+- Photography: Low-key, single warm light source. Product emerging from shadow.
+- Packaging: Dark matte. Minimal text, often embossed or foil. Nothing superfluous.
+- Language: Extremely sparse. Sometimes single-word communication.
+
+Benchmark: Le Labo, Byredo, Diptyque, Rick Owens, Tom Ford, Maison Margiela (some ranges)
+Opportunity: Undercrowded in wellness and supplements — most brands default to light/neutral.
+
+--- HERITAGE / CRAFT AUTHENTICITY ---
+Definition: Trust through provenance, process, and time.
+The brand existed before branding became a strategy.
+
+Visual codes:
+- Colour: Aged, earthy, warm. Ochre, terracotta, umber, forest green, brick, aged cream.
+- Type: Slab serif, aged serif, or humanist faces. Sometimes hand-lettered elements.
+- Layout: Slightly irregular — not chaotic but not machine-perfect.
+- Photography: Process photography. Hands at work. Raw ingredients. Documentary.
+- Packaging: Kraft paper, stamp marks, imperfect registration, letterpress feel.
+- Language: Provenance-focused. Named makers, named places, specific dates.
+
+Benchmark: Specialty coffee (Onyx, Madcap, Intelligentsia), craft spirits, Patagonia (storytelling), Howies
+Avoids: Clean geometric sans, bright white, anything that reads as digitally designed.
+
+--- TECH / PRODUCT DESIGN ---
+Definition: Clarity, system, and function as the brand expression.
+Trust comes from how well the interface works, not how beautiful it looks.
+
+Visual codes:
+- Colour: White/light base. One brand colour. Semantic colours (red/green/amber) for status.
+- Type: Single typeface family in multiple weights. System fonts used deliberately.
+- Layout: 8px grid. Consistent component spacing. No decorative elements.
+- Photography: Product UI, clean lifestyle, never staged stock.
+- Iconography: Consistent icon system — line weight matches type weight.
+- Language: Clear, specific, feature-named. No jargon, no hyperbole.
+
+Benchmark: Stripe, Linear, Notion, Figma, Arc browser, Vercel, Raycast
+Key distinction: Colour is functional, not expressive. Every colour decision justifiable.
+
+--- STREETWEAR / YOUTH CULTURE ---
+Definition: Identity through aesthetic signals that mark cultural belonging.
+The consumer signals their tribe through brand choice.
+
+Visual codes:
+- Colour: Bold contrast. One disruptive accent. Often black/white + one saturated colour.
+- Type: Bold grotesque or condensed sans. Type AS the graphic element.
+- Layout: Maximalist energy. Density and layering read as cultural awareness.
+- Photography: Unconventionally cropped. Urban environments. People wearing the work.
+- Packaging: Merch-first thinking — how does it read on a 5cm tag or embroidered patch?
+- Language: Insider references. Brevity. Drop culture cadence.
+
+Benchmark: Supreme, Palace, Aimé Leon Dore (more restrained), Off-White, Stüssy
+Avoids: Anything corporate, safe, or legible to people outside the culture.
+
+--- EDITORIAL / CULTURAL INSTITUTION ---
+Definition: Authority through intellectual credibility.
+The brand does not sell a product — it frames how you should think about ideas.
+
+Visual codes:
+- Colour: Sparse. Black + one institutional accent, or full-colour used deliberately by section.
+- Type: Mix permitted — confident serif for gravitas + humanist sans for readability.
+- Layout: Neutral and authoritative. Does not compete with the content it frames.
+- Photography: Documentary, archival, or fine-art. Never commercial.
+- Language: Long-form, complex, referential. Assumes an intelligent reader.
+
+Benchmark: Aperture, Frieze, MoMA design language, The New Yorker, Phaidon
+Key principle: The design frames the content; the content is the point.
+
+--- WELLNESS CLICHÉ (WHAT TO AVOID FOR PREMIUM POSITIONING) ---
+The visual pattern to actively differentiate from:
+- Botanical green at high saturation
+- Warm peach or coral
+- Lavender purple
+- Sun-bleached white with gold script
+- All of the above simultaneously
+- Stock photography of women laughing with salad
+- "Clean" / "natural" / "holistic" language without specificity
+Benchmark to avoid: Generic supplement brands, influencer-founded wellness, spa retail packaging.
+
+================================================================================
+COMPETITIVE POSITIONING MAP — HOW TO READ THE SPACE
+================================================================================
+
+Two axes: SCIENTIFIC CREDIBILITY (vertical) and AESTHETIC APPEAL (horizontal)
+
+HIGH SCIENCE / LOW AESTHETIC: Pharmacy brands, The Ordinary, most supplements
+HIGH SCIENCE / HIGH AESTHETIC: Aesop (personal care), Bamford — TARGET TERRITORY, undercrowded
+LOW SCIENCE / HIGH AESTHETIC: Most clean beauty, influencer wellness — visually strong, vague claims
+LOW SCIENCE / LOW AESTHETIC: Generic vitamins, mass-market health — compete on price only
+
+For any new brand: locate current competitors on this map, identify the open quadrant.
+
+================================================================================
+VISUAL CODES BY CONSUMER EMOTION TARGET
+================================================================================
+
+CALM / TRUST: Muted palette, warm neutrals, generous space, serif type, slow photography
+ENERGY / URGENCY: High saturation, bold contrast, condensed type, dense layout, dynamic angles
+INTELLIGENCE: Clean systematic layout, limited palette, precise typography, data visible
+EXCLUSIVITY: Restraint, isolation, dark or pale mono palette, single product per visual
+AUTHENTICITY: Earthy tones, imperfect layout, process photography, hand-influenced type
+BELONGING: Bold colour codes, insider type choices, cultural references, anti-corporate signals
+JOY: Bright saturated palette, playful type, layered busy layouts, expressive photography
+AUTHORITY: Serif type, institutional layout, archival or documentary photography, black + one colour

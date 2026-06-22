@@ -1,0 +1,162 @@
+TYPOGRAPHY PAIRING LOGIC AND HIERARCHY RULES
+Source: Editorial Design Principles, Brand Typography Research — Multi-Aesthetic Reference
+Category: Design Theory — Typography
+
+================================================================================
+FOUNDATIONAL PAIRING PRINCIPLES
+================================================================================
+
+Core rule: pair typefaces that share a quality but differ in classification.
+Serif + sans-serif: standard pairing — contrast in classification, harmony in proportion.
+Two serifs: too similar unless weight/size contrast is extreme.
+Two sans-serifs: works if one is geometric and one is humanist, or if weight contrast is very strong.
+
+Contrast creates hierarchy. Hierarchy creates reading flow.
+The eye needs a visual signal to switch between heading and body.
+
+Typeface classifications and their brand signals:
+
+OLD STYLE SERIFS (Garamond, Caslon, EB Garamond, Cormorant)
+Signal: Heritage, craft, editorial authority, European luxury, literary timelessness.
+Used in: Quiet luxury, heritage brands, literary publishing, fine art.
+Stroke character: Diagonal stress, bracketed serifs, moderate thick-thin variation.
+
+TRANSITIONAL SERIFS (Baskerville, Times, Freight Text)
+Signal: Institutional authority, journalism, serious intent.
+Used in: Newspapers, academic, legal — less common in contemporary brand design.
+
+MODERN/DIDONE SERIFS (Bodoni, Didot, Canela)
+Signal: High fashion drama, couture, editorial boldness.
+Used in: Vogue, fashion houses, luxury fragrance, editorial magazines.
+Caution: Hairline strokes vanish at small sizes — display use only.
+
+HUMANIST SANS-SERIFS (Gill Sans, Optima, Jost, Source Sans)
+Signal: Approachable intelligence, warmth with clarity.
+Used in: Premium lifestyle, accessible luxury, cultural institutions.
+
+GEOMETRIC SANS-SERIFS (Futura, DM Sans, Inter, Avenir, Circular)
+Signal: Modern, functional, Swiss-influenced precision.
+Used in: Tech, Scandinavian brands, Muji, Cos, Everlane, most SaaS products.
+
+GROTESQUE SANS-SERIFS (Helvetica, Akzidenz-Grotesk, Neue Haas Grotesk)
+Signal: Confident neutrality — the typeface doesn't ask for attention.
+Used in: Celine, Calvin Klein, Bloomberg, Helvetica-era Swiss design.
+
+SLAB SERIFS (Rockwell, Clarendon, Plaak, Sentinel)
+Signal: Mechanical, confident, American, robust.
+Used in: Outdoor brands, craft beer, heritage Americana, editorial magazines.
+
+VARIABLE / EXPRESSIVE TYPE (display faces, custom marks)
+Signal: Brand investment, uniqueness, personality at scale.
+Used in: Campaigns, packaging heroes, wordmarks — not body text.
+
+================================================================================
+TYPOGRAPHY BY AESTHETIC TERRITORY
+================================================================================
+
+--- QUIET LUXURY / PREMIUM WELLNESS ---
+Display/Heading: Old style serif (Cormorant Garamond, EB Garamond) — tracked generously
+Body: Geometric sans (DM Sans, Inter) — regular weight, comfortable leading
+Label/Detail: Same sans, uppercase with extended tracking (0.1–0.2em)
+Rule: Maximum 2 families. Regular and light weights only. Bold almost never.
+Example pairing: Cormorant Garamond + DM Sans
+
+--- HIGH FASHION / EDITORIAL ---
+Display: Didone serif (Bodoni, Didot, or custom) at large scale — the hairlines are the point
+Body: Grotesque or geometric sans (Helvetica Neue, Inter, Akzidenz) — neutral to contrast drama
+Rule: High contrast between headline and body is the signature. Size difference is extreme (96px headline / 14px body).
+Key detail: All-caps with extreme tracking for section headers
+Example pairing: Bodoni* (open source) + Neue Haas Grotesk
+
+--- DARK LUXURY ---
+Display: Thin-weight serif or sans — Didot Light, Canela Thin, or bespoke light sans
+Body: Regular weight sans — let space do more work than weight
+Rule: Lightness of type weight against dark ground creates the tension. Do not use bold.
+Example pairing: Canela Light + Inter Regular (both at generous size)
+
+--- BRUTALIST / RAW TECH ---
+Typography is confrontational: oversized, tight-tracked, unresolved
+Display: Grotesque or grotesk at extreme size — Helvetica Heavy, Akzidenz Bold
+Body: Monospace (IBM Plex Mono, Courier) or standard grotesque — signals raw code/terminal
+Rule: Functional hierarchy only. No typographic ornament. No serifs.
+Key detail: Type can overrun containers, bleed edges, or be cut by the frame — intentionally unfinished
+Example: Helvetica Black headers + IBM Plex Mono body
+
+--- TECH / DIGITAL PRODUCT ---
+Display: Geometric or humanist sans — Inter, SF Pro, Inter Display
+Body: Same family, smaller weight — consistent family throughout
+Rule: Single typeface family with multiple weights (not multiple families)
+Hierarchy: Size + weight variation only — no contrast between typeface classifications
+Example: Inter Display Bold + Inter Regular (single family)
+Note: System fonts (SF Pro, Segoe UI) used intentionally can signal native-platform quality, not laziness
+
+--- ARTISAN / HERITAGE CRAFT ---
+Display: Slab serif or rough-edge serif (Sentinel, Plaak, Freight Display, or aged custom)
+Body: Humanist sans or readable serif at body size
+Accent: Hand-lettered elements or script for product names / provenance detail
+Rule: Imperfection is intentional. Slightly aged, textured, or hand-influenced type adds authenticity.
+Avoid: Clean geometric sans — too digital, loses the craft signal
+Example pairing: Sentinel + Source Sans Pro
+
+--- STREETWEAR / YOUTH CULTURE ---
+Display: Bold grotesque, condensed sans, or custom wordmarks — Akzidenz-Grotesk Condensed, Franklin Gothic
+Body: Regular grotesque or geometric sans
+Rule: Legibility at small merch scale is non-negotiable. Test at 12px embroidery and 5cm print.
+Key technique: Oversized bold type as graphic element — type IS the design
+Example: Franklin Gothic Condensed + DM Sans Regular
+
+--- NORDIC / SCANDINAVIAN FUNCTIONAL ---
+Display: Clean geometric sans, lightly tracked — DM Sans, Aktiv Grotesk, Graphik
+Body: Same family, regular weight
+Rule: Democratic hierarchy — no single element demands too much attention
+Avoid: Serifs (reads as English heritage not Nordic), scripts, anything ornate
+Example: Aktiv Grotesk Medium + Aktiv Grotesk Regular (single family)
+
+--- CULTURAL INSTITUTION / MUSEUM ---
+Display: Mix is acceptable — confident serif (Freight, Publico) for permanent collection gravitas
+Body: Humanist sans (Source Sans, Frutiger) for accessibility and informational clarity
+Rule: Legibility across ages and contexts is paramount. Type system must work in signage, print, and digital.
+Example pairing: Publico + Source Sans Pro
+
+================================================================================
+TRACKING, SPACING, AND WEIGHT AS BRAND SIGNALS
+================================================================================
+
+GENEROUS TRACKING on display uppercase: 0.05–0.2em
+Signal: Premium, considered, unhurried, editorial. Used across quiet luxury and fashion.
+
+TIGHT TRACKING on headlines: -0.02 to -0.04em
+Signal: Bold, assertive, modern, tech-forward. Used in SaaS, streetwear, brutalist.
+
+BODY LINE HEIGHT:
+- 1.6–1.8x: Quality reading experience. Premium and editorial.
+- 1.4–1.5x: Efficient, functional. Tech and informational.
+- Under 1.3x: Dense data, technical documentation, not brand-facing.
+
+WEIGHT RANGE SIGNALS:
+- Thin + Regular only: Quiet luxury, dark luxury, minimal
+- Regular + Medium: Scandinavian, accessible premium, tech
+- Regular + Bold: Editorial, craft, mid-market
+- Bold + Black: Streetwear, youth, fast food, disruptive branding
+
+================================================================================
+TYPOGRAPHIC HIERARCHY — 5-LEVEL SYSTEM
+================================================================================
+
+Level 1 — DISPLAY: 48–96px+. Brand statements, hero headlines, campaign lines.
+Level 2 — HEADING: 24–42px. Section titles, feature headings.
+Level 3 — SUBHEADING: 16–22px. Article subheads, card titles, navigation. Often uppercase + tracked.
+Level 4 — BODY: 14–16px. Paragraphs, descriptions. Comfortable line-height (1.6x+).
+Level 5 — LABEL/CAPTION: 10–13px. Specs, captions, legal copy. Often uppercase, extended tracking.
+
+================================================================================
+COMMON PAIRING MISTAKES
+================================================================================
+
+Never: More than 2 typeface families in a brand system (3+ reads as indecision)
+Never: Script/handwriting faces in clinical or tech contexts
+Never: Two serifs of similar weight at similar sizes (invisible hierarchy)
+Never: Tight tracking on lowercase body text (cheap software default appearance)
+Never: System fonts as a deliberate choice without understanding the signal they send
+Never: Tracking and weight AND size all varying simultaneously with no clear purpose
+Avoid: Using a typeface because it is trending — once ubiquitous, it reads as derivative

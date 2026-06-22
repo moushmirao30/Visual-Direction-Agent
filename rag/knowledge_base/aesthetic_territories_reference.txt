@@ -1,0 +1,400 @@
+AESTHETIC TERRITORIES VISUAL REFERENCE
+Brand Visual Language Across Contrasting Design Territories
+
+This document provides visual direction references for seven contrasting aesthetic territories.
+Each section covers colour application, typography behaviour, spatial logic, photography approach,
+and brand signal benchmarks. Used by the Design Theory Analyst agent to ground retrieved theory
+in territory-specific application.
+
+================================================================================
+COLOUR APPLICATIONS BY AESTHETIC TERRITORY
+
+Colour is the fastest signal in brand communication. Before any other element lands,
+the palette tells the viewer which world they are in. The same typographic treatment
+reads as cold in a high-chroma palette and warm in a muted one. Understanding how
+colour functions differently across territories is the first requirement of visual
+direction work.
+
+--- BOLD STREETWEAR / URBAN ---
+Colour in this territory performs identity rather than refinement. Palettes are built
+on high-saturation anchors — acid yellow (#E8FF00), off-white (#F0EDE8), and black
+(#0A0A0A) — with deliberate clashes that signal subcultural fluency. Monochromatic
+all-black or all-white executions carry the same energy when treated with graphic
+weight. Neon accents (#FF2D55, #00F5FF) are used sparingly as single-element
+interventions, not as palette-wide choices.
+
+Colour psychology: association with energy, provocation, and self-declaration.
+Warm versus cool matters less than saturation and contrast ratio. Avoid mid-tone
+neutrals — they read as hesitant. Avoid pastels — they read as lifestyle rather
+than streetwear. The palette must commit to its register.
+
+Key colour signals: Supreme uses red/white/black as a near-totalitarian brand
+identity. Off-White introduces diagonal yellow as a single mark. Palace uses
+tonal brights. The signature move is restraint within high contrast — not
+the full-spectrum maximalism of mass fashion.
+
+Do not use: dusty muted tones, botanical greens, warm creams, rose gold, blush.
+
+--- CLINICAL MINIMALISM / MEDTECH ---
+Palettes are built on functional clarity. White (#FFFFFF or near-white #F8F9FA),
+mid-grey (#E2E8F0), and dark navy (#0F172A) or charcoal (#1E293B) form the structural
+base. A single clinical accent — cool teal (#0EA5E9), electric blue (#2563EB), or
+precise green (#10B981) — is used to signal precision and activity. The accent is
+never more than 10-15% of any composition.
+
+Colour psychology: association with trust, accuracy, and institutional competence.
+Warmth is a liability — even slightly warm whites read as dated or soft.
+All tones trend cool. Gradients are used only in UI contexts (data visualisation,
+interface elements) and never in identity or print.
+
+Key colour signals: Hims/Hers migrated clinical white toward friendly pastels as
+a deliberate departure. Levels Health uses dark navy with teal as precision signal.
+Whoop uses black and neon green (performance/data register). Oura moves toward
+slate with gold hardware (clinical + premium).
+
+Do not use: warm neutrals, earth tones, high-chroma saturated accents, black for
+authority (reads as fashion, not clinical), any warm beige or cream.
+
+--- MAXIMALIST / EXPRESSIVE / GEN-Z ---
+This territory rejects the premise of palette restraint. Colours are chosen for
+emotional amplitude — often three to five high-saturation hues used simultaneously,
+where the relationship creates dynamism rather than hierarchy. Common palette
+approaches: complementary splits (purple + yellow + pink), triadic schemes
+(red + blue + yellow at high saturation), or single-hue explosions in multi-tonal
+ranges (ten variants of pink from blush to magenta).
+
+Colour psychology: association with abundance, personality, and anti-minimalism
+as a stance. The visual statement is "more is more." Restraint reads as boring.
+Colour needs to feel chosen, not filtered — joyful specificity rather than
+curated control.
+
+Key colour signals: Jacquemus at its most playful (orange + pink + straw yellow).
+Versace Jeans Couture (acid wash + neon + baroque pattern). Museum of Ice Cream
+(sensory pink environments). Glossier's original palette (millennial pink as cultural
+statement). More recently: Valentino's PP Pink season — monochromatic saturation
+as a full brand takeover.
+
+Do not use: muted neutrals, single-colour restraint, any approach that "coordinates."
+Every element should add colour, not subtract.
+
+--- DARK LUXURY / NOIR ---
+The palette is built on absence. Deep black (#090909), near-black charcoals
+(#1A1A1A, #2A2A2A), and a single precious accent — warm gold (#C9A84C), cold silver
+(#C0C0C0), bone white (#F5F0E8), or aged brass (#8B7355). The accent is used almost
+nowhere. Its scarcity creates value. The background absorbs light; the accent emits it.
+
+Colour psychology: association with rarity, power, and nocturnal sophistication.
+This territory is distinct from clinical minimalism (cool, functional) and from
+quiet luxury (warm, restrained). Dark luxury is theatrical — it borrows from cinema,
+from private spaces, from the aesthetics of exclusion.
+
+Key colour signals: Tom Ford's early Gucci era (black velvet + gold). Cartier's
+deeper campaigns (black photography, gold type). Balmain's dark editorials.
+Rick Owens' architecture (concrete + bone). Celine under Slimane: noir photography
+as the brand environment.
+
+Texture matters: in this territory the surface of black matters as much as the
+colour. Matte black reads differently from glossy black from velvet from lacquer.
+Photography must control surface texture.
+
+Do not use: warm earth tones, botanical elements, bright white backgrounds,
+lifestyle warmth, wellness softness.
+
+--- COASTAL ORGANIC / RAW NATURAL ---
+This territory is textural rather than chromatic. Palettes are pulled from unprocessed
+nature: raw linen (#EDE0CC), driftwood grey (#B0A898), washed terracotta (#C47C5A),
+sea-glass green (#7FAD9A), and sand (#D4C5A9). Nothing is high-saturation. The
+reference is materials, not colour theory. Colours look like they have been in the sun.
+
+Colour psychology: association with unmediated experience, physical place, and
+the rejection of urban artificiality. The palette must feel weathered, not styled.
+"Organic" in this context means irregular — slight unevenness in tone is a feature.
+
+Key colour signals: Patagonia's worn, functional colour language. Aesop's earthy
+palette (distinct from dark luxury — warmer, more tactile). Toast clothing (raw
+linen, terracotta, stone). Australian surf brands (bleached by UV, salt-textured).
+Differentiation from quiet luxury: where quiet luxury is deliberate restraint, coastal
+organic is undeliberate. It looks like the environment, not like a design choice.
+
+Do not use: high contrast, dark anchors, anything that looks designed or aspirational.
+Avoid clean white backgrounds. Avoid any cold tone — everything should carry warmth.
+
+--- CORPORATE DIGITAL / SAAS TECH ---
+Palettes are built on legibility at screen resolution under variable ambient light.
+White (#FFFFFF), near-white (#F9FAFB), and mid-blue (#3B82F6 or #2563EB) are the
+structural base. Secondary accents — purple (#8B5CF6), green (#10B981), orange (#F97316)
+— are used systematically in UI state design (success, warning, active, inactive).
+
+Colour psychology: association with productivity, clarity, and forward motion.
+The palette must function across light mode and dark mode. Brand colour choices
+in this territory increasingly function as semantic signals — Stripe blue means
+payment infrastructure, Notion dark mode means knowledge work.
+
+Key colour signals: Linear (purple + dark) as the design-forward SaaS reference.
+Vercel (black + white) as developer-culture minimalism. Loom (purple) as async
+video. Figma (multi-colour) as creativity tool. Notion migrated from minimal to
+more expressive as it broadened from developers to general use.
+
+Do not use: earth tones, craft aesthetics, any palette that reads as "hand-made."
+The territory requires digital precision — nothing should look like it was printed.
+
+--- ARTISANAL CRAFT / HERITAGE ---
+Palette logic follows material origins: aged paper (#F2E8D9), deep forest green
+(#2D4A3E), oxblood (#7B2D2D), natural beeswax (#D4A853), and hand-pressed ink navy
+(#1B2A4A). These are the colours of printing, bookbinding, wool, and fermentation.
+Saturation is moderate — not as muted as quiet luxury, but nothing approaching primary.
+
+Colour psychology: association with accumulated skill, time investment, and material
+honesty. The palette should feel like it emerged from a process, not from a brief.
+Heritage marks the passage of time; the palette must carry that quality.
+
+Key colour signals: Moleskine (black + Prussian red). Barbour (olive + tartan).
+Taylor Stitch (rugged, faded, broken-in palette). Rag & Bone's darker seasons.
+Small-batch food brands: Mast Brothers chocolate, Noma restaurant materials.
+
+Photography in this territory is process-focused: hands on materials, tools in use,
+grain and texture over surface gloss. Colour must support the narrative of making.
+
+Do not use: digital blue, clinical white, high-saturation brights, anything that
+reads as designed rather than made. Avoid geometric regularity.
+
+================================================================================
+TYPOGRAPHY BY AESTHETIC TERRITORY
+
+Type choice is architectural. The typeface determines the register before a word
+is read — serif carries history, grotesque carries system, script carries gesture.
+But within each category, the specific cut, weight, and spacing creates the
+territory. Understanding which typographic decisions signal which worlds is
+essential for coherent visual direction.
+
+--- BOLD STREETWEAR / URBAN ---
+Typography in this territory uses weight and scale as primary tools. Display: heavy
+grotesque or compressed sans-serif at large scale — Impact, Helvetica Neue Condensed
+Bold, Druk, or custom compressed faces. Body: clean grotesque medium weight at
+generous leading. Tracking is tight on display (0–5% letter-spacing), creating
+aggressive density. Capitalization is a tool — all-caps display type signals
+institutional authority reclaimed.
+
+Graphic typography (type as image): this territory allows type to function as a
+visual element independent of readability at smaller scales. The logo or slogan
+becomes a mark. Supreme's box logo is typographic. Palace's triangle is not, but
+its campaign typography is compressed grotesque used graphically.
+
+Avoid: serif display faces (read as heritage, not street). Avoid light weights
+(signal luxury, not urban). Avoid excessive tracking on display (signals luxury/fashion,
+not streetwear register).
+
+--- CLINICAL MINIMALISM / MEDTECH ---
+Sans-serif exclusivity. Display and body both use geometric or humanist sans-serif
+families: Inter, DM Sans, Plus Jakarta Sans, or custom grotesque. Weight scale is
+narrow — regular and medium only, with bold used rarely for single-word emphasis.
+Tracking: display type at 0–40% letter-spacing (restrained). Body copy at 100%
+standard tracking with generous leading (1.6–1.8x).
+
+Type hierarchy is highly systematic: H1/H2/H3/body/caption must each occupy
+distinct size/weight slots with no ambiguity. This territory runs on systematic
+thinking — typography is a grid function, not a creative decision.
+
+Number treatment matters in this territory: tabular figures, monospace for data
+display, consistent decimal alignment. Precision in numerical communication signals
+clinical competence.
+
+Avoid: any serif for primary use. Avoid decorative or display faces. Avoid organic
+imperfection in type setting. Everything should be pixel-aligned.
+
+--- MAXIMALIST / EXPRESSIVE / GEN-Z ---
+Typography ignores the hierarchy rules of other territories. Multiple typefaces
+at conflicting scales are a feature, not an error. Display type might be handwritten,
+serif, compressed grotesque, bubble letter, or custom — often in the same composition.
+The visual effect should feel assembled, curated, or even chaotic.
+
+Trend-aware choices: Y2K revival typography (bold drop shadow, bubble, reflective
+gradients). Editorial serif (Canela, Portrait, Freight Display) used at extreme
+scale. Type as sticker — outlined or with fill that sits over photography.
+
+Leading is often tight — type stacks at 0.9x leading, creating density that feels
+energetic rather than unreadable. Mixing languages, alphabets, or scripts in single
+layouts is common and intentional.
+
+Avoid: systematic hierarchy. Avoid anything that looks like corporate communication.
+The only rule is that it should feel authored.
+
+--- DARK LUXURY / NOIR ---
+Typography uses restraint as its primary signal — the same restraint as the colour
+palette. Display: elegant serif (Didot, Baskerville, or contemporary cuts like Freight
+Display, Canela) at generous scale with wide tracking (120–180%). The tracking creates
+space around each letter. The space is value. Body: small-scale grotesque at low
+weight, sometimes reversed out of dark backgrounds. Type never competes with image.
+
+Case: sentence case for headlines (not all-caps except for brand marks). This signals
+editorial restraint rather than shouting. The brand does not need to announce itself.
+
+The relationship between type and silence is the key principle: type in this territory
+exists in a field of dark space. The page or screen is dark. The type is light.
+Its legibility is calculated, not maximised.
+
+Avoid: rounded or friendly grotesque (Circular, Proxima Nova). Avoid heavy weights
+except for single-word emphasis. Avoid any warmth in type colour — pure white or
+cold off-white only on dark grounds.
+
+--- COASTAL ORGANIC / RAW NATURAL ---
+Typography echoes material qualities: slightly irregular, warm, not digitally precise.
+Display: humanist serif (Freight Text, Lora, Playfair Display, or custom artisan
+faces) or editorial grotesque used at moderate tracking. Handwritten or quasi-handwritten
+display is appropriate when used sparingly. Body: Humanist sans-serif (Gill Sans,
+Futura Book, Johnston) at relaxed leading.
+
+Imperfection as signal: in this territory, a slightly informal type choice reads as
+authentic. The brand is not trying too hard. Type that looks designed reads as
+aspirational — wrong register for coastal organic.
+
+Layout behaviour: ragged-right alignment preferred over justified. Justified blocks
+look machine-made; ragged-right looks hand-set. Generous leading (1.7–1.9x body)
+creates breathing room that echoes the spatial logic of the aesthetic.
+
+Avoid: geometric sans-serif (too constructed). Avoid tight tracking (too precise).
+Avoid all-caps except for small labels.
+
+--- CORPORATE DIGITAL / SAAS TECH ---
+Systematic typography built for scalability across all screen sizes, densities, and
+contexts. A type scale (8px/12px/14px/16px/20px/24px/32px/48px) defines the entire
+system. Display: Inter, Söhne, or custom grotesque at regular and semibold weights.
+Body: same family, regular, at 16px/1.6 leading minimum. No decorative faces.
+
+Variable fonts are used in this territory for performance (fewer HTTP requests)
+and for progressive typographic behaviour (weight-interpolation on scroll, for example).
+The type system is component-based: Heading1, Heading2, Body, Caption, Label are
+named components in the design system, not ad hoc decisions.
+
+Type in this territory must handle internationalisation: all character sets, RTL,
+condensed scripts. The type choice is a systems decision, not an aesthetic one —
+though aesthetic discrimination exists within those constraints.
+
+Avoid: display serifs in primary hierarchy. Avoid typefaces that don't cover the
+full required unicode range. Avoid anything that looks handmade or irregular.
+
+--- ARTISANAL CRAFT / HERITAGE ---
+The typeface carries cultural time. Display: classic serif families (Caslon, Garamond,
+Baskerville) or pre-modern revival faces (Freight Display, Miller, Chronicle) with
+genuine historical weight. Alternatively: slab serif or woodtype-inspired display
+(Clarendon, Archer, Sentinel) for craft-sector brands. Body: matching serif family
+at text weight.
+
+Tracking behaviour: very wide tracking (200–400%) on all-caps sub-headings functions
+as a heritage signal — it echoes the hand-lettered quality of signage. Body text at
+100–110% tracking, generous leading (1.8x), evoking the reader-pace of a printed book.
+
+Printed matter reference: in this territory, the typography should look at home on
+uncoated stock. Digital executions should maintain the same sensibility. Avoid
+screen-optimised choices that break the heritage register.
+
+Avoid: sans-serif for primary use. Avoid geometric precision (read as contemporary
+product design). Avoid condensed faces — they signal urgency, not craft.
+
+================================================================================
+SPATIAL DESIGN AND LAYOUT BY AESTHETIC TERRITORY
+
+Layout is the argument the brand makes about what matters. Generous negative space
+says one thing costs more. Compressed density says energy is the value. Gridded
+symmetry says trust the system. Asymmetric drift says we have a perspective.
+The spatial strategy is not separable from the visual identity — it is an expression
+of the same values.
+
+--- BOLD STREETWEAR / URBAN ---
+Layout operates at the extremes: either full-bleed graphic density (type over image,
+saturated colour fields, layered elements, zero white space) or severe reduction
+(single element on black, one word, no margin). The brand can live at either extreme
+because both read as intentional. The register is commitment to position.
+
+Grid: this territory departs from grid more freely than others. Bleeding type off
+edges, overlapping elements, misaligning to the visible grid are all viable — when
+deliberate. The key is that non-grid choices read as a statement, not as an accident.
+
+Scale contrast: huge headline type against small body creates graphic impact.
+The differential between the largest and smallest text in a composition is much
+larger than in restrained territory.
+
+--- CLINICAL MINIMALISM / MEDTECH ---
+8-column grid minimum (12-column preferred). Content-to-space ratio: 45-55% content,
+45-55% white space. Symmetry preferred in static layouts; asymmetry only when
+justified by content hierarchy. Margins are fixed and generous (min 80px desktop,
+16px mobile).
+
+The grid is the identity in this territory. Deviation from the grid reads as error.
+Consistent baseline grid (4px or 8px unit system). All elements snap to the grid
+in both axes. The precision of layout communicates the precision of the product.
+
+Information density is managed through systematic spacing: 4px/8px/16px/24px/32px
+spacing scale applied without exception. No arbitrary spacing values.
+
+--- MAXIMALIST / EXPRESSIVE / GEN-Z ---
+Layout resists system. Elements stack, overlap, rotate, bleed. The grid exists as
+a reference but is treated as a starting point to depart from. The energy of the
+layout is the statement. Collage logic: elements assembled from different sources
+at different scales create richness rather than visual noise (when composition is skilled).
+
+Dense visual fields are intentional: the reward is discovery. The eye moves across
+a maximalist layout multiple times, finding new elements. This is the opposite of
+the restrained layout's single focal point.
+
+Rule: maximalism must be authored. The difference between chaos and maximalism is
+deliberate compositional logic underneath the surface density.
+
+--- DARK LUXURY / NOIR ---
+The layout exists in a dark field. Content-to-space ratio: 20-35% content, 65-80%
+dark space. The dark space is not empty — it carries weight, texture, atmosphere.
+Nothing should fill it. Photography bleeds into the dark background; there is no
+box, no container, no frame. The space of the page and the space of the image are
+the same space.
+
+Centrally-anchored compositions function in this territory: a single subject centred
+against darkness. Asymmetric placement where the subject occupies one corner and dark
+space occupies the rest. Both work because the dark space has presence.
+
+No visible grid infrastructure: no rule lines, no boxes, no grid markers. The structure
+should be invisible. The eye perceives a compositional logic without being able to
+identify its mechanism.
+
+--- COASTAL ORGANIC / RAW NATURAL ---
+Soft asymmetry: content positioned with natural drift rather than grid-snapped precision.
+Margins are generous and variable. Text blocks end where they naturally end (ragged
+right, variable length), not at fixed column widths. The layout should feel like
+it breathed, not like it was set.
+
+Generous leading and gutter space. Content-to-space ratio: 40-50% content with the
+remaining space feeling inhabited rather than empty (texture, photography, material
+photography fills the space). White space tends toward warm white or linen tone, not
+pure white — the blank areas carry the palette.
+
+Photography bleed: imagery bleeds to edges rather than sitting in boxes. The material
+world doesn't have containers. The layout should echo that quality.
+
+--- CORPORATE DIGITAL / SAAS TECH ---
+Component-based layout built from a design system. All spacing derives from a base
+unit (typically 4px or 8px). 12-column grid for wide viewports, 4-column for mobile.
+All layouts designed to be responsive from definition, not retrofitted.
+
+Content sections follow a repeatable pattern: hero / feature block / social proof /
+CTA / footer. Within sections, alternating left/right alignment creates rhythm without
+requiring variation in component design. The layout is efficient — it serves conversion
+and comprehension, not aesthetic pleasure.
+
+Navigation architecture is as important as page layout. The spatial logic of the
+product (IA, navigation depth, component hierarchy) must be coherent. In SaaS,
+the spatial language of the product must match the spatial language of the marketing.
+
+--- ARTISANAL CRAFT / HERITAGE ---
+Layout references the proportional systems of pre-digital print: golden ratio,
+Fibonacci proportions, classical column structures. Wide outer margins that echo
+the margins of a well-made book. Content floats within the page rather than
+filling it. The white space feels considered because it follows a system, even
+if that system is invisible.
+
+Single-column body text at long measure (65-75 characters per line) for text-heavy
+pieces. Multi-column layouts where columns have organic, not mechanical, relationships.
+Pull quotes, footnotes, marginal notes as typographic texture — this territory has
+a history of knowledge organisation in physical media.
+
+Photography is embedded in text rather than competing with it. Images are sized
+proportionally to content, not to fill space. The relationship between text and image
+is editorial, not advertorial.

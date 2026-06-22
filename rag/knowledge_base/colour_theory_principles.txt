@@ -1,0 +1,121 @@
+COLOUR THEORY AND PSYCHOLOGY PRINCIPLES
+Source: Itten, Albers, Brand Colour Research — Multi-Aesthetic Reference
+Category: Design Theory — Colour
+
+================================================================================
+FOUNDATIONAL PRINCIPLES (ITTEN + ALBERS)
+================================================================================
+
+ITTEN'S SEVEN CONTRASTS — applied across brand aesthetics:
+
+HUE CONTRAST: Pure colours at maximum saturation against each other.
+Signal: Bold, energetic, populist. Used in mass-market, streetwear, fast food, youth culture.
+Avoid in: Premium, minimal, luxury aesthetics.
+
+LIGHT-DARK CONTRAST: Pairing light tones with dark for hierarchy.
+The most universal contrast tool. Controls where the eye moves first.
+Wide light-dark on narrow hue = quiet luxury. Wide light-dark on saturated hue = high fashion drama.
+
+COLD-WARM CONTRAST: Cool-toned vs warm-toned colours.
+Warm tones: approachable, safe, organic, sensorial. Cool tones: precise, modern, technical, clinical.
+Mixing deliberately: warm background + cool accent = friendly competence (common in tech brands).
+
+SATURATION CONTRAST: Saturated vs muted/desaturated.
+Desaturated palette: restraint, intelligence, longevity. High saturation: urgency, energy, trend.
+The rule: saturation level correlates inversely with perceived exclusivity in most categories.
+
+SIMULTANEOUS CONTRAST (Albers): Adjacent colours alter each other's perceived hue.
+The same taupe reads cooler on warm cream than on white. Test palettes in layout context, never in isolation.
+
+EXTENSION CONTRAST: Proportion of each colour. 70% base / 20% structure / 10% accent is the quiet
+luxury formula. Equal proportions across multiple colours = loudness.
+
+================================================================================
+COLOUR PALETTES BY AESTHETIC TERRITORY
+================================================================================
+
+--- QUIET LUXURY / PREMIUM WELLNESS ---
+Palette character: Narrow hue range, muted, warm neutrals
+Key tones: Warm cream (#F5F1E8), stone/sand (#D8C7AE), taupe (#9B8C7D), sage-grey (#6F7563), deep charcoal (#2B2B2B)
+Psychology: Restraint as value signal. Quality communicated through absence of noise.
+Avoid: Saturated accents, bright white, botanical greens at full saturation
+Benchmark aesthetics: AURU, The Row, Aesop, Cos, Kinfolk, Bamford
+
+--- HIGH FASHION / EDITORIAL ---
+Palette character: High contrast, often monochromatic or two-tone extremes
+Key tones: Pure black + white + one saturated or metallic accent; or deep jewel tones (burgundy, cobalt, forest) with black
+Psychology: Drama, authority, aspiration. Colour is a weapon, not a background.
+Key technique: Didone type on black reads as fashion; same type on cream reads as heritage luxury
+Benchmark aesthetics: Celine, Bottega Veneta dark range, Vogue covers, Alexander McQueen
+
+--- DARK LUXURY / MODERN VOID ---
+Palette character: Near-black dominant, one warm accent maximum
+Key tones: Deep charcoal, obsidian, dark slate, one warm neutral (parchment or aged brass)
+Psychology: Exclusivity through inaccessibility. The visual equivalent of a members-only door.
+Key technique: Warm light sources photographed against dark grounds — creates intimacy rather than coldness
+Benchmark aesthetics: Le Labo, Byredo, Diptyque, Rick Owens, Tom Ford
+
+--- BRUTALIST / RAW TECH ---
+Palette character: Industrial, unfinished, intentionally harsh
+Key tones: Concrete grey, black, raw white, acid yellow or safety orange as disruption accent
+Psychology: Anti-aesthetic as aesthetic. Signals authenticity, no-bullshit positioning, technical confidence.
+Typography colour: Black on white, white on black — no gradients, no soft tones
+Benchmark aesthetics: The Brutalist web design movement, early Balenciaga campaigns, Bloomberg Terminal aesthetic, some Web3 branding
+
+--- TECH / DIGITAL PRODUCT ---
+Palette character: Clean, systematic, functional. Colour used for information hierarchy, not mood.
+Key tones: White or very light grey base, mid-grey for secondary elements, one brand blue/purple/teal, semantic colours (red/green/amber) for status
+Psychology: Trust through clarity. Every colour has a defined function. Decorative colour reads as unprofessional in SaaS.
+Key technique: Accessible contrast ratios (WCAG AA minimum 4.5:1) as design constraint, not afterthought
+Benchmark aesthetics: Linear, Notion, Figma, Stripe, Vercel, Arc browser
+
+--- ARTISAN / HERITAGE CRAFT ---
+Palette character: Aged, warm, earthy. Colours that look like they came from natural pigments.
+Key tones: Ochre, terracotta, umber, aged cream, forest green, brick red, raw linen
+Psychology: Authenticity, slowness, pre-industrial quality. Anti-generic. Signals something was made by hand.
+Avoid: Bright white (too new), cool greys (too digital), black (too graphic/designed)
+Benchmark aesthetics: Specialty coffee roasters (Blue Bottle early, Onyx, Madcap), craft beer packaging, artisan bakeries, organic farm brands
+
+--- STREETWEAR / YOUTH CULTURE ---
+Palette character: Bold, irreverent, often unexpected combinations
+Key tones: Depends on season and brand — but often: black + white + one disruptive colour (acid green, hot pink, warning orange, electric blue)
+Psychology: Identity and belonging. Colour signals which tribe you're in.
+Key technique: Contrast for legibility at small sizes (for merch and social thumbnails) — function drives choice
+Benchmark aesthetics: Supreme (red/white), Palace, Stüssy, Off-White, Aimé Leon Dore (more restrained end)
+
+--- NORDIC / SCANDINAVIAN FUNCTIONAL ---
+Palette character: Clean, light, functional. Inspired by northern light and natural materials.
+Key tones: Cool white, warm white, pale birch, dusty sage, slate blue, soft grey
+Psychology: Democratic design. Accessible intelligence. Form follows function, beauty follows form.
+Avoid: Warm rich tones (reads as Mediterranean), dark heavy tones (reads as Gothic)
+Benchmark aesthetics: Muji, Swedish Hasbeens, Snow Peak, Arc'teryx (product language), Marimekko (prints aside)
+
+--- TROPICAL / MAXIMALIST RESORT ---
+Palette character: Rich, saturated, layered. Multiple warm-vibrant tones together intentionally.
+Key tones: Terracotta, warm coral, cobalt, palm green, sand, raw white
+Psychology: Abundance and pleasure. More is more. Restraint reads as cold in this context.
+Key technique: Warm base holds saturated colours together — a cool base would make them clash
+Benchmark aesthetics: Cult Gaia, Lisa Says Gah, resort hotel identity, Havaianas premium range
+
+================================================================================
+ALBERS ON COLOUR PERCEPTION — PRACTICAL RULES
+================================================================================
+
+1. Colour is never seen in isolation — always in relation to its neighbours.
+2. Approve palettes in full layout context, never from swatches on white.
+3. The same muted tone reads sophisticated on warm cream, average on pure white.
+4. Near-black (#2B2B2B, #1A1A1A) reads warmer and more editorial than #000000.
+5. Two warm neutrals together intensify each other's warmth — useful for sensorial brand design.
+6. Cool grey on warm background reads as a deliberate, modern interruption (good for tech-wellness hybrids).
+
+================================================================================
+COLOUR AND PERCEIVED BRAND POSITIONING — QUICK REFERENCE
+================================================================================
+
+PREMIUM SIGNALS: Narrow hue range. Low saturation. Clear light-dark hierarchy. Near-black not black. No trend colours.
+MASS-MARKET SIGNALS: Wide hue range. Higher saturation. Bright white. Complementary contrasts. Colour-coding by product.
+CLINICAL SIGNALS: Cool-toned palette. High black-white contrast. No warmth. Pharmaceutical white.
+AUTHENTIC/CRAFT SIGNALS: Earthy, aged tones. Imperfect palette (not perfectly matched). Natural pigment references.
+TECH SIGNALS: Systematic colour use. Functional colour hierarchy. Accessibility-compliant contrast. No decoration.
+STREETWEAR SIGNALS: Bold contrast. Disruptive accent. Culturally specific colour references. Print-legible at scale.
+EDITORIAL SIGNALS: Restrained palette with one intentional drama point. Colour serves composition, not the reverse.

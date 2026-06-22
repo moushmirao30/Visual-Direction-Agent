@@ -1,0 +1,131 @@
+AURU BRAND RESEARCH DOCUMENT
+Source: Visual Direction Research Exercise + Editorial Project Brief
+Category: Brand Research — Luxury Wellness
+
+================================================================================
+BRAND OVERVIEW
+================================================================================
+
+Brand Name: AURU
+Tagline: Evidence, Elevated.
+Category: Minimal luxury wellness — supplements, adaptogens, functional beauty
+Market Space: Premium wellness with scientific credibility and emotional calm
+Essence: Where peer-reviewed science meets sensory calm — rituals that feel indulgent and perform on paper.
+Founded: 2024 | Origin: Physician-designer collaboration, Copenhagen and Kyoto
+
+Core Promise: Results you can measure, rituals you want to keep.
+Brand Summary: Science-backed stillness for modern bodies. "Quiet minds are the new luxury."
+
+================================================================================
+TARGET AUDIENCE
+================================================================================
+
+Primary Age Range: 28–48
+Profile: Urban, design-literate professionals — creatives, founders, professionals
+Psychographics: Values calm mastery, credible data, crafted materials, and time well spent
+Behaviours: Reads ingredients before buying. Values quality over quantity. Prefers subtle luxury. Feels overwhelmed by wellness marketing. Seeks routines over quick fixes.
+Key Mindset Quote: "I want products that work without demanding attention."
+Rejects: Novelty churn, neon promises, performative wellness, trend-driven visuals
+
+================================================================================
+BRAND POSITIONING
+================================================================================
+
+Positioning Statement: AURU delivers clinically validated outcomes through sensorially refined rituals.
+Differentiators: Peer-reviewed formulas, material warmth, editorial restraint, measurable progress
+Landscape Position: Between lab-grade efficacy and boutique hospitality
+White Space: Evidence-forward wellness with tactile, humane design
+
+Key Tension: Translating scientific rigour into an experience that soothes — never sterile, never loud.
+The Gap: Clinical efficacy often feels cold; luxury wellness often lacks proof.
+Why Now: A post-peak biohacking world seeking grounded, sustainable care and fewer but better rituals.
+
+Pull Quote: "Give me what works, then get out of the way."
+
+================================================================================
+BRAND VOICE
+================================================================================
+
+Tone: Calm, precise, warm
+Voice Characteristics: Measured, warm, refined, intelligent, minimal
+Language Principles: Say less. Lead with clarity. Evidence first, flourish second.
+Sounds Like: Composed, intentional, unhurried
+Not: Hypey, dense, or clinical jargon
+
+Do: "Designed for everyday ritual." / "We value consistency over intensity."
+Don't: "Transform your life" / "Unlock your best self" / No exclamation marks
+
+Sample Copy: "One capsule, morning. 8 weeks to steadier energy. No noise. Just data — and a softer landing."
+
+================================================================================
+VISUAL DIRECTION
+================================================================================
+
+Design Principles: Spacious grids, thin rules, generous margins
+Materials Feel: Matte paper grain, soft shadows, brushed stone accents
+Mood Reference: Morning light on limestone, linen, and glass. Hands, not faces. Breath and texture over spectacle.
+Photography Direction: Hands, product on surface, close-up texture — no faces, no energy, no motion
+
+Colour Palette:
+- #F5F1E8 — Warm Cream (background base)
+- #D8C7AE — Stone/Sand (structure colour)
+- #9B8C7D — Taupe (depth colour)
+- #6F7563 — Sage Grey-Green (secondary structure)
+- #2B2B2B — Deep Charcoal (type, near-black)
+
+Typography System:
+- Display/Heading: Cormorant Garamond or DM Serif Display (editorial, considered)
+- Body/Label: DM Sans or Inter (clean, readable)
+- Usage Hierarchy: Heading / Subheading / Body / Label / Caption
+- Show at 3 sizes minimum
+- Tracking: generous on headings, tight on body
+
+Icons: Minimal line marks for dosing, time, and progress
+
+================================================================================
+THEME ANALYSIS — RESEARCH FINDINGS
+================================================================================
+
+Three aesthetic themes were evaluated:
+
+THEME 1 — COLD MINERAL ("Aesop-coded")
+Description: Clinical, mineral-toned aesthetic inspired by apothecary branding
+Rejection Reason: Felt overly medicated and chemical rather than natural
+User Response: "Much clinical-based designs. Feels too medicated — less natural, more chemical."
+
+THEME 2 — WARM BOTANICALS ("Generic Wellness")
+Description: Warm, nature-forward aesthetic typical of wellness branding
+Rejection Reason: Visual clutter and generic, overcrowded feel
+User Response: "Warm but feels like too much noise in the background. Demands obvious attention."
+
+THEME 3 — MODERN VOID ("Dark Luxury") — SELECTED
+Description: Dark, restrained aesthetic built on negative space and minimal visual cues
+Selection Reason: Aligned with "Quiet Luxury" positioning — less noise, more sophisticated
+User Response: "Selected — fits the quote 'Quiet Luxury' — less noise, more sophisticated vibe."
+
+================================================================================
+RESEARCH INSIGHT SUMMARY
+================================================================================
+
+Critical Findings:
+1. Users are sensitive to the fine line between "natural" and "clinical" — Theme 1 crossed it
+2. Warmth alone does not signal premium; Theme 2's botanical approach read as generic
+3. Visual restraint is the strongest signal of sophistication in this category
+4. The "Quiet Luxury" principle — communicating quality through absence rather than excess — resonated most strongly
+
+Key Insight: Users associate luxury with what is NOT shown rather than what is.
+Overt wellness cues (botanicals, warmth, clutter) reduce perceived exclusivity.
+Clinical precision without warmth feels pharmaceutical.
+The ideal space sits between: dark, intentional, and unhurried.
+
+================================================================================
+OPPORTUNITY AREAS
+================================================================================
+
+Growth: Evidence-backed supplements, recovery tools, guided micro-rituals
+Expansion: Sleep and focus stacks; travel reset kits; in-home assessment
+Partnerships: Research labs, boutique hotels, slow-living publishers
+Future Vision: An ecosystem of measured calm — fewer inputs, deeper outcomes
+
+Competitive Whitespace: The "dark luxury wellness" space is currently undercrowded in the category
+Differentiator: Restraint as a brand differentiator against competitors relying on warm botanical tropes

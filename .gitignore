@@ -1,0 +1,41 @@
+# Virtual environment
+venv/
+.venv/
+
+# API keys — never commit
+.env
+
+# ChromaDB local database
+rag/chroma_db/
+
+# Generated moodboard images
+moodboard_cache/
+
+# Agent output cache
+cache/
+
+# Per-run console logs
+logs/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Test and build artifacts
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

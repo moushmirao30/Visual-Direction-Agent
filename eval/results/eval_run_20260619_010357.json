@@ -1,0 +1,252 @@
+{
+  "generated_at": "2026-06-19T01:12:26",
+  "judge_model": "anthropic/claude-opus-4-8",
+  "wall_clock_s": 509.3,
+  "held_out_benchmark": null,
+  "aggregate": {
+    "n_cases": 2,
+    "n_scored": 2,
+    "pipeline_errors": 0,
+    "mean_overall": 4.9,
+    "per_dimension_mean": {
+      "positioning_fit": 5.0,
+      "specificity": 5.0,
+      "coherence": 5.0,
+      "benchmark_validity": 4.5,
+      "actionability": 5.0
+    },
+    "auto_fail_count": 0,
+    "mean_latency_s": 239.3,
+    "mean_cost_usd": 0.16,
+    "mean_total_tokens": 49318.0
+  },
+  "sweep": [
+    {
+      "keyword": "quiet luxury wellness",
+      "signal": "premium",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 5,
+          "specificity": 5,
+          "coherence": 5,
+          "benchmark_validity": 4,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": false,
+          "internal_contradiction": false
+        },
+        "overall": 4.8,
+        "justification": "Lands squarely in premium/restrained territory with committed hexes (#2B2B2B, #9D8B7E, #F5F3F0, #8B9D84), named typefaces, tracking ranges, frame-occupancy percentages and matte-only material rules that a junior could execute without questions. Benchmarks are all real and largely on-aesthetic (Aesop is exact; Malin+Goetz and Everlane are credible if slightly less ultra-premium), and the conflicts_resolved section actively reinforces coherence rather than contradicting it. Minor deduction on benchmarks: the 'Less But Better' campaign attribution to Malin+Goetz reads as invented framing and Everlane is a fashion-basics rather than wellness reference, slightly stretching the keyword.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 44.6,
+        "agent_02": 103.2,
+        "agent_03": 67.7,
+        "agent_04": 66.4,
+        "total": 281.9
+      },
+      "cost": {
+        "llm_calls": 11,
+        "prompt_tokens": 40018,
+        "completion_tokens": 12814,
+        "total_tokens": 52832,
+        "cost_usd": 0.1773,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "quiet luxury wellness",
+        "positioning_statement": "A desaturated, spatially disciplined design system that communicates scientific authority and natural provenance through restraint, material honesty, and editorial precision \u2014 never through ornament, abundance, or persuasion.",
+        "palette": [
+          {
+            "name": "Deep Charcoal",
+            "hex_code": "#2B2B2B",
+            "role": "Primary \u2014 structural foundation for all typography, outlines, and key graphic elements",
+            "rationale": "Signals premium tier and restraint; replaces pure black to avoid harshness while maintaining structural gravity and authority across all surfaces"
+          },
+          {
+            "name": "Warm Taupe",
+            "hex_code": "#9D8B7E",
+            "role": "Secondary \u2014 humanising mid-tone for large fields, background washes, and secondary surfaces",
+            "rationale": "Bridges the tension between clinical/scientific and natural/botanical; carries the memory of natural materials without romanticising them; used in large fields and secondary surfaces"
+          },
+          {
+            "name": "Off-White Stone",
+            "hex_code": "#F5F3F0",
+            "role": "Tertiary \u2014 primary background tone across all digital, print, and packaging surfaces",
+            "rationale": "Warm enough to prevent sterility, neutral enough to avoid cream's cosiness associations; never replaced with pure white #FFFFFF or parchment; the ground everything rests on"
+          },
+          {
+            "name": "Muted Sage",
+            "hex_code": "#8B9D84",
+            "role": "Accent \u2014 single botanical reference deployed at strict \u226415% palette distribution across any composition",
+            "rationale": "Provides the necessary botanical reference without tipping into wellness-generic territory; deployed only in detail elements such as a single label line, secondary icon, or packaging band \u2014 never dominant; acts as punctuation, not voice"
+          }
+        ],
+        "photography_tones": "Cool-to-neutral colour cast throughout all photography; no warm amber, golden-hour, sunrise, or candle-adjacent warmth permitted; backgrounds consistent with Off-White Stone #F5F3F0 or near-charcoal studio fields; subjects rendered in natural desaturated tones with zero colour grading toward warmth; soft and directional light source only \u2014 overcast natural light, soft dusk, or controlled studio diffusion; no flash, no ring light, no visible light source",
+        "typography": {
+          "display_typeface": "Didot or Sabon (Neoclassical High-Contrast Serif) \u2014 used for all headlines, wordmarks, campaign headers, and editorial pull-quotes",
+          "body_typeface": "Akzidenz Grotesk or DIN Next (Humanist Sans-Serif) \u2014 used for all body copy, product descriptors, ingredient lists, UI labels, and secondary information",
+          "display_tracking": "0.05\u20130.10em open letter spacing across all display sizes; minimum 0.05em applied to any all-caps label or section heading; never set tight; never all-lowercase in primary display contexts \u2014 formal capital authority is load-bearing",
+          "body_tracking": "0.00\u20130.01em neutral to barely open; leading minimum 1.5\u00d7 type size across all body contexts; reduce type size before reducing leading \u2014 no exceptions for packaging constraints",
+          "hierarchy_notes": "Body copy medium weight only \u2014 no bold body text, no light weights below 300; display typeface always set with generous tracking to signal editorial authority; line length held to 60\u201370 characters maximum for all body copy; no rounded sans-serif typefaces (Proxima Nova, Circular, Gill Sans) permitted at any level of hierarchy"
+        },
+        "layout_approach": "Invisible grid infrastructure \u2014 no visible dividing lines or ruled structure; content occupies 40\u201355% of total available space across all formats (print: 40\u201350% / digital: 50\u201355% / packaging: 30\u201340% of surface area); digital side margins set at 120\u2013160px; every placement decision is additive from zero, not subtractive from fullness",
+        "negative_space_rule": "Negative space is the primary design element and the primary luxury signal \u2014 it is not empty; no element may be placed to fill available space; dark and neutral fields carry equal communicative weight to positive content; the first question in every layout decision is 'what can be removed?' not 'what needs to be added?'; spatial confidence is the tier signal",
+        "photography_direction": [
+          "Subject occupies 30\u201340% of frame maximum; remainder is intentional negative field \u2014 either Off-White Stone #F5F3F0 studio ground or matte near-charcoal neutral surface; shallow depth of field with subject sharp and background soft; no full-frame product fill permitted",
+          "Light source is soft and directional \u2014 overcast natural light, soft dusk, or controlled studio diffusion only; colour cast is cool-neutral throughout; no flash, no ring light, no visible light source; eliminate all imagery lit with golden hour, sunrise, or candle-adjacent warmth",
+          "Subject matter is material and tactile exclusively \u2014 hands on ceramic, cross-section of raw ingredient, close-up of glass vessel texture, uncoated paper grain, matte surface detail; no lifestyle scenes, no meditation postures, no wellness selfies, no abundance shots, no models in robes, no person-as-wellness-icon imagery of any kind"
+        ],
+        "materials": "Glass, ceramic, and uncoated/kraft paper surfaces only; matte finish takes precedence over gloss in every material decision; packaging labels occupy 30\u201340% of surface area maximum with single-sided application or die-cut form; tactile refinement through emboss or deboss only \u2014 no foiling, no metallic inks, no gloss spot UV, no warm metallic colour expressions; eliminate plastic substrates and full-wrap label applications entirely; the unmarked surface speaks as loudly as the marked one",
+        "do_rules": [
+          "DO use Didot or Sabon at generous tracking (0.05\u20130.10em) for all display text \u2014 the high-contrast neoclassical serif at open spacing is the single most immediate signal of editorial authority in this tier",
+          "DO hold content to \u226455% of any surface \u2014 in every layout decision, the first question is 'what can be removed?' not 'what needs to be added?'; spatial confidence is the tier signal",
+          "DO photograph with cool-neutral colour grading and limit subject to 30\u201340% of frame \u2014 subject matter is texture, material, and ingredient; the restraint of the frame mirrors the restraint of the brand",
+          "DO deploy muted sage #8B9D84 as the single accent at strict \u226415% palette presence \u2014 it provides the necessary botanical reference without tipping into wellness-generic territory; use it as punctuation, not as voice",
+          "DO use matte, tactile surfaces with minimal label coverage (30\u201340% maximum) across all packaging \u2014 the material itself communicates quality; emboss or deboss finish signals craft; the unmarked surface carries equal communicative weight to the marked one"
+        ],
+        "dont_rules": [
+          "DON'T use warm rose gold #B76E79, peach, coral #FF7F50, or any warm metallic accent \u2014 these are hard mass-market tier markers and mid-tier/influencer-wellness signals that collapse the ultra-premium positioning",
+          "DON'T use rounded sans-serif typefaces such as Proxima Nova, Circular, or Gill Sans \u2014 rounded terminals read as generic supplement and accessible-premium branding; they are the typographic signature of the exact competitor territory this system must oppose",
+          "DON'T show wellness lifestyle photography \u2014 meditation scenes, yoga postures, spa moments, abundance tablescapes, or models interacting with product in a wellness context all read as influencer-founded or mass-market spa; the imagery system is material and editorial, never aspirational-lifestyle",
+          "DON'T use saturated botanical greens (#2D5016, #4CAF50, or equivalent) \u2014 these are the generic wellness visual clich\u00e9; the muted sage accent #8B9D84 is the only controlled botanical reference; any step toward saturation exits the luxury tier",
+          "DON'T allow content density to exceed 55% of any surface \u2014 increasing content density above this threshold (packaging label coverage >40%, digital margin collapse, print layouts that fill the page) is the single fastest signal of mid-tier positioning; when in doubt, remove"
+        ],
+        "benchmark_brands": [
+          {
+            "name": "Aesop",
+            "reference_note": "Reference specifically the Taxonomy of Design retail spatial strategy and editorial content approach: the way material craft is foregrounded over product function, how spatial breathing room is treated as primary brand communication, and how the earthy brown/charcoal/cream palette operates without any botanical green contamination"
+          },
+          {
+            "name": "Malin+Goetz",
+            "reference_note": "Reference specifically the Less But Better campaign typography system and ingredient-forward product photography: lowercase wordmark architecture, clean humanist sans-serif body copy hierarchy, and the flatlay photography approach that emphasises material detail over lifestyle context"
+          },
+          {
+            "name": "Aesop and Everlane (combined materials reference)",
+            "reference_note": "Cross-reference Aesop's matte ceramic and glass packaging surface approach with Everlane's warm taupe/greige palette and transparent material sourcing narrative; the synthesis demonstrates how warm neutrals communicate both natural provenance and editorial restraint simultaneously without reading as either spa or fashion"
+          }
+        ],
+        "visual_narrative": "The brand operates in the register of a considered edit. Every surface \u2014 digital, print, packaging \u2014 begins empty, and elements are placed only when their presence earns its space. The palette is desaturated by conviction: charcoal #2B2B2B provides structural gravity, warm taupe #9D8B7E carries the memory of natural materials without romanticising them, and stone #F5F3F0 is the ground everything rests on \u2014 never parchment, never pure white, always this precise temperature. A single muted sage #8B9D84 punctuates at discipline, present enough to register, restrained enough to never perform. Didot or Sabon sets the display register with open tracking, signalling editorial precision over warmth. Akzidenz Grotesk or DIN Next holds the body copy with neutral authority. Photography never shows a wellness moment \u2014 it shows a surface, a hand, a material, a texture, held in cool diffused light with the subject occupying no more than a third of the frame. The rest is intention.",
+        "conflicts_resolved": "CONFLICT 01 \u2014 Warm Light vs. Cool-Neutral Photography: Trend research (Herbivore, Goop references) advocated for natural light with warm backgrounds implying golden-hour aesthetics; theory explicitly identified warm light as a mass-market signal. Resolution: Theory governs \u2014 cool-neutral cast is the differentiating ultra-premium signal; soft directional light is retained but warmth is removed. CONFLICT 02 \u2014 Rose Gold and Metallic Accents: Trend research identified warm rose gold as a subtle luxury marker; theory explicitly prohibited it as a mid-tier signal. Resolution: Theory governs \u2014 rose gold has migrated downmarket since 2016\u20132020 and now functions as accessible-premium; metallic effects if required must use cold/silver tones in deboss only, never as warm metallic colour. CONFLICT 03 \u2014 Sage Green Saturation Level: Trend research referenced sage green without specifying saturation limits; theory prohibited saturated botanical greens and restricted green to muted sage #8B9D84 at \u226415% distribution. Resolution: Partial synthesis with theory providing the constraint \u2014 muted sage #8B9D84 satisfies both sources by acknowledging the trend signal while honouring the saturation and distribution limits. CONFLICT 04 \u2014 Parchment vs. Stone Off-White: Trend research referenced parchment with warm undertones; theory specified stone #F5F3F0 and explicitly rejected cream. Resolution: Theory governs \u2014 parchment risks reading cosier and more accessible than ultra-premium positioning demands; stone #F5F3F0 provides the warm-enough-to-avoid-sterility quality while maintaining cooler reserve that positions above the parchment-palette tier of Goop and Herbivore."
+      }
+    },
+    {
+      "keyword": "clinical skincare science",
+      "signal": "clinical",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 5,
+          "specificity": 5,
+          "coherence": 5,
+          "benchmark_validity": 5,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": false,
+          "internal_contradiction": false
+        },
+        "overall": 5.0,
+        "justification": "The direction lands squarely in clinical territory with a committed cool-only chromatic rule (#F8F9FA, #E2E8F0, #0F172A navy over pure black, single functional teal #0EA5E9 capped at 10-15%), and the matte-only no-foil materials rule correctly defends against luxury drift. Benchmarks are all real and genuinely on-aesthetic \u2014 The Ordinary, Medik8, and MALIN+GOETZ \u2014 with the latter explicitly framed as the apothecary-adjacent boundary rather than the target, showing precise positioning awareness. Specs are concrete and executable (Inter weight-only hierarchy, tabular numerals, Swiss 10-12 col grid, 120-160px margins, 50-60% content ratio), and the conflicts_resolved section preempts the obvious objections without contradicting any stated rule.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 34.7,
+        "agent_02": 29.3,
+        "agent_03": 62.9,
+        "agent_04": 69.8,
+        "total": 196.7
+      },
+      "cost": {
+        "llm_calls": 12,
+        "prompt_tokens": 36923,
+        "completion_tokens": 8881,
+        "total_tokens": 45804,
+        "cost_usd": 0.1495,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "clinical skincare science",
+        "positioning_statement": "A pharmaceutical-precision visual system proving scientific rigour and aesthetic refinement are not opposing forces \u2014 every design decision communicates efficacy first, beauty second, and never sacrifices either.",
+        "palette": [
+          {
+            "name": "Pharmaceutical White",
+            "hex_code": "#F8F9FA",
+            "role": "Dominant background and primary packaging surface; minimum 60% of all compositions",
+            "rationale": "Signals institutional trust, clinical cleanliness, and scientific neutrality; establishes the cool-to-cooler chromatic rule \u2014 the palette only moves toward grey and navy, never toward warmth"
+          },
+          {
+            "name": "Cool Grey",
+            "hex_code": "#E2E8F0",
+            "role": "Structural support tone for secondary typography, UI backgrounds, and subtle surface differentiation",
+            "rationale": "Provides breathing room variation without introducing warmth; reinforces cool chromatic discipline and supports the white primary without competing against it"
+          },
+          {
+            "name": "Clinical Teal",
+            "hex_code": "#0EA5E9",
+            "role": "Single functional accent; maximum 10\u201315% of any composition; applied exclusively to CTAs, ingredient percentage callouts, concentration data, and UI interaction states",
+            "rationale": "Enhances information hierarchy in ways pure monochrome cannot; earned presence only where pointing to data, action, or efficacy proof \u2014 never used decoratively; differentiates the High Science / High Aesthetic quadrant above category monochromatic default"
+          },
+          {
+            "name": "Deep Navy",
+            "hex_code": "#0F172A",
+            "role": "Primary typographic colour for all display and body text across every hierarchy tier",
+            "rationale": "Replaces pure black to deliver institutional, data-precise authority appropriate to digital and print surfaces equally; reads as clinical and refined rather than editorial; delivers equivalent contrast authority to pure black with greater system coherence in the High Science / High Aesthetic quadrant"
+          }
+        ],
+        "photography_tones": "Neutral, shadowless clinical lighting on white (#F8F9FA) or cool grey (#E2E8F0) backgrounds exclusively. No warm toning, no golden hour, no lifestyle warmth, no yellow-shifted light sources. Product and ingredient surfaces rendered with forensic precision \u2014 matte textures, serum surfaces, molecular imagery, and material clarity dominant. All tones remain in the cool-neutral range, consistent with the chromatic system.",
+        "typography": {
+          "display_typeface": "Inter (Geometric Grotesque Sans-Serif) \u2014 Medium to Bold weights only",
+          "body_typeface": "Inter Regular to Medium (same family, weight-differentiated) \u2014 no secondary typeface introduced",
+          "display_tracking": "0\u201340 units letter-spacing (dense, precise \u2014 signals data confidence, not airy luxury); uppercase or sentence case depending on hierarchy level",
+          "body_tracking": "Standard 100 tracking with leading set at 1.6\u20131.8\u00d7 line height; line length capped at 60\u201370 characters",
+          "hierarchy_notes": "Single typeface family across entire system \u2014 weight variation is the sole hierarchy tool: Bold for display headlines and active ingredient callouts, Medium for subheads and product names, Regular for body and technical copy. Tabular numerals mandated for all percentage and concentration data. No decorative flourishes, no serif, no script, no family switching permitted under any circumstance."
+        },
+        "layout_approach": "Swiss 10\u201312 column grid system enforced across digital and print touchpoints. Content occupies 50\u201360% of available space; 40\u201350% is structured margin and intentional negative space. Digital margins set at 120\u2013160px per side. Avoids maximum-density pharmaceutical layouts (reads as generic) and maximum-emptiness luxury layouts (reads as vague) \u2014 occupies the precise midpoint that signals high-science refinement.",
+        "negative_space_rule": "Intentional and grid-anchored \u2014 not dramatic emptiness, not informational crowding. The 50\u201360% content-to-space ratio is non-negotiable: whitespace proves confidence, crowding signals insecurity. Spatial generosity provides the approachability function that warm colours are excluded from providing. Margins are structural commitments, not adjustable padding.",
+        "photography_direction": [
+          "Lead with lab context or macro ingredient close-ups as primary visual content \u2014 scientific authority over lifestyle aspiration; serums, active compounds, and material textures treated as subjects worthy of forensic attention",
+          "Apply clinical neutral lighting exclusively \u2014 shadowless or soft directional only; eliminate all warmth, golden tones, or spa-adjacent lighting that reads as wellness rather than evidence-based efficacy",
+          "Focus on texture and material surfaces \u2014 serum morphology, product structure, molecular and microscopic imagery preferred; aspirational human lifestyle photography is prohibited unless the subject is visible ingredient application or clinical assessment in progress",
+          "Shoot on white (#F8F9FA) or cool grey (#E2E8F0) backgrounds only \u2014 no environmental staging, no lifestyle context, no warm surface materials visible in frame"
+        ],
+        "materials": "Matte surface finishes on all packaging without exception. Zero emboss, zero foil, zero metallics, zero gloss \u2014 these treatments migrate brand positioning toward luxury and dilute the clinical signal. Typography and data visualisation are the primary design elements on all surfaces; photography is secondary support. Information architecture carries the visual weight.",
+        "do_rules": [
+          "Lead with ingredient data visually: percentages, active names, and concentration callouts occupy the primary hierarchy tier on packaging fronts and digital surfaces \u2014 set in tabular numerals, Inter Medium, with Clinical Teal (#0EA5E9) applied to numerical values only",
+          "Hold Pharmaceutical White (#F8F9FA) as structural: every surface begins from pharmaceutical white and moves cooler toward grey (#E2E8F0) or navy (#0F172A) \u2014 never warmer; warm tones of any kind are a system violation",
+          "Treat Clinical Teal (#0EA5E9) as a functional signal exclusively: the accent earns its presence only when pointing to data, action, or efficacy proof \u2014 if a design works without it, remove it",
+          "Use weight variation within Inter as the sole hierarchy tool: Bold for display, Medium for subheads, Regular for body \u2014 no additional typefaces, no family switching, no decorative elements to generate visual interest",
+          "Maintain grid discipline across every touchpoint: Swiss 10\u201312 column system enforced digitally and in print; margins at 120\u2013160px per side are structural commitments, not adjustable padding \u2014 spatial consistency signals systematic science",
+          "Apply tabular numerals for all percentage and concentration data to ensure precise alignment in ingredient callout hierarchies and data visualisation tables"
+        ],
+        "dont_rules": [
+          "Never introduce warm neutrals: beige (#F5F0E8), cream, warm white, or any off-white with yellow undertone instantly shifts the brand into apothecary-luxury or pseudo-clean beauty territory \u2014 both directly undermine clinical positioning and blur differentiation from wellness competitors",
+          "Never use serif, script, or decorative typefaces: any serif letterform, handwritten element, or decorative type introduces emotional softness or heritage signalling incompatible with evidence-based efficacy positioning",
+          "Never use lifestyle photography without explicit scientific context: models, environmental shots, and aspirational staging communicate beauty over chemistry \u2014 if a face appears, it must be in the context of visible product application or clinical assessment, never aspirational",
+          "Never introduce a second accent colour: a second accent \u2014 gold, rose, sage, dusty blue, or any addition \u2014 immediately breaks colour discipline and signals wellness or premiumisation, both of which are positioning errors for this aesthetic system",
+          "Never use maximum-density information layout: packing every surface with data reads as generic pharmaceutical, not high-science refined \u2014 the 50\u201360% content-to-space ratio is non-negotiable and must be maintained across all touchpoints",
+          "Never apply emboss, foil, metallics, or gloss finishes to any packaging or print surface \u2014 these treatments signal luxury positioning and dilute the clinical credibility the system is built to communicate"
+        ],
+        "benchmark_brands": [
+          {
+            "name": "The Ordinary (Deciem)",
+            "reference_note": "Reference ingredient percentage hierarchy on packaging fronts, pharmaceutical labelling conventions, and typographic confidence from the 'Truth Should Be Ordinary' campaign. Do NOT replicate their visual austerity or anti-aesthetic positioning \u2014 this system operates in the High Science / High Aesthetic quadrant they vacate, adding spatial refinement and chromatic precision above their category floor."
+          },
+          {
+            "name": "Medik8",
+            "reference_note": "Reference the integration of active ingredient percentages into primary packaging typography and the clinical sans-serif treatment paired with minimal composition. Their restraint in colour application and confidence in structured white space is the direct spatial model for this system."
+          },
+          {
+            "name": "MALIN+GOETZ",
+            "reference_note": "Reference the apothecary-modern hybrid that softens clinical sterility without sacrificing authority \u2014 specifically their unisex ingredient-forward positioning and prescription-label typographic conventions. The approachability model they demonstrate is achieved spatially (breathing room, leading) not chromatically (warm colour), which maps directly to this system's conflict resolution on warm neutrals."
+          }
+        ],
+        "visual_narrative": "The brand lives in pharmaceutical white and cool grey \u2014 surfaces that feel like a clean room, not a spa. Every composition opens with space: structured, grid-anchored breathing room that signals a team confident enough not to shout. Typography is a single family \u2014 Inter \u2014 working through weight and scale to carry ingredient names, percentages, and clinical data with the visual authority of a laboratory report. The sole accent colour, a precise teal, appears only where it earns its place: pointing to an active concentration figure, marking a data threshold, confirming an action. Photography abandons lifestyle entirely \u2014 serums catch neutral light, textures are examined up close, ingredient materials are treated as subjects worthy of forensic attention. Packaging surfaces are matte, unembossed, and let the information speak. This is not minimalism for aesthetic effect. This is the visual proof that efficacy and refinement are the same discipline.",
+        "conflicts_resolved": "CONFLICT 01 \u2014 Warm Neutrals (Trend Research vs. Theory): Trend research identified soft warm neutrals as valid in hybrid apothecary-scientific brands. Theory explicitly prohibits them as apothecary-luxury signals. Resolution: Theory governs. Warm neutrals are present in adjacent positioning (apothecary-modern), not the clinical skincare science quadrant. Approachability is achieved through spatial generosity (1.6\u20131.8x leading, 120\u2013160px margins) and humanist typeface selection (Inter over colder Helvetica) \u2014 not chromatic warmth. Warm neutrals excluded without exception. | CONFLICT 02 \u2014 Deep Navy vs. Pure Black for Typography: Market research cited deep charcoal/black (per The Ordinary) as primary text colour. Theory specified Deep Navy #0F172A for authority text, noting pure black reads editorial in digital contexts. Resolution: Theory governs with market awareness. The Ordinary built their system in print-first contexts; this brand operates equally across digital and packaging surfaces. Deep Navy #0F172A delivers equivalent contrast authority with institutional data-precision appropriate to the High Science / High Aesthetic quadrant. Deep Navy is the primary text colour. | CONFLICT 03 \u2014 Clinical Teal Accent vs. No Chromatic Accent: Market trend research described a primarily monochromatic black-white system with only muted accents. Theory introduced Clinical Teal #0EA5E9 as a deliberate single functional accent. Resolution: Theory governs with strict application constraint. Category monochrome is the floor, not the ceiling. A single precisely controlled accent applied only to data callouts and functional signals enhances information hierarchy beyond what pure monochrome achieves. The 10\u201315% maximum and functional-only rule are enforced without exception. Clinical Teal #0EA5E9 is retained as the sole permitted accent."
+      }
+    }
+  ]
+}

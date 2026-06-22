@@ -1,0 +1,429 @@
+{
+  "generated_at": "2026-06-19T01:25:08",
+  "judge_model": "anthropic/claude-opus-4-8",
+  "wall_clock_s": 701.7,
+  "held_out_benchmark": {
+    "keyword": "quiet luxury wellness",
+    "excluded_source": "auru_brand_research.txt",
+    "convergence": {
+      "palette_match": 4,
+      "typography_match": 5,
+      "positioning_match": 5,
+      "benchmark_overlap": 4,
+      "convergence_overall": 4.5,
+      "matched_elements": [
+        "Warm Cream #F5F1E8 exact match as dominant background",
+        "Sage grey-green as restrained secondary accent, low saturation",
+        "Taupe as depth/structure tone",
+        "Low-saturation warm-neutral palette character with explicit avoidance of high-sat botanical green",
+        "Editorial old-style serif display (Sabon vs Cormorant/DM Serif) + humanist sans body (Source Sans Pro vs DM Sans/Inter)",
+        "Generous heading tracking, restrained weights, lowercase wordmark",
+        "Quiet luxury / restraint / quality through absence thesis",
+        "Negative space as active material",
+        "Close-up product/hands/texture photography, no faces, no lifestyle",
+        "Uncoated/matte materials, no gloss/foil/metallic",
+        "Explicit rejection of pure white as clinical",
+        "Aesop named as benchmark"
+      ],
+      "missed_elements": [
+        "Deep Charcoal / near-black anchor (AI deliberately replaced black with taupe, weakening the near-black anchor)",
+        "Le Labo and Bamford not named (substituted Susanne Kaufmann, Vintner's Daughter)",
+        "Ground truth specifies warm morning light on limestone/linen; AI mandated cool-to-neutral light, a deliberate divergence"
+      ],
+      "justification": "The AI independently converged with remarkable precision on palette character (exact cream hex, low-saturation sage, taupe), typographic class (Sabon old-style serif + humanist sans), and the core restraint/quiet-luxury thesis with negative space as material. Benchmark overlap is strong via Aesop plus brands of identical positioning (Susanne Kaufmann, Vintner's Daughter), though it missed Le Labo and Bamford. Minor divergences: it dropped the near-black charcoal anchor in favour of taupe, and mandated cool light where the ground truth favours warm morning light.",
+      "judge_model": "anthropic/claude-opus-4-8",
+      "error": null
+    },
+    "timings": {
+      "agent_01": 40.3,
+      "agent_02": 63.3,
+      "agent_03": 60.0,
+      "agent_04": 70.8,
+      "total": 234.4
+    },
+    "cost": {
+      "llm_calls": 11,
+      "prompt_tokens": 35148,
+      "completion_tokens": 11600,
+      "total_tokens": 46748,
+      "cost_usd": 0.1625,
+      "cost_available": true
+    },
+    "report": {
+      "aesthetic_keyword": "quiet luxury wellness",
+      "positioning_statement": "A visual system that communicates premium wellness through material integrity and editorial restraint \u2014 where absence of commercial signalling, tonal cohesion within a narrow value range, and deliberate negative space collectively function as the brand's primary luxury markers.",
+      "palette": [
+        {
+          "name": "Cream",
+          "hex_code": "#F5F1E8",
+          "role": "Primary \u2014 dominant background field across all surfaces (digital, print, packaging)",
+          "rationale": "Communicates premium space, restraint, and the warmth of natural fibre; never replaced by pure white (#FFFFFF), which reads clinical rather than crafted"
+        },
+        {
+          "name": "Sage Green",
+          "hex_code": "#9CAF88",
+          "role": "Secondary \u2014 botanical accent used sparingly in editorial photography props, secondary packaging elements, and typographic accent moments only",
+          "rationale": "Grounds the palette in ingredient authenticity; saturation held below 20% at all times to avoid the generic wellness visual code of mid-market competitors"
+        },
+        {
+          "name": "Taupe",
+          "hex_code": "#8B8680",
+          "role": "Accent \u2014 functional tertiary tone for typography, fine rules, divider lines, and tonal blocking",
+          "rationale": "Maintains hierarchy within the analogous palette without saturation breaks; replaces black as the dark anchor of the system to preserve tonal cohesion"
+        },
+        {
+          "name": "Coastal Blue (Conditional Exception)",
+          "hex_code": "#B8C9CC",
+          "role": "Restricted exception \u2014 limited to photography prop styling or secondary packaging lines for brands with a genuine marine or coastal ingredient narrative only; never used in typography, primary surfaces, or digital UI",
+          "rationale": "Acknowledges the live coastal serenity palette market signal while preserving core palette logic; introduced only where a brand has an authentic marine narrative and kept below 15% saturation to avoid fragmenting tonal cohesion"
+        }
+      ],
+      "photography_tones": "Cool-to-neutral natural light exclusively \u2014 no warm or golden-hour colour grading permitted under any circumstance. Skin tones and surface textures rendered faithfully without saturation correction. Background tones pulled strictly from the cream-to-taupe value range (#F5F1E8 to #8B8680) to maintain palette cohesion within all imagery. Warmth in the visual system is delivered through material texture and palette substrate, not photographic colour temperature.",
+      "typography": {
+        "display_typeface": "Sabon (Classic Old Style Editorial Serif)",
+        "body_typeface": "Source Sans Pro (Humanist Sans-Serif)",
+        "display_tracking": "3\u20135% letterspacing (approximately 30\u201350 units in most design systems); upper end of range (4\u20135%) preferred for maximum editorial restraint and timelessness",
+        "body_tracking": "+5\u201310% letterspacing (approximately 50\u2013100 units); enforces calm legibility and an unhurried reading pace; never tightened under any circumstance",
+        "hierarchy_notes": "Display (Sabon): Regular\u2013Medium weight only \u2014 never Bold; lowercase wordmark treatment preferred over all-caps; scale used architecturally for spatial presence, not informational density. Body (Source Sans Pro): Regular weight only; left-aligned ragged right; relaxed leading at 1.7\u20131.9x type size; never justified, never condensed. Line length capped at 60\u201370 characters across all formats. Geometric sans-serif typefaces (Futura, Avenir, Gill Sans) are categorically prohibited as body copy substitutes."
+      },
+      "layout_approach": "Swiss Grid logic applied with restraint \u2014 invisible grid structure governs all layouts. Content occupies 40\u201350% of total page or screen space; margins dominate at 120\u2013160px per side on digital. Gutter width set at 3\u20135x standard gutter to enforce breathing room as an active compositional element. Line length capped at 60\u201370 characters. The grid is always present structurally but never visible or decorative.",
+      "negative_space_rule": "Negative space is treated as active presence, not failure to fill. A minimum of 50\u201360% of every page, screen, and packaging face must be intentional empty space \u2014 this ratio is non-negotiable and communicates brand tier more efficiently than any graphic element. If a layout feels sparse, it is correct. If it feels complete or balanced, it is likely overcrowded for this aesthetic tier and must be edited back.",
+      "photography_direction": [
+        "Shoot close-up detail exclusively: hands holding product, ingredient texture at macro level, interior material surfaces \u2014 never full lifestyle tableaux, wide environmental shots, or active wellness contexts (yoga poses, outdoor scenes, green smoothies).",
+        "Natural light with cool-to-neutral colour temperature only. Reject any image exhibiting golden-hour warmth, artificial fill light, commercial product-photography lighting setups, or any post-production warm colour grading.",
+        "Full-frame or tightly cropped compositions with high negative space held within the frame. Limit surface textures to one or two maximum per image (e.g., linen cloth and stone surface only); no excess contextual props permitted.",
+        "Style all product photography with uncoated, natural surface materials (linen, stone, ceramic, dry botanical) to reinforce the palette and communicate ingredient transparency without commercial staging.",
+        "Document process and ingredient origin through editorial photography \u2014 behind-the-scenes sourcing imagery, botanical detail shots, and craft-focused visual content build authority and differentiate from mid-market wellness without sales language."
+      ],
+      "materials": "Uncoated paper and textile-quality substrates exclusively across all print and packaging touchpoints \u2014 linen, kraft, and uncoated card. Matte finishes only. No gloss lamination, no foil, no metallic finishes of any kind. The substrate's natural texture is a deliberate brand message: warmth and craft integrity communicated through touch before the eye processes the design. Metallic and gloss finishes are categorically prohibited as they signal traditional luxury rather than the restrained material integrity this aesthetic requires.",
+      "do_rules": [
+        "Hold saturation below 15\u201320% across all palette applications \u2014 Cream (#F5F1E8), Sage (#9CAF88), and Taupe (#8B8680) must remain within a 40\u201380% greyscale value range; tonal contrast and colour relativity create hierarchy and movement without saturation peaks.",
+        "Let negative space dominate every layout \u2014 maintain 50\u201360% of every page, screen, and packaging face as intentional empty space; this ratio is non-negotiable and communicates brand tier more efficiently than any graphic element.",
+        "Use Sabon at 3\u20135% generous tracking for all display type \u2014 the editorial serif at this tracking signals timelessness, luxury heritage, and restraint simultaneously; this typographic pairing is the single most important decision in the system.",
+        "Shoot all product photography in material context \u2014 always style with uncoated, natural surfaces (linen, stone, ceramic, dry botanical); the material environment must reinforce the palette and communicate ingredient transparency without commercial staging.",
+        "Document process and ingredient origin through editorial photography \u2014 sourcing imagery, botanical detail shots, and craft-focused visual content build authority and differentiate from mid-market wellness without any sales language; let the process image carry the positioning.",
+        "Deploy Sage Green (#9CAF88) sparingly and only as a botanical accent in editorial photography props, secondary packaging elements, and typographic accent moments \u2014 never as a dominant or structural colour in the system."
+      ],
+      "dont_rules": [
+        "Never allow botanical green above 20% saturation \u2014 at high saturation, sage reads as generic wellness branding (supplement packaging, yoga studio signage); restraint below this threshold is what separates the aesthetic from mid-market competitors.",
+        "Never use justified text blocks \u2014 justified text reads as corporate and institutional; ragged right with relaxed leading at 1.7\u20131.9x is the spatial signature of this aesthetic tier and must not be overridden for layout convenience.",
+        "Never use geometric sans-serif typefaces as body copy \u2014 geometric sans (Futura, Avenir, Gill Sans) reads as tech or fashion, not wellness heritage; Source Sans Pro's humanist warmth is load-bearing in the system's emotional positioning.",
+        "Never introduce lifestyle photography of people in active wellness contexts \u2014 women laughing, yoga poses, green smoothies, and golden-light outdoor scenes all signal mid-market wellness regardless of production quality; this visual code is categorically off-limits.",
+        "Never introduce a fourth colour beyond the approved palette (Cream, Sage, Taupe, and the conditional coastal blue exception), metallic accent, or gloss finish \u2014 any addition beyond the defined palette breaks the monochromatic tonal logic the entire positioning is built upon.",
+        "Never replace the primary cream field (#F5F1E8) with pure white (#FFFFFF) on any surface \u2014 pure white reads clinical rather than crafted and fundamentally undermines the material warmth the system is built to communicate."
+      ],
+      "benchmark_brands": [
+        {
+          "name": "Aesop",
+          "reference_note": "Reference specifically: the ratio of unlabelled negative space on packaging surfaces; the editorial portrait styling with botanical props held at low saturation; the wordmark's lowercase Sabon-adjacent serif tracked at generous spacing. Do not reference: retail store architecture (out of scope for this system)."
+        },
+        {
+          "name": "Susanne Kaufmann",
+          "reference_note": "Reference specifically: the educational ingredient editorial content format pairing process photography with sparse body copy; the warm taupe and cream packaging substrate and uncoated material choice; the founder-narrative positioning that treats sustainability as a luxury signal rather than a marketing claim."
+        },
+        {
+          "name": "Vintner's Daughter",
+          "reference_note": "Reference specifically: the refined product flatlay using a single-material surface (stone or linen) with extreme negative space held in-frame; the tight ingredient-specificity copy set in restrained serif at modest scale; the complete absence of visible lifestyle context in all product imagery."
+        }
+      ],
+      "visual_narrative": "The brand lives in the space between a well-worn linen cloth and late afternoon window light \u2014 unhurried, intelligent, and entirely uninterested in announcing itself. Every surface is a field of cream (#F5F1E8) with measured interruptions: a sage-green botanical fragment, a taupe rule, a restrained Sabon headline tracked to breathe. Layouts hold 50\u201360% open space not because they are unfinished, but because that openness is the most precise signal of value available. Photography moves close \u2014 ingredient texture, a hand, a ceramic surface \u2014 and light is cool and honest, never styled toward warmth. Sabon carries all headline moments at moderate scale and generous tracking; Source Sans Pro does the quiet work of body copy with relaxed leading that refuses to rush the reader. Packaging is uncoated, matte, and tactile. There are no metallic finishes, no saturated greens, no lifestyle moments. The consumer who understands this system recognises it immediately.",
+      "conflicts_resolved": "CONFLICT 01 \u2014 Photography warmth (Trend research vs. Theory brief): Trend research described broadly warm natural lighting referencing Aesop and Vintner's Daughter editorial tones; theory brief explicitly prohibited warm/golden-hour colour temperature as reading commercial. Resolution: Theory governs. Warm/golden styling has reached saturation in mid-market wellness; cool-to-neutral natural light is the differentiating premium signal. Warmth is delivered through material texture and cream/taupe palette, not photographic colour temperature. | CONFLICT 02 \u2014 Coastal/ocean palette (Osea reference) vs. Restricted palette logic: Trend research identified a Coastal Serenity Palette (soft blues, sandy beiges, pale cerulean) as a live market code; theory brief restricted palette to Cream/Sage/Taupe and explicitly warned against expansion beyond three tones. Resolution: Theory governs with a narrow exception. Coastal blue is excluded from the core palette. Where a brand has a genuine marine or coastal ingredient narrative, a single pale coastal blue (#B8C9CC approximate, below 15% saturation) may appear in photography prop styling or a secondary packaging line only \u2014 never in typography, primary surfaces, or digital UI. | CONFLICT 03 \u2014 Serif tracking (Trend research 'generous' vs. Theory 0\u20135%): Trend research identified generous tracking as a defining signal without specifying range; theory brief specified 0\u20135% for display. Resolution: Aligned with clarification. Both signals are compatible \u2014 generous in trend context means visually open relative to standard commercial settings, which maps precisely to the 3\u20135% range the theory specifies. The resolution is definitional: generous means the upper end of the theory range (4\u20135%), not extended tracking above 5% which would tip into decorative or fashion-adjacent territory."
+    }
+  },
+  "aggregate": {
+    "n_cases": 13,
+    "n_scored": 1,
+    "pipeline_errors": 12,
+    "mean_overall": 4.5,
+    "per_dimension_mean": {
+      "positioning_fit": 4.0,
+      "specificity": 5.0,
+      "coherence": 5.0,
+      "benchmark_validity": 4.0,
+      "actionability": 5.0
+    },
+    "auto_fail_count": 0,
+    "mean_latency_s": 188.8,
+    "mean_cost_usd": 0.02,
+    "mean_total_tokens": 41469.0
+  },
+  "sweep": [
+    {
+      "keyword": "quiet luxury wellness",
+      "signal": "premium",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 4,
+          "specificity": 5,
+          "coherence": 5,
+          "benchmark_validity": 4,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": false,
+          "internal_contradiction": false
+        },
+        "overall": 4.5,
+        "justification": "The system is committed and concrete \u2014 #1A1A1A ground at 60-70%, Bodoni Thin-Regular at 0.15em, Univers Light/Book body, matte-only materials with a single emboss accent, and measurable margins (140px digital, 70-100mm print, 65ch line length) \u2014 making it sharply executable. Le Labo, Augustinus Bader and Byredo are all real and broadly credible, though the chosen dark near-black 'withholding' direction is a defensible but somewhat aggressive read of 'quiet luxury wellness,' which more typically skews warm, pale and tactile rather than fully shadow-dominant \u2014 costing a point on positioning. The conflicts_resolved section is unusually rigorous and the do/don't rules are internally consistent with the palette, photography and materials throughout.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 32.8,
+        "agent_02": 28.1,
+        "agent_03": 64.1,
+        "agent_04": 63.7,
+        "total": 188.8
+      },
+      "cost": {
+        "llm_calls": 11,
+        "prompt_tokens": 32634,
+        "completion_tokens": 9015,
+        "total_tokens": 41649,
+        "cost_usd": 0.147,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "quiet luxury wellness",
+        "positioning_statement": "A dark, restrained editorial system that communicates scientific credibility and earned exclusivity through the deliberate absence of decoration \u2014 luxury that withholds rather than performs.",
+        "palette": [
+          {
+            "name": "Near-Black",
+            "hex_code": "#1A1A1A",
+            "role": "Primary dominant ground across all hero touchpoints \u2014 packaging, website backgrounds, campaign photography backgrounds",
+            "rationale": "Carries atmosphere and visual weight; IS the design, not merely a backdrop. Signals ultra-premium tier above accessible-premium benchmarks by occupying 60\u201370% of every composition as weighted negative space."
+          },
+          {
+            "name": "Matte Cream / Linen",
+            "hex_code": "#F5F3F0",
+            "role": "Primary typography colour and light editorial surface \u2014 inhabits negative space on dark grounds, appears on packaging label fields and as photography surface for product-only light treatments",
+            "rationale": "Bridges dark and light without introducing brightness or warmth excess. Keeps type legible and luminous on near-black ground without competing with the spatial atmosphere the dark field creates."
+          },
+          {
+            "name": "Warm Greige",
+            "hex_code": "#C4B8A8",
+            "role": "Single-use accent per composition only \u2014 applied to one element: a detail line, a secondary typographic element, or a subtle material texture visible in photography. Never used as background fill.",
+            "rationale": "Prevents clinical coldness without compromising restraint. Warmth exists in the details, not the ground \u2014 incorporating trend research on earthy tones while subordinating them to theory-governed dominance hierarchy."
+          }
+        ],
+        "photography_tones": "Low-key with warm single-source light emerging from shadow against a near-black (#1A1A1A) ground. Product surfaces reveal cream (#F5F3F0), linen, and matte stone tones where material texture is the subject. No bright highlights, no saturated colour, no warm gold fill. Skin tones in portraiture (if used) are desaturated and shadow-anchored, not luminous. Overall tonal register: dark, still, and materially honest.",
+        "typography": {
+          "display_typeface": "Bodoni (high-contrast Didone serif) \u2014 used for brand name, campaign headlines, and product names on packaging",
+          "body_typeface": "Univers (geometric sans-serif) \u2014 used for all supporting copy: ingredient lists, instruction text, UI copy, editorial body paragraphs",
+          "display_tracking": "0.10\u20130.20em letter-spacing (deliberate, unhurried; 0.15em preferred default for all display settings)",
+          "body_tracking": "0em\u20130.02em letter-spacing; line height 1.7\u00d7 \u2014 spacious but not loose",
+          "hierarchy_notes": "Display: Bodoni at Thin\u2013Regular weight range only \u2014 never Bold or Heavy; stroke contrast performs luxury without relying on scale or weight. Body: Univers at Light or Book weight only \u2014 rigorous geometric clarity reinforces scientific credibility. Never set body copy in any serif typeface. Display type set in Matte Cream (#F5F3F0) on near-black ground. One warm greige (#C4B8A8) secondary typographic element permitted per composition as the single accent instance."
+        },
+        "layout_approach": "Asymmetric editorial grid. Content occupies 30\u201340% of total composition area; 60\u201370% remains active near-black negative space. Print margins: 70\u2013100mm all sides on A4. Packaging: label information on maximum 35% of visible surface area. Digital: 140px minimum margins per side; line length capped at 65 characters. No visible containers, rule lines, borders, or framing devices \u2014 single elements float isolated and intentional within the dark field.",
+        "negative_space_rule": "Negative space is the primary design element \u2014 it is not empty, it is weighted. Dark space (#1A1A1A) carries atmosphere and signals the brand's confidence in restraint. The 60\u201370% negative space ratio must be measured before sign-off; if content exceeds 40% of composition area, elements must be removed until the ratio is restored. No element should crowd another.",
+        "photography_direction": [
+          "Low-key single-source lighting: one warm light source emerging from shadow; product or subject is partially lit and partially dissolved into the near-black (#1A1A1A) darkness \u2014 no flat studio lighting, no front-lit product shots, no fill light.",
+          "Compositional stillness: no motion, no lifestyle narrative, no human activity implied. Product or subject is an isolated object of contemplation, not a prop in a story \u2014 no hands, rituals, pouring, applying, or implied use.",
+          "Material honesty: where texture is the subject (ceramic, linen, matte glass, stone), macro proximity reveals grain and surface without decoration. Texture serves restraint, not spectacle \u2014 no botanical elements, plant matter, water droplets, or ingredient iconography.",
+          "Every product must be photographed against near-black (#1A1A1A) with a single warm sidelight source \u2014 the product appears to emerge from darkness, not sit in front of a background."
+        ],
+        "materials": "Matte finishes exclusively across all packaging and print collateral \u2014 no gloss laminate, no high-shine foil, no metallic ink, no foil colour of any kind. A single embossed or debossed element (wordmark or monogram) is permitted as the one tactile accent per packaging unit, replacing metallic colour entirely. Paper stocks: uncoated, high-gsm, with visible grain. Material textures permitted in photography: ceramic, linen, matte glass, stone \u2014 all serving restraint, not decoration.",
+        "do_rules": [
+          "Deploy near-black #1A1A1A as the dominant ground on all hero touchpoints \u2014 packaging, campaign hero imagery, website hero sections \u2014 so that restraint reads at first contact, before typography is absorbed.",
+          "Use Bodoni at Thin\u2013Regular weight with 0.10\u20130.20em tracking (default 0.15em) for all display text \u2014 allow the typeface's inherent stroke contrast to perform luxury; never compensate with weight or scale.",
+          "Limit each composition to one instance of the warm greige accent #C4B8A8 \u2014 one line, one detail, one texture \u2014 so its appearance reads as a considered decision rather than a decorative habit.",
+          "Photograph every product against near-black (#1A1A1A) with a single warm sidelight source \u2014 the product must appear to emerge from darkness, not sit in front of a background.",
+          "Maintain 60\u201370% negative space in every layout \u2014 measure this before sign-off; if content exceeds 40% of composition area, remove elements until the ratio is restored.",
+          "Apply matte finishes exclusively across all physical touchpoints and use only uncoated, high-gsm paper stocks with visible grain \u2014 the one permitted tactile accent is a single emboss or deboss of the wordmark or monogram, with no metallic ink or foil colour."
+        ],
+        "dont_rules": [
+          "Never use botanical greens, sage, or eucalyptus tones as palette colours \u2014 these are documented wellness clich\u00e9s that signal aspirational mid-tier positioning and actively undermine the ultra-premium territory this brand occupies.",
+          "Never use warm peach, lavender, coral, or rose gold in any colour application \u2014 these tones carry spa-retail associations and immediately relocate the brand to a lower tier; rose gold is explicitly prohibited as a colour signal even where trend research documents its presence in adjacent brands.",
+          "Never set body copy in serif typefaces \u2014 display serif plus body serif reads as undifferentiated and removes the hierarchical tension that signals a considered, dual-register design system.",
+          "Never introduce lifestyle photography \u2014 no hands, rituals, pouring, applying, or implied use. The product does not demonstrate its function through imagery; doing so would undermine brand confidence and tip the visual language into generic wellness content territory.",
+          "Never add decorative botanical illustration, line drawings, or ingredient iconography \u2014 these are direct signals of generic wellness branding and collapse tier perception regardless of how restrained the execution appears.",
+          "Never use gloss laminate, high-shine foil, metallic ink, or foil colour on any packaging or print collateral \u2014 the only tactile material accent permitted is a single embossed or debossed wordmark or monogram element."
+        ],
+        "benchmark_brands": [
+          {
+            "name": "Le Labo",
+            "reference_note": "Reference for packaging restraint: the typed-label system, the absence of colour branding, and the product-as-product honesty. Reference also for how near-absence of visual identity becomes the primary identity signal for informed audiences."
+          },
+          {
+            "name": "Augustinus Bader",
+            "reference_note": "Reference for editorial photography style: the near-white-to-dark tonal range in product photography, the deliberate use of material texture over lifestyle staging, and the pairing of serif display type with clean sans-serif body copy in digital environments."
+          },
+          {
+            "name": "Byredo",
+            "reference_note": "Reference for dark spatial direction: the deployment of near-black across packaging and digital presence, the isolated product photography against dark grounds, and the invisible grid structure that makes compositions read as intuitive rather than constructed."
+          }
+        ],
+        "visual_narrative": "The brand exists in near-darkness \u2014 not as absence, but as intention. Every touchpoint opens on a near-black field (#1A1A1A) from which a single product, a single word, a single material surface emerges into partial light. Content occupies 30\u201340% of each composition; 60\u201370% is weighted dark space that is itself the primary signal of confidence and resource. Bodoni display type \u2014 tracked at 0.15em, held at Regular weight, set in matte cream (#F5F3F0) \u2014 floats in that field, its stroke contrast performing luxury that size and weight would undo. One warm greige detail (#C4B8A8) per composition: a single line, a surface grain, a secondary label element \u2014 chosen, not accumulated. Photography is low-key, single-source, and still. Matte everywhere. No gloss, no botanical reference, no wellness ritual implied. This brand does not explain itself, and every spatial, chromatic, and typographic decision confirms that position.",
+        "conflicts_resolved": "CONFLICT 1 \u2014 Palette temperature (warm earthy tones vs. dark near-black ground): Market trend research documented warm taupe, greige, off-white, and soft sage as dominant signals across benchmark brands. Design theory specified near-black #1A1A1A as primary ground and identified warm botanical greens and warm whites as tier-undermining signals. RESOLUTION: Theory governs palette ground; trend governs accent selection. Near-black is the primary ground as it signals a tier above accessible-premium benchmarks. Warm greige #C4B8A8 and matte cream #F5F3F0 are incorporated as secondary and accent palette \u2014 warmth exists in the details, not the ground. | CONFLICT 2 \u2014 Botanical and organic elements (trend inclusion vs. theory prohibition): Trend research identified botanical and organic visual elements as a core visual code across quiet luxury wellness brands. Theory brief explicitly prohibited botanical elements as tier-undermining wellness clich\u00e9s. RESOLUTION: Theory governs categorically. Botanical elements are excluded entirely. Material texture (linen, stone, ceramic, matte glass) from trend research is retained as the permissible version of natural material reference \u2014 it serves restraint rather than wellness clich\u00e9. | CONFLICT 3 \u2014 Rose gold and brushed metallics (trend accent vs. theory prohibition): Trend research documented rose gold and brushed metallics as secondary colour signals in the quiet luxury wellness sector. Theory brief prohibited metallics as signals of aspirational rather than established luxury, with one narrow exception. RESOLUTION: Theory governs on colour; trend governs on tactile materiality. Rose gold as a colour signal is excluded. The trend research observation is honoured only through the tactile dimension: a single emboss or deboss on packaging surface satisfies material reference without any metallic ink or foil colour association."
+      }
+    },
+    {
+      "keyword": "clinical skincare science",
+      "signal": "clinical",
+      "pipeline_error": "InternalServerError: litellm.InternalServerError: AnthropicException - [Errno 11001] getaddrinfo failed. Handle with `litellm.InternalServerError`.",
+      "cost": {
+        "llm_calls": 11,
+        "prompt_tokens": 33885,
+        "completion_tokens": 7404,
+        "total_tokens": 41289,
+        "cost_usd": 0.1066,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "bold brutalist streetwear",
+      "signal": "bold",
+      "pipeline_error": "InternalServerError: litellm.InternalServerError: AnthropicException - [Errno 11001] getaddrinfo failed. Handle with `litellm.InternalServerError`.",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "warm artisanal bakery",
+      "signal": "warm",
+      "pipeline_error": "InternalServerError: litellm.InternalServerError: AnthropicException - [Errno 11001] getaddrinfo failed. Handle with `litellm.InternalServerError`.",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "affordable everyday essentials",
+      "signal": "accessible",
+      "pipeline_error": "InternalServerError: litellm.InternalServerError: AnthropicException - [Errno 11001] getaddrinfo failed. Handle with `litellm.InternalServerError`.",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "dark luxury fragrance",
+      "signal": "premium",
+      "pipeline_error": "InternalServerError: litellm.InternalServerError: AnthropicException - [Errno 11001] getaddrinfo failed. Handle with `litellm.InternalServerError`.",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "playful kids edtech",
+      "signal": "accessible",
+      "pipeline_error": "InternalServerError: litellm.InternalServerError: AnthropicException - [Errno 11001] getaddrinfo failed. Handle with `litellm.InternalServerError`.",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "minimalist scandinavian home",
+      "signal": "premium",
+      "pipeline_error": "InternalServerError: litellm.InternalServerError: AnthropicException - [Errno 11001] getaddrinfo failed. Handle with `litellm.InternalServerError`.",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "high-energy fitness brand",
+      "signal": "bold",
+      "pipeline_error": "InternalServerError: litellm.InternalServerError: AnthropicException - [Errno 11001] getaddrinfo failed. Handle with `litellm.InternalServerError`.",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "heritage craft whiskey",
+      "signal": "premium",
+      "pipeline_error": "InternalServerError: litellm.InternalServerError: AnthropicException - [Errno 11001] getaddrinfo failed. Handle with `litellm.InternalServerError`.",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "modern fintech app",
+      "signal": "accessible",
+      "pipeline_error": "InternalServerError: litellm.InternalServerError: AnthropicException - [Errno 11001] getaddrinfo failed. Handle with `litellm.InternalServerError`.",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "earthy sustainable fashion",
+      "signal": "warm",
+      "pipeline_error": "InternalServerError: litellm.InternalServerError: AnthropicException - [Errno 11001] getaddrinfo failed. Handle with `litellm.InternalServerError`.",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "premium electric vehicle",
+      "signal": "premium",
+      "pipeline_error": "InternalServerError: litellm.InternalServerError: AnthropicException - [Errno 11001] getaddrinfo failed. Handle with `litellm.InternalServerError`.",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "generated_at": "2026-06-19T19:08:52",
+  "judge_model": "anthropic/claude-opus-4-8",
+  "wall_clock_s": 26.8,
+  "held_out_benchmark": {
+    "keyword": "quiet luxury wellness",
+    "pipeline_error": "ModuleNotFoundError: No module named 'tavily'"
+  },
+  "aggregate": {
+    "n_cases": 13,
+    "n_scored": 0,
+    "pipeline_errors": 13,
+    "judge_errors": 0,
+    "reliable": false,
+    "mean_overall": null,
+    "per_dimension_mean": {
+      "positioning_fit": null,
+      "specificity": null,
+      "coherence": null,
+      "benchmark_validity": null,
+      "actionability": null
+    },
+    "auto_fail_count": 0,
+    "mean_latency_s": null,
+    "mean_cost_usd": 0.0,
+    "mean_total_tokens": null
+  },
+  "sweep": [
+    {
+      "keyword": "quiet luxury wellness",
+      "signal": "premium",
+      "pipeline_error": "ModuleNotFoundError: No module named 'tavily'",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "clinical skincare science",
+      "signal": "clinical",
+      "pipeline_error": "ModuleNotFoundError: No module named 'tavily'",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "bold brutalist streetwear",
+      "signal": "bold",
+      "pipeline_error": "ModuleNotFoundError: No module named 'tavily'",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "warm artisanal bakery",
+      "signal": "warm",
+      "pipeline_error": "ModuleNotFoundError: No module named 'tavily'",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "affordable everyday essentials",
+      "signal": "accessible",
+      "pipeline_error": "ModuleNotFoundError: No module named 'tavily'",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "dark luxury fragrance",
+      "signal": "premium",
+      "pipeline_error": "ModuleNotFoundError: No module named 'tavily'",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "playful kids edtech",
+      "signal": "accessible",
+      "pipeline_error": "ModuleNotFoundError: No module named 'tavily'",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "minimalist scandinavian home",
+      "signal": "premium",
+      "pipeline_error": "ModuleNotFoundError: No module named 'tavily'",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "high-energy fitness brand",
+      "signal": "bold",
+      "pipeline_error": "ModuleNotFoundError: No module named 'tavily'",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "heritage craft whiskey",
+      "signal": "premium",
+      "pipeline_error": "ModuleNotFoundError: No module named 'tavily'",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "modern fintech app",
+      "signal": "accessible",
+      "pipeline_error": "ModuleNotFoundError: No module named 'tavily'",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "earthy sustainable fashion",
+      "signal": "warm",
+      "pipeline_error": "ModuleNotFoundError: No module named 'tavily'",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    },
+    {
+      "keyword": "premium electric vehicle",
+      "signal": "premium",
+      "pipeline_error": "ModuleNotFoundError: No module named 'tavily'",
+      "cost": {
+        "llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "cost_available": true
+      },
+      "timings": {}
+    }
+  ]
+}

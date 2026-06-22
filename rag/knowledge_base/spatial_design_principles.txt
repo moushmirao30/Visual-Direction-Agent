@@ -1,0 +1,157 @@
+SPATIAL DESIGN AND LAYOUT PRINCIPLES
+Source: Editorial Design, Swiss Grid System, Brand Layout Research — Multi-Aesthetic Reference
+Category: Design Theory — Spatial / Layout
+
+================================================================================
+NEGATIVE SPACE — FOUNDATIONAL PRINCIPLE
+================================================================================
+
+Negative space is not absence — it IS the design.
+
+THE CORE PSYCHOLOGY:
+Density communicates: everything here is important (which means nothing is).
+Openness communicates: we had the confidence to leave room.
+
+SPACE AS A TIER SIGNAL:
+- Budget/mass market: Maximum information density, no space "wasted"
+- Mid-market: Some breathing room, content tends to fill available area
+- Premium: Space is the primary design element; content is placed, not filled in
+- Luxury/ultra-premium: Space vastly outweighs content; elements float in a field
+
+QUIET LUXURY SPATIAL RATIO:
+Print: Content occupies 40–55% of page. Rest is margin and breathing room.
+Digital: Wide margins (120–160px each side), line length 60–70 characters max.
+Packaging: Label content on 30–40% of surface area maximum.
+
+================================================================================
+GRID SYSTEMS
+================================================================================
+
+THE SWISS GRID (Müller-Brockmann):
+Establish a consistent grid, then use it to create purposeful tension.
+Breaking the grid intentionally = editorial confidence.
+Breaking the grid accidentally = lack of craft.
+
+12-COLUMN GRID: Maximum flexibility — divides into 2, 3, 4, or 6 columns.
+MODULAR GRID: Equal rectangular modules — useful for packaging and systematic hierarchy.
+ASYMMETRIC GRID (1/3 + 2/3): Creates editorial tension, feels considered rather than templated.
+
+MARGIN RATIOS:
+Traditional book: Top < sides < bottom (bottom largest for optical correction)
+Premium editorial: All margins generous — minimum 15% of page width on any side
+Digital: Consistent side margins, generous top padding on sections
+
+================================================================================
+LAYOUT PATTERNS BY AESTHETIC TERRITORY
+================================================================================
+
+--- QUIET LUXURY / PREMIUM WELLNESS ---
+Single wide column or asymmetric 2-column. Generous margins.
+Thin horizontal rules as section dividers — never borders or boxes.
+Single image per spread, large. Typography floats with space around it.
+Photography: Material, texture, surface. Hands not faces. Low-key lighting.
+Key signal: One sentence of copy on a half-page amplifies meaning through restraint.
+
+--- HIGH FASHION / EDITORIAL ---
+Grid is intentionally broken — overlapping text and image is the point.
+Full-bleed photography, text over image.
+Extreme size contrast: 96px headline / 10px caption in the same column.
+White space used dramatically — long empty column next to dense content.
+Photography: Portrait, full-body, high contrast. People wearing the work.
+
+--- DARK LUXURY ---
+Single elements floating in dark fields. No grid visible.
+Product isolation: one object in a 2/3 empty frame.
+Minimal text, positioned low or edge-anchored.
+Photography: Low-key, single warm light source. Product emerging from shadow.
+Key principle: The darker the background, the more powerful the isolation.
+
+--- BRUTALIST / DECONSTRUCTED ---
+Anti-grid or hyper-visible grid (explicit grid lines as design elements).
+Overlapping, bleeding, clashing elements — intentional visual friction.
+Content can overrun containers, bleed edges, be cut by the frame.
+Typography as graphic mass: type fills space as shape, not just as information.
+Photography: Raw, un-retouched, documentary. Or deliberately artificial.
+
+--- TECH / DIGITAL PRODUCT ---
+8px or 4px base grid — consistency is the value signal.
+Clear visual hierarchy through size and weight, not decorative elements.
+Components repeat consistently (cards, buttons, input fields) — variation is functional, not stylistic.
+White space is systematic: identical padding within components, consistent gap tokens.
+Photography: Clean product UI or lifestyle imagery, never stock photos of handshakes.
+
+--- ARTISAN / HERITAGE CRAFT ---
+Slightly irregular layout suggests handmade — not chaotic, but not machine-perfect.
+Labels: information grouped in logical zones with clear internal margins.
+Texture and material in the layout (paper grain, stamp effects, letterpress depth).
+Photography: Process photography, hands at work, raw ingredients. Imperfect and real.
+Typography positioning: anchored to a baseline grid but with human variation.
+
+--- STREETWEAR / YOUTH CULTURE ---
+Maximalist when needed — density and layering read as energy and reference.
+Type as primary visual element — at sizes that dominate the composition.
+Photography: Cropped unconventionally — cut off heads, show details, break rules.
+Print considerations: Legibility at 5cm (embroidery, badge, tag) is non-negotiable.
+Grid can be used or discarded — the choice itself communicates attitude.
+
+--- NORDIC / SCANDINAVIAN FUNCTIONAL ---
+Strict grid adherence. Functional symmetry preferred.
+Generous white space but less dramatic than luxury — space serves the product.
+Photography: Clean product on white or light ground. Natural light. No excess.
+Typography always aligned. No orphans or runts tolerated.
+Layout communicates: this was designed with care, not flair.
+
+--- CULTURAL INSTITUTION / MUSEUM ---
+Information hierarchy over aesthetic drama — wayfinding and legibility first.
+Large photography + clear caption hierarchy + generous margins.
+Grid must scale from wayfinding signage to exhibition catalogue.
+Layout is neutral and authoritative — it does not compete with the exhibits.
+Color in layout is sparse: usually black + institution accent colour only.
+
+================================================================================
+VISUAL WEIGHT AND BALANCE
+================================================================================
+
+WHAT CREATES VISUAL WEIGHT:
+Size (larger = heavier), darkness (darker = heavier), density (more elements = heavier),
+isolation (single element in empty space reads as surprisingly heavy), position (lower = heavier).
+
+SYMMETRICAL BALANCE: Equal weight on both sides of a central axis.
+Signal: Traditional, institutional, formal, stable. Used in classic luxury and heritage.
+
+ASYMMETRICAL BALANCE: Unequal elements in equilibrium through size/position trade-offs.
+Signal: Dynamic, editorial, contemporary. One heavy element offset by several lighter ones.
+
+EMPHASIS THROUGH ISOLATION:
+Most powerful quiet luxury and dark luxury technique.
+Single product in a field of space — isolation creates reverence.
+The eye goes immediately to the isolated element, then rests.
+
+================================================================================
+COMPOSITION PRINCIPLES FOR BRAND PHOTOGRAPHY
+================================================================================
+
+RULE OF THIRDS: Key elements at intersection points — more dynamic than centred.
+HORIZON PLACEMENT: High (2/3 up) emphasises foreground. Low (1/3 up) emphasises sky/space.
+PROXIMITY: Elements placed close = related. Elements with space around them = standalone/important.
+TEXTURE AND SURFACE: Material surface extends tactile brand language.
+
+Surface guide by aesthetic:
+- Quiet luxury / wellness: Stone, limestone, linen, matte ceramic, raw paper, brushed marble
+- Dark luxury: Black matte, velvet, obsidian, aged metal, dark timber
+- Artisan/craft: Raw wood, rough concrete, kraft paper, terracotta, worn leather
+- Fashion/editorial: Seamless studio, draped fabric, architectural backgrounds
+- Tech: Clean white surface, device screens, minimal desks
+- Streetwear: Urban concrete, chain-link, raw wall, asphalt
+
+================================================================================
+THIN RULES AND LINE WORK
+================================================================================
+
+Thin rules (0.25–0.5pt) are a signature of editorial and premium brand design.
+Functions: Section division, grid reference, rhythm in sparse layouts, signals craft precision.
+Rules of use: Consistent weight throughout, always grid-aligned, used as dividers not frames,
+colour matches depth colour of palette (not black).
+
+Used across: Quiet luxury, editorial, cultural institution.
+Avoid in: Brutalist, streetwear, tech (too decorative), warm/artisan (too formal).

@@ -1,0 +1,1532 @@
+{
+  "generated_at": "2026-06-19T20:37:49",
+  "judge_model": "anthropic/claude-opus-4-8",
+  "wall_clock_s": 3220.4,
+  "held_out_benchmark": {
+    "keyword": "quiet luxury wellness",
+    "excluded_source": "auru_brand_research.txt",
+    "convergence": {
+      "palette_match": 4,
+      "typography_match": 5,
+      "positioning_match": 5,
+      "benchmark_overlap": 3,
+      "convergence_overall": 4.25,
+      "matched_elements": [
+        "Warm cream base (#F5F1ED vs #F5F1E8) nearly identical",
+        "Warm taupe structural mid-tone (#C4B8AD vs #D8C7AE)",
+        "Warm near-black charcoal anchor (#2A2622 vs #2B2B2B), explicitly brown-black not blue-black",
+        "Low-saturation warm neutral character with explicit exclusion of botanical green/peach/coral",
+        "Editorial old-style serif display (Freight Text Pro) + humanist sans body (Source Sans Pro)",
+        "Generous tracking on headings, standard/tight on body",
+        "Quiet luxury through restraint / quality through absence positioning",
+        "Negative space as material ('space is never neutral', warm field)",
+        "Material-focused close-up photography, no faces/lifestyle/movement, diffuse morning light",
+        "Matte/uncoated finishes, no gloss/foil/lacquer",
+        "Aesop named as benchmark with matched positioning",
+        "Explicit avoidance of clinical coldness and geometric sans"
+      ],
+      "missed_elements": [
+        "No explicit sage grey-green secondary structure tone in the active palette (only mentioned as excluded eucalyptus in photography)",
+        "Did not name Le Labo or Bamford",
+        "Augustinus Bader and Goop substituted for Le Labo/Bamford (similar tier but Goop is a slightly looser fit)"
+      ],
+      "justification": "The AI independently converged on nearly the exact palette hex values and character, an identical typographic class (old-style serif + humanist sans), and the same quiet-luxury-through-restraint thesis with matching photography and material rules. The main divergence is the absence of an active sage grey-green tone (treated only as an excluded photographic reference) and benchmark selection: Aesop is shared, but Le Labo and Bamford are replaced by Augustinus Bader and Goop \u2014 same luxury-wellness register but not the same boutique-perfumery references.",
+      "judge_model": "anthropic/claude-opus-4-8",
+      "error": null
+    },
+    "timings": {
+      "agent_01": 36.5,
+      "agent_02": 60.2,
+      "agent_03": 74.5,
+      "agent_04": 58.6,
+      "total": 229.8
+    },
+    "cost": {
+      "llm_calls": 11,
+      "prompt_tokens": 32817,
+      "completion_tokens": 9873,
+      "total_tokens": 42690,
+      "cost_usd": 0.1592,
+      "cost_available": true
+    },
+    "report": {
+      "aesthetic_keyword": "quiet luxury wellness",
+      "positioning_statement": "Craft-authoritative restraint: a material-forward aesthetic communicating premium wellness through warm understatement, humanist typography, and editorial confidence \u2014 refusing botanical clich\u00e9 and clinical minimalism in equal measure.",
+      "palette": [
+        {
+          "name": "Warm Off-White",
+          "hex_code": "#F5F1ED",
+          "role": "Universal primary ground \u2014 dominant field across all digital surfaces, print layouts, and packaging",
+          "rationale": "Structural warmth that signals handmade quality and craft authenticity; never pure white, its warmth is the brand's skin \u2014 present even when no other element occupies the field"
+        },
+        {
+          "name": "Warm Taupe",
+          "hex_code": "#C4B8AD",
+          "role": "Secondary structural mediating tone \u2014 typographic supporting elements, borders, container lines, and subtle texture references",
+          "rationale": "Bridges the warm off-white ground and deep charcoal without harshness or contrast excess; the visual workhorse that holds the system together across all compositional scales"
+        },
+        {
+          "name": "Deep Charcoal",
+          "hex_code": "#2A2622",
+          "role": "Accent \u2014 primary typography, critical emphasis, and select photographic shadow grounding exclusively; never used as background fill",
+          "rationale": "Brown-black undertone (not blue-black) preserves systemic warmth while delivering legibility hierarchy; its warmth differentiates it from clinical or corporate black"
+        }
+      ],
+      "photography_tones": "Soft, low-saturation warm neutrals drawn from the same achromatic family as the brand palette \u2014 cream, linen, raw sand, and warm shadow. No cool-toned environments under any circumstances. Light must appear native and diffuse, never dramatic or directional. All backgrounds and surfaces in photography must echo #F5F1ED, #C4B8AD, and warm shadow tones rather than contrast against them. Botanical greens are excluded; if a botanical reference is editorially required, it may appear only as a deeply desaturated near-neutral eucalyptus tone, never as a saturated green.",
+      "typography": {
+        "display_typeface": "Freight Text Pro (Humanist Old Style Serif) \u2014 used for all headlines, campaign wordmarks, and primary editorial hierarchy; set in mixed case only, never all-caps at display scale",
+        "body_typeface": "Source Sans Pro (Humanist Sans-Serif) \u2014 used for all supporting copy, UI text, ingredient callouts, and secondary hierarchy; high x-height and open counters provide legibility and warmth without ornamentation",
+        "display_tracking": "+0.08em letter-spacing \u2014 mid-point of the +0.05\u20130.15em editorial range; signals unhurried confidence without excess",
+        "body_tracking": "0em tracking (standard) with 1.8x line-height leading \u2014 standard tracking preserves readability; generous leading delivers spatial luxury at typographic scale",
+        "hierarchy_notes": "Lowercase or mixed-case wordmark settings are endorsed and must be executed exclusively in Freight Text Pro (humanist serif), never in Source Sans Pro (body sans-serif). Lowercase serif at wordmark scale delivers cultural accessibility without sacrificing editorial authority. No third typeface may be introduced except hand-drawn botanical illustration callouts used sparingly in packaging contexts only. No geometric sans-serif typefaces (Futura, DIN, Helvetica) at any scale. No tight-tracked all-caps sans-serif under any circumstances."
+      },
+      "layout_approach": "Asymmetric functional grid with 40\u201345% content occupancy of total page or surface area. The remaining 55\u201360% is active warm ground \u2014 never empty void but warm field holding visual weight through palette presence (#F5F1ED or #C4B8AD). Ragged-right text alignment throughout all layouts; never justified. The ragged edge signals hand-set, considered composition over mechanical uniformity. Content exceeding 45% occupancy must be edited \u2014 not margins reduced.",
+      "negative_space_rule": "Space is never neutral \u2014 it is always warm, filled with #F5F1ED (Warm Off-White) or #C4B8AD (Warm Taupe) ground. Pure white (#FFFFFF) and cool grey are prohibited on all brand-controlled surfaces. Margins are generous: 120\u2013150px on digital layouts, 40\u201355mm on print. Negative space communicates quiet confidence \u2014 'we have nothing to prove' \u2014 not absence or minimalism for its own sake.",
+      "photography_direction": [
+        "Soft, diffuse natural light only \u2014 no dramatic directional lighting, no studio flash signatures, no high-key brightness. Light must appear as though the subject exists within it naturally: morning window light, overcast diffusion, or shaded natural environments are the reference conditions.",
+        "Single warm low-key light source with material emergence \u2014 product, ingredient, or hand-handled object emerges from soft shadow into light. Shadow is a compositional partner, not a problem to eliminate. The subject is never harshly lit against a plain background.",
+        "Material-focused, not lifestyle \u2014 photograph texture of product surface, raw ingredients in hand or on natural substrate, and tactile packaging detail. No models in aspirational scenes, no performance or movement contexts, no wellness-lifestyle compositions (smoothies, yoga mats, laughing subjects, fresh produce arrangements). The product and its material reality are the subject.",
+        "All photography surfaces and backgrounds must echo the brand palette \u2014 cream, linen, raw sand, warm shadow tones drawn from the #F5F1ED\u2013#C4B8AD\u2013#2A2622 family. No cool-toned environments, no stark white backgrounds, no high-contrast backdrops."
+      ],
+      "materials": "Packaging: matte finishes primary across all physical touchpoints \u2014 no gloss, no metallic foil, no high-shine laminate under any circumstances. Embossing or debossing preferred for tactile premium communication. Paper stocks: uncoated only \u2014 linen texture, warm natural kraft, warm white. Material must communicate through touch, not announce itself visually. Digital surfaces: Warm Off-White (#F5F1ED) as the native digital ground; pure white (#FFFFFF) is prohibited in all brand-controlled digital contexts. Any production specification introducing gloss, foil, or metallic must be escalated for creative director approval and explicitly justified against this direction.",
+      "do_rules": [
+        "Use Warm Off-White (#F5F1ED) as the universal ground on every surface \u2014 digital, print, and packaging. It is not background; it is the brand's skin. Every composition begins from this warm base.",
+        "Pair Freight Text Pro (humanist serif) with Source Sans Pro (humanist sans-serif) consistently and exclusively across the entire typographic system. Introduce no third typeface except carefully considered hand-drawn botanical illustration callouts used sparingly in packaging only.",
+        "Maintain 40\u201345% content occupancy on all layouts. Before finalising any composition, calculate the actual content-to-space ratio. If content exceeds 45%, edit content \u2014 never reduce margins or negative space.",
+        "Photograph material texture, not lifestyle. Every photography brief must specify the material being featured (product surface, ingredient, packaging detail, hand-handling) before lighting and styling are discussed.",
+        "Apply matte finishes and uncoated stocks across all physical touchpoints. Any production specification introducing gloss, foil, or metallic must be escalated for creative director approval and justified against this direction.",
+        "Set all display typography in mixed case using Freight Text Pro at +0.08em tracking. Wordmarks and campaign headlines in lowercase or mixed case are endorsed; all-caps at display scale is prohibited."
+      ],
+      "dont_rules": [
+        "Do not use botanical greens, lavender, peach, or high-saturation pastels in any brand palette context \u2014 not in packaging, social, campaign backgrounds, or digital UI. These are wellness-category clich\u00e9s that signal mass-market positioning and directly undermine the quiet luxury tier.",
+        "Do not use geometric sans-serif typefaces (Futura, DIN, Helvetica) at any scale. These read as tech-corporate or clinical minimalist, contradicting humanist warmth and craft authenticity. Tight-tracked all-caps sans-serif at display scale is prohibited under all circumstances.",
+        "Do not use pure white (#FFFFFF) as any brand surface in any brand-controlled context. Pure white reads as clinical or mass-market digital. Every white surface must be the designated Warm Off-White (#F5F1ED) or warmer.",
+        "Do not compose lifestyle photography featuring aspirational scenes, active subjects, or environmental performance contexts. No laughing subjects, no movement shots, no aspirational wellness props (smoothies, yoga mats, fresh produce arrangements). These belong to mass-market wellness visual language.",
+        "Do not introduce multiple bold typefaces at competing display scales, tight tracking, or dense layout compositions. If a layout feels dense, remove content before adjusting type scale. Dense, competing typographic hierarchy reads as youth-expressive or tech-forward \u2014 the antithesis of unhurried authoritative quiet luxury.",
+        "Do not execute wordmarks or brand headlines in Source Sans Pro (humanist sans-serif). Lowercase or mixed-case wordmarks must be set exclusively in Freight Text Pro (humanist serif). Sans-serif lowercase at wordmark scale reads as lifestyle-casual rather than editorial-premium."
+      ],
+      "benchmark_brands": [
+        {
+          "name": "Augustinus Bader",
+          "reference_note": "Reference the minimalist product photography approach specifically: clinical precision expressed through restraint rather than overt scientific visual language. The 'Cell Care is the New Self-Care' campaign's positioning of efficacy as understated confidence, not performance. Do not reference their cooler blue-toned palette \u2014 adapt all references to the warmer #F5F1ED\u2013#2A2622 palette specified in this direction."
+        },
+        {
+          "name": "Aesop",
+          "reference_note": "Reference specifically the editorial flatlay composition approach: intentional asymmetric arrangement of ritual objects, open-book and journal styling, and ragged-right editorial text hierarchy. Reference their apothecary packaging matte finish execution as the physical material benchmark. Do not reference their typographic density on packaging \u2014 this system is more spatially generous at 40\u201345% content occupancy."
+        },
+        {
+          "name": "Goop",
+          "reference_note": "Reference specifically the unretouched, natural-light photography standard and earth-tone palette application across digital editorial. Their treatment of generous whitespace in long-form editorial layouts is the spatial benchmark for this system's digital direction. Do not reference their occasional high-contrast colour campaigns or product placement in lifestyle contexts."
+        }
+      ],
+      "visual_narrative": "The brand exists in a register of considered quietness \u2014 not silence, but the specific stillness of a room where nothing is superfluous. Every surface begins from Warm Off-White (#F5F1ED), a ground that is never blank but always present, carrying the brand's warmth even when nothing else occupies the field. Freight Text Pro moves across that ground with unhurried confidence \u2014 mixed case, tracked at +0.08em, never announcing itself but impossible to mistake for anything casual. Source Sans Pro holds the secondary tier with proportional warmth, its open counters and 1.8x leading creating the sensation of time slowing. Photography does not perform wellness \u2014 it reveals material reality: a product emerging from soft shadow, a hand-held ingredient on raw linen, texture captured in diffuse morning light. Nothing is styled to aspirational excess; everything is edited to essential presence. The system refuses botanical green, lavender, lifestyle imagery, and geometric sans-serif not as restrictions but as a declaration: true luxury in this space is the refusal to prove itself through the category's own visual vocabulary.",
+      "conflicts_resolved": "CONFLICT 1 \u2014 Botanical Green as Accent Colour: Trend research identifies sage green and muted eucalyptus as consistent accent colours across benchmark brands (Aesop, Anima Mundi, Goop, Olaplex), establishing them as category visual code. Design theory explicitly identifies high-saturation botanical green as a wellness clich\u00e9 diluting the luxury signal. RESOLUTION: Theory governs. Botanical green is excluded from the brand palette entirely. If botanical reference is editorially necessary (ingredient callout, single-campaign context), it may appear in photography only as a deeply desaturated near-neutral tone \u2014 never as a palette colour. CONFLICT 2 \u2014 Lowercase Wordmarks and Accessible Type Sensibility: Market research identifies lowercase wordmarks as a credible luxury-wellness signal (Olaplex, Aesop) communicating accessible contemporary calm. Design theory specifies humanist serif at display and wordmark scale and warns against humanist sans-serif at wordmark application reading as casual. RESOLUTION: Both signals are honoured through execution specification. Lowercase and mixed-case wordmark settings are endorsed as market-relevant. However, execution must be in Freight Text Pro (humanist serif), not Source Sans Pro (body sans-serif). Lowercase serif at wordmark scale delivers accessibility without sacrificing editorial authority. Typeface classification governs; case convention follows market practice."
+    }
+  },
+  "aggregate": {
+    "n_cases": 13,
+    "n_scored": 12,
+    "pipeline_errors": 1,
+    "judge_errors": 0,
+    "reliable": true,
+    "mean_overall": 3.4,
+    "per_dimension_mean": {
+      "positioning_fit": 4.75,
+      "specificity": 5.0,
+      "coherence": 4.75,
+      "benchmark_validity": 3.5,
+      "actionability": 5.0
+    },
+    "auto_fail_count": 6,
+    "mean_latency_s": 221.22,
+    "mean_cost_usd": 0.16,
+    "mean_total_tokens": 51821.23
+  },
+  "sweep": [
+    {
+      "keyword": "quiet luxury wellness",
+      "signal": "premium",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 4,
+          "specificity": 5,
+          "coherence": 4,
+          "benchmark_validity": 2,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": false,
+          "internal_contradiction": false
+        },
+        "overall": 3.95,
+        "justification": "Specificity and actionability are excellent: committed hexes (#F5F3F0, #8B8678), named typefaces with +60/+15 em tracking rules, 45/55 content ratio, 80px/40px margins, and unambiguous do/don't rules a junior could execute without questions. Positioning largely lands premium, though the cool-grading-only mandate is a defensible but debatable reading of 'quiet luxury wellness,' and there is a soft tension between prohibiting all warmth in photography while permitting Burnt Sienna and citing 'warmth without sentimentality' in the ivory rationale (acknowledged but not a hard contradiction). Benchmarks are the weak point: Aesop is genuinely on-aesthetic, but Jacquemus is a loud, playful fashion brand that contradicts the 'restraint over gesture' thesis, and Goop is mid-market wellness-lifestyle \u2014 the very category coding this brief explicitly differentiates against \u2014 making two of three benchmarks off-territory despite being real.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 34.8,
+        "agent_02": 54.1,
+        "agent_03": 74.7,
+        "agent_04": 72.8,
+        "total": 236.4
+      },
+      "cost": {
+        "llm_calls": 11,
+        "prompt_tokens": 37700,
+        "completion_tokens": 12318,
+        "total_tokens": 50018,
+        "cost_usd": 0.1789,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "quiet luxury wellness",
+        "positioning_statement": "An ultra-premium wellness identity built on spatial restraint, desaturated authority, and editorial confidence \u2014 communicating that true wellbeing requires no decoration, no persuasion, and no noise.",
+        "palette": [
+          {
+            "name": "Soft Ivory",
+            "hex_code": "#F5F3F0",
+            "role": "Primary background field; dominant surface across all layouts, packaging, and digital environments",
+            "rationale": "Carries warmth without sentimentality; avoids clinical white brightness; functions as breathing architecture and aligns with off-white parchment/cream trend signals while maintaining theoretical requirement for non-sentimental warmth"
+          },
+          {
+            "name": "Warm Taupe",
+            "hex_code": "#8B8678",
+            "role": "Secondary tone for supporting type, border details, and subtle compositional anchoring",
+            "rationale": "Bridges warmth of trend research with theory's requirement to avoid warmth clich\u00e9s; reads as sophisticated and precise rather than cosy; replaces the category-coding liability of sage green and botanical accents"
+          },
+          {
+            "name": "Deep Charcoal",
+            "hex_code": "#2B2B2B",
+            "role": "Authority anchor for primary display type, key UI elements, and packaging text",
+            "rationale": "Provides contrast without aggression; communicates precision and restraint; replaces trend-generic sage green and soft peach signals that activate mid-market wellness category coding"
+          },
+          {
+            "name": "Burnt Sienna",
+            "hex_code": "#8B4513",
+            "role": "Seasonal campaign accent only; maximum 5% palette presence; never in core brand system, logo, packaging primary surface, or recurring UI elements",
+            "rationale": "Engages Itten's Contrast of Saturation principle; the near-neutral primary palette allows this single understated warm element to carry disproportionate visual weight when sparingly deployed in seasonal work only"
+          }
+        ],
+        "photography_tones": "Desaturated, cool-leaning natural light governing all photographic grading. Tonal register: blues, desaturated greys, and muted greens. High-key exposure without overexposure. Soft, directional shadows. Warm golden-hour amber grading is expressly prohibited \u2014 cool-neutral grading achieves meditative calm while maintaining visual inaccessibility required for ultra-premium positioning. Photography palette must echo the design system palette as a single unified register.",
+        "typography": {
+          "display_typeface": "Garamond (Classical Old Style Serif, 8\u201312\u00b0 stress angle); substitute Sabon where Garamond is unavailable",
+          "body_typeface": "Source Sans Pro (Humanist Sans-Serif, open counter geometry)",
+          "display_tracking": "+60 em units letterspacing \u2014 creates unhurried, editorial reading pace signalling confidence and restraint; apply consistently with no compression for space efficiency",
+          "body_tracking": "+15 em units letterspacing \u2014 maintains openness and legibility without overstating the effect; never track body copy below +10 em under any layout constraint",
+          "hierarchy_notes": "Display Garamond set in title case or sentence case only \u2014 never all-caps, never condensed. Garamond italic permitted for single-line editorial callouts, pull quotes, and campaign sub-headlines only; never in body copy. Source Sans Pro must never be paired with Garamond in the same weight class \u2014 hierarchy must remain unambiguous. Grotesque cuts (Helvetica, Akzidenz) and geometric sans (Futura, Circular) are prohibited as substitutes."
+        },
+        "layout_approach": "Asymmetric composition on a 12-column Swiss grid. Content-to-space ratio: 45% content / 55% reserved space. Grid provides underlying structure but never forces content into rigid symmetry \u2014 grid is subservient to proportion. Asymmetric tension is non-negotiable; centred and balanced layouts are prohibited as they signal mid-market accessibility rather than ultra-premium restraint.",
+        "negative_space_rule": "Space is a primary design material, not background. Desktop margins: 80px minimum. Mobile margins: 40px minimum. Space between text blocks equals 1.5\u00d7 the height of the preceding text block. Single elements float in the field \u2014 they do not fill available area. When in doubt, remove content rather than compress space. Every layout should feel like it has more space than content; if a layout feels comfortable, one element must be removed.",
+        "photography_direction": [
+          "FRAMING: Single subject or minimal gesture only \u2014 one hand holding an object, one product on an ivory ground, one figure in an open environment. Subject positioned one-third from the nearest edge; never centred. Majority of frame must be negative space, not subject. Asymmetric framing is mandatory.",
+          "LIGHTING AND GRADING: High-key natural or natural-simulating light with soft, directional shadows. Colour grading is cool-neutral: blues, desaturated greens, and greys govern the tonal register. Warm amber and golden-hour grading are expressly prohibited. All imagery must be run through a desaturating cool grade before any other treatment.",
+          "TEXTURE OVER LIFESTYLE: Photography surfaces emphasise tactile materials \u2014 linen, unglazed ceramics, pale stone, matte paper. No lifestyle staging (salads, yoga mats, sunlit scenery). No people photographed in posed wellness or activity contexts. If human subjects appear, they are photographed in understated, unstaged moments emphasising stillness and material relationship \u2014 a hand holding a product, a figure observed from distance in a neutral environment, or a partial human presence that foregrounds material over personality.",
+          "COMMISSIONING: All photography must be commissioned to specification. Stock photography is prohibited \u2014 stock imagery cannot deliver the asymmetric framing, textural specificity, and cool-graded restraint required by this direction.",
+          "SUBJECT CONDITIONS FOR HUMAN PRESENCE: Full-figure portrait photography is excluded unless it simultaneously meets asymmetric framing, cool grading, and non-staged conditions. No wellness-activity contexts (yoga, meditation posture, movement-as-wellness). Permitted human presence: hand with product, distant figure in neutral environment, partial presence emphasising material relationship over personality."
+        ],
+        "materials": "All physical surfaces \u2014 packaging, print collateral, mailers, product inserts, cards, and brand collateral \u2014 use matte finish exclusively. No gloss, no high-shine foil, no tactile coatings that introduce visual or physical brightness. Brand text on packaging is embossed, blind-embossed, or debossed only; never printed in a high-contrast colour that dominates the surface. The brand mark must be discoverable, not announced \u2014 the packaging surface communicates restraint through silence.",
+        "do_rules": [
+          "Lead with empty space: every layout, screen, and spread must feel like it has more space than content. If a layout feels comfortable, remove one element before finalising.",
+          "Use Garamond at +60 em tracking for all display type without exception \u2014 across campaign work, social formats, and every brand touchpoint. Consistency at the headline level is how the brand reads as singular and authoritative.",
+          "Anchor all colour decisions in #F5F3F0 (Soft Ivory) and #8B8678 (Warm Taupe). These two tones govern 90%+ of all surface area. Every other colour is a deliberate, rationed decision relative to them.",
+          "Grade all photography toward cool-neutral: run all imagery through a desaturating cool grade before any other treatment. The photographic palette must echo the design system palette \u2014 they are one unified register, not two separate systems.",
+          "Apply matte finishes to all physical touchpoints exclusively. Packaging, mailers, product inserts, cards, and brand collateral use matte surfaces as a brand signature, not a production preference."
+        ],
+        "dont_rules": [
+          "Do not use sage green, eucalyptus, soft peach, clay, or any botanical wellness colour in the core brand system \u2014 regardless of hex value or saturation level. These colours activate wellness-generic category coding that this brand is explicitly differentiating from; they belong to mid-market supplement and spa-adjacent positioning.",
+          "Do not use centred or symmetrical layout compositions. Centred design reads as accessible and democratic \u2014 the opposite of the visual inaccessibility that communicates ultra-premium tier. Every layout must carry asymmetric tension.",
+          "Do not photograph people in wellness activity contexts: no yoga, no meditation posture, no movement-as-wellness imagery, no lifestyle staging. The moment a subject is visibly performing wellness, the brand descends into generic category codes.",
+          "Do not use warm golden-hour photography grading. Despite trend research citing golden-hour tones as a quiet luxury wellness signal, warm grading activates emotional persuasion rather than earned authority and now reads as a mid-market category signal rather than a differentiator.",
+          "Do not use stock photography under any circumstances. Stock imagery cannot deliver the asymmetric framing, textural specificity, and cool-graded restraint required by this visual direction. All photography must be commissioned to specification.",
+          "Do not apply Burnt Sienna (#8B4513) in the core brand system, logo, packaging primary surface, or any recurring UI element. This seasonal accent is restricted to a maximum 5% palette presence in seasonal campaign work only."
+        ],
+        "benchmark_brands": [
+          {
+            "name": "Aesop",
+            "reference_note": "Reference for: typographic restraint and consistency across all brand touchpoints; the relationship between matte surface packaging and brand text as embossed/understated mark; the principle that visual coherence across product, digital, and physical environments creates brand authority without a single dominant visual gesture."
+          },
+          {
+            "name": "Jacquemus",
+            "reference_note": "Reference for: the use of asymmetric negative space as compositional drama; the technique of allowing a single oversized typographic element to carry the visual weight of an entire layout while surrounding space remains unoccupied; the confidence to leave large areas of a layout visually unresolved."
+          },
+          {
+            "name": "Goop",
+            "reference_note": "Reference for: editorial-first digital layout architecture; the principle that curation and low content density on a digital page communicates premium positioning; the relationship between generous white/ivory space and the perceived quality of individual content items within that space."
+          }
+        ],
+        "visual_narrative": "This brand occupies the space where authority goes quiet. Every design decision is governed by a single principle: restraint is the luxury signal, not decoration. The palette operates in a narrow band \u2014 ivory (#F5F3F0), taupe (#8B8678), and charcoal (#2B2B2B) \u2014 with space between them doing more work than colour ever could. Layouts are built on asymmetric 12-column architecture at a 45/55 content-to-space ratio; the empty field is not background, it is the primary statement. Garamond headlines at +60 tracking sit in that field like gallery objects \u2014 unhurried, singular, confident. Source Sans Pro body copy runs at +15 tracking: clear, open, without effort. Photography is cool-graded, asymmetrically framed, and textural \u2014 linen, stone, unglazed ceramic \u2014 never a wellness clich\u00e9, never a lifestyle scene. Physical surfaces are matte; the brand mark is discovered, not announced. The brand communicates one thing without ever saying it: we have nothing to prove.",
+        "conflicts_resolved": "CONFLICT 1 \u2014 Warm vs. Cool Photography Grading: Trend research named golden-hour tones as core quiet luxury wellness visual codes for meditative calm. Design theory specified cool colour grading (blues/greens/greys) and desaturated palettes, arguing warm grading activates emotional persuasion and undermines ultra-premium authority. RESOLUTION: Theory governs. Warm golden-hour grading is widely distributed across mid-market wellness and now reads as a category signal rather than a differentiator. Cool-neutral grading achieves meditative calm while maintaining the visual inaccessibility required by ultra-premium positioning. Warm grading is not prohibited from all usage \u2014 the Burnt Sienna seasonal accent permits a restrained warm gesture \u2014 but it cannot govern the photographic palette. CONFLICT 2 \u2014 Sage Green and Botanical Accents: Trend research identified desaturated sage green/eucalyptus as a refined secondary accent differentiating from kitschiness. Design theory prohibited botanical green at any saturation level as a generic wellness clich\u00e9. RESOLUTION: Theory governs. The volume of wellness brands currently deploying sage green means it no longer differentiates within the category \u2014 it identifies membership in it. Warm Taupe (#8B8678) and Soft Ivory (#F5F3F0) carry the botanical/natural sophistication signal without the category-coding liability. CONFLICT 3 \u2014 Human Photography (Candid Lifestyle vs. Minimal Gesture): Trend research specified editorial portrait photography of human subjects in understated, unstaged moments (sitting by windows, holding objects, walking in natural settings). Design theory cautioned against lifestyle staging and wellness-activity contexts as undermining ultra-premium positioning. RESOLUTION: Partial synthesis with conditions. Theory's prohibition targets lifestyle staging and wellness-activity contexts, not human presence per se. The trend research's 'holding objects' and 'stillness' direction is compatible with theory's 'minimal gesture (hand with object)' specification. Human subjects are permitted under strict conditions: no wellness-activity context, no lifestyle staging, no posed ease. Permitted: a hand holding a product, a figure observed from distance in a neutral environment, a partial human presence emphasising material relationship over personality. Full-figure portrait photography is excluded unless it simultaneously meets asymmetric framing, cool grading, and non-staged conditions."
+      }
+    },
+    {
+      "keyword": "clinical skincare science",
+      "signal": "clinical",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 5,
+          "specificity": 5,
+          "coherence": 5,
+          "benchmark_validity": 5,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": false,
+          "internal_contradiction": false
+        },
+        "overall": 5.0,
+        "justification": "Positioning lands squarely in premium-clinical territory with committed hexes (#F5F3F0, #A8A89D, #8FA89A, #1A1A1A), named typefaces with tracking and line-height specs, and concrete margin/ratio rules a junior could execute without questions. Benchmarks (Augustinus Bader, SkinCeuticals, iS Clinical, Dr. Barbara Sturm, Clinique) are all real and on-territory, and the conflicts_resolved section transparently reconciles the warm-vs-cool and serif-vs-sans tensions rather than contradicting itself. The single-sage-accent rule, monospace-for-data convention, and no-warm-fill photography direction all reinforce one coherent clinical direction.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 58.6,
+        "agent_02": 26.9,
+        "agent_03": 62.2,
+        "agent_04": 50.0,
+        "total": 197.6
+      },
+      "cost": {
+        "llm_calls": 15,
+        "prompt_tokens": 57469,
+        "completion_tokens": 8862,
+        "total_tokens": 66331,
+        "cost_usd": 0.1671,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "clinical skincare science",
+        "positioning_statement": "Scientific evidence made beautiful through restraint \u2014 precision without coldness, authority without institution, efficacy communicated through what is removed rather than what is added.",
+        "palette": [
+          {
+            "name": "Off-White / Parchment",
+            "hex_code": "#F5F3F0",
+            "role": "Primary dominant field; occupies 60\u201370% of all compositions",
+            "rationale": "Warmer than pharmaceutical white to prevent sterility while retaining clinical clarity; the base ground against which all clinical communication reads across packaging, digital, and campaign touchpoints"
+          },
+          {
+            "name": "Warm Grey / Greige",
+            "hex_code": "#A8A89D",
+            "role": "Secondary structural neutral for backgrounds, layout dividers, and surface differentiation",
+            "rationale": "Bridges warmth and cool without resolving fully to either; used to create hierarchy and spatial organisation without introducing colour tension or wellness-adjacent warmth"
+          },
+          {
+            "name": "Soft Sage / Pale Grey-Green",
+            "hex_code": "#8FA89A",
+            "role": "Single accent; maximum 10% of any composition; one application per layout only",
+            "rationale": "Introduces just enough cool structure to maintain clinical distance from pure warm-neutral palette; derived from 2024\u20132025 trend signal but selected specifically to resolve the warm-vs-cool palette conflict; never distributed across multiple elements simultaneously"
+          },
+          {
+            "name": "Deep Charcoal",
+            "hex_code": "#1A1A1A",
+            "role": "Typography ink for all text elements across all scales",
+            "rationale": "Avoids pure black's fashion-forward reading while maintaining clinical contrast ratios compliant with accessibility standards; applies to display, body, and monospace type uniformly"
+          }
+        ],
+        "photography_tones": "Natural or studio-controlled lighting with cool-to-neutral white balance; no warm amber or golden-hour tones permitted; skin tones rendered luminous and accurate, not stylised or retouched; backgrounds held strictly within #F5F3F0 to #A8A89D range; product photography on white or cool-light-grey ground with minimal cast shadow; zero warm ambient fill in any scenario",
+        "typography": {
+          "display_typeface": "DM Sans (humanist sans-serif) \u2014 used for H1\u2013H2 campaign headlines, packaging callouts, and hero statements; sentence case only; no all-caps permitted",
+          "body_typeface": "Inter (geometric sans-serif, precision-engineered, screen-legible) \u2014 used for all long-form product information, ingredient descriptions, clinical claim copy, and UI/web body text; 16\u201318px digital; 1.6\u20131.8\u00d7 line-height; tabular figures activated for all numerical and percentage data; Inter Mono or equivalent monospace variant reserved exclusively for ingredient percentages, clinical trial figures, and formulation data",
+          "display_tracking": "0.02\u20130.05em (restrained, legibility-led; no theatrical word-spacing or extended tracking)",
+          "body_tracking": "0em standard tracking, fully compensated by 1.6\u20131.8\u00d7 line-height for premium reading experience",
+          "hierarchy_notes": "No serif typefaces at any display scale \u2014 serifs are explicitly prohibited as they signal editorial creativity and heritage rather than clinical evidence. Three typographic registers in use: (1) DM Sans for brand voice and headlines, (2) Inter for body and UI copy, (3) Inter Mono for all scientific and numerical data. Sentence case or lowercase across all labels, callouts, and campaign lines to communicate accessible precision without institutional all-caps."
+        },
+        "layout_approach": "Symmetrical or center-anchored grid structure; content occupies 40\u201350% of composition with remaining area as intentional margin, silence, and breathing room; no information density play \u2014 every element placed with deliberate purpose, never filled; minimum margins of 120\u2013160px on digital compositions; 50mm+ on print",
+        "negative_space_rule": "Negative space is the primary signal of confidence and communicates institutional certainty; if a layout feels sparse, it is correct \u2014 if it feels full, remove one element before adjusting space; spatial generosity is the confidence signal and must resist the instinct to fill space with additional claims or decorative elements",
+        "photography_direction": [
+          "Laboratory or clinical ingredient close-ups: white or light-grey ground (#F5F3F0\u2013#E8E6E2), natural or clinical overhead lighting, zero warm ambient fill; ingredients and textures rendered with material honesty and no stylisation",
+          "Skin portrait photography: clean neutral background, soft-focus on skin texture and luminosity, unretouched skin surface, no dramatic shadows or lifestyle context; model functions as evidence not personality \u2014 clinical objectivity governs framing",
+          "Product-on-surface shots: white or greige background (#F5F3F0 to #A8A89D range), product occupies 30\u201345% of frame and is never centred-and-maximised, minimal cast shadow, clinical objectivity in framing \u2014 the product is a specimen not a hero object; no warm fills, no styled lifestyle props, no botanical context"
+        ],
+        "materials": "Matte finish on all packaging and print executions; no gloss, high-shine foiling, or reflective surfaces permitted; uncoated white or light-grey paper stock for all print; packaging labels minimalist with ingredients and certifications legible and prominent; functional glass (amber or frosted) and clinical-grade plastic containers as primary material language; no organic texture, craft paper, or botanical material photography in any execution",
+        "do_rules": [
+          "Use #F5F3F0 as the dominant field across all touchpoints \u2014 packaging, digital, campaign \u2014 letting content float in generous white space at a 40\u201350% content-to-space ratio",
+          "Set all ingredient percentages, clinical data, and formulation figures in tabular monospace (Inter Mono or equivalent) to visually separate scientific evidence from brand communication",
+          "Limit the sage accent #8FA89A to a single application per layout \u2014 one typographic highlight, one icon element, or one graphical rule; never scatter across a composition",
+          "Shoot all product photography on white-to-greige grounds with clinical overhead or natural lighting \u2014 no warm fills, no styled lifestyle props, no botanical context; the product is evidence",
+          "Write all labels, callouts, and campaign lines in sentence case or lowercase to communicate accessible precision and depart from institutional all-caps without sacrificing authority",
+          "Maintain minimum margins of 120\u2013160px on digital and 50mm+ on print; treat every instance of generous negative space as an active design decision that signals brand confidence"
+        ],
+        "dont_rules": [
+          "Do not introduce warm whites, cream, or beige backgrounds in the #F5E6D3 range \u2014 these read as soft wellness or naturalistic and directly collapse clinical positioning into Aesop/botanical territory",
+          "Do not use serif typefaces at any display scale \u2014 serifs signal editorial creativity and heritage, not clinical evidence; even transitional serifs (Garamond derivatives) shift the brand into premium lifestyle not science",
+          "Do not distribute the sage accent #8FA89A across multiple elements in a single layout \u2014 clinical accent is a precision instrument not a decorative system; multiplication reads as decoration not signal",
+          "Do not use botanical photography, organic textures, warm amber glass styled with lifestyle props, or natural-material surfaces \u2014 these visual codes collapse into wellness/spa positioning and signal inauthenticity to informed skincare consumers",
+          "Do not allow information density to increase to compensate for product efficacy \u2014 dense layouts read as defensive; spatial generosity is the confidence signal; resist the instinct to fill space with claims",
+          "Do not apply all-caps treatment to any headline, label, or campaign line \u2014 this signals pharmaceutical institution over premium clinical science and undermines the accessible authority the brand requires"
+        ],
+        "benchmark_brands": [
+          {
+            "name": "Augustinus Bader",
+            "reference_note": "Reference specifically: stark white-space governance in packaging layout, confident typographic hierarchy with generous margins, and the use of clinical trial data as editorial narrative anchor; this is the compositional gold standard for the aesthetic"
+          },
+          {
+            "name": "SkinCeuticals",
+            "reference_note": "Reference specifically: pharmaceutical-adjacent information architecture on packaging (ingredient transparency, clinical claim labeling, functional hierarchy), and the no-styling product photography that renders bottles as clinical specimens"
+          },
+          {
+            "name": "iS Clinical",
+            "reference_note": "Reference specifically: the use of data visualization and clinical photography in editorial content; how laboratory-adjacent flat-lay composition (scientific instruments, ingredient swatches, clean white grounds) communicates formulation credibility without overt beauty-brand theatrics"
+          }
+        ],
+        "visual_narrative": "The brand exists in the visual register of certainty \u2014 the certainty of a laboratory result, of a peer-reviewed finding, of a formulation that has earned its claims. Every composition breathes: content occupies no more than half the field, and the space around it is not emptiness but confidence. The palette is warm enough to be held, cool enough to be believed \u2014 off-white grounds at #F5F3F0, greige structure at #A8A89D, a single sage accent at #8FA89A placed once per layout like a measured drop of active ingredient. DM Sans carries the brand voice in sentence case at the headline; Inter renders body copy with clinical legibility and tabular precision for every figure and percentage. Photography is honest light, honest skin, honest product on a clean ground \u2014 no styling that performs efficacy, because the evidence performs itself. This brand does not decorate. It demonstrates.",
+        "conflicts_resolved": "CONFLICT 1 \u2014 Warm vs. Cool Palette: Theory prescribed a fully cool-toned palette (#F8F9FA, #E2E8F0, #0EA5E9) warning that warm neutrals undermine clinical credibility. Trend research showed premium clinical skincare leaders (Augustinus Bader, Dr. Barbara Sturm, SkinCeuticals) operating successfully in warm-neutral territory. Judgment: Trend governs with theoretical guardrails applied. Pure cool-toned palettes risk reading as medical device or pharmaceutical rather than premium skincare. Resolution: adopt warm-neutral base (#F5F3F0, #A8A89D) from market evidence, but replace the trend warm taupe accent with cool-toned sage (#8FA89A) to maintain clinical distance. Theory's accent intensity principle (single application, simultaneous contrast) retained in full. CONFLICT 2 \u2014 Serif vs. Sans-Serif Typography: Theory explicitly prohibited serif typefaces as undermining clinical credibility. Trend research identified serif headlines as a key typographic signal across Clinique, Dr. Barbara Sturm, and the broader category. Judgment: Theory governs. Market trend toward serif display type reflects positioning drift toward luxury wellness, not a defining clinical signal. Brands using serifs are legacy brands managing softening repositioning. For a brand building clinical science as primary territory, sans-serif at display scale maintains sharper differentiation. Sentence case from trend research is retained to prevent sans-serif from reading as overly institutional."
+      }
+    },
+    {
+      "keyword": "bold brutalist streetwear",
+      "signal": "bold",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 5,
+          "specificity": 5,
+          "coherence": 5,
+          "benchmark_validity": 2,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": true,
+          "internal_contradiction": false
+        },
+        "overall": 2.0,
+        "justification": "The direction nails the bold/brutalist territory with committed specifics: #0A0A0A ground, #E8FF00 single-accent scarcity rule, Akzidenz-Grotesk Bold Condensed at -0.03em, and concrete/chain-link photography rules that a junior could execute without questions. However, the benchmarks lean on fabricated specifics \u2014 'Rick Owens FW26 TOWER Campaign' and 'Dsquared2 SS25 shot by Andrea Artemisio' are invented attributions, and the Dsquared2 'poetic pastels' framing is off-territory and only retrofitted as a tension reference. Internal coherence is strong with no contradictions, as the conflicts_resolved section explicitly governs out pastels and multiple accents.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 35.3,
+        "agent_02": 36.2,
+        "agent_03": 61.4,
+        "agent_04": 53.8,
+        "total": 186.7
+      },
+      "cost": {
+        "llm_calls": 12,
+        "prompt_tokens": 36236,
+        "completion_tokens": 9183,
+        "total_tokens": 45419,
+        "cost_usd": 0.1457,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "bold brutalist streetwear",
+        "positioning_statement": "A confrontational architectural system that is structurally imposing, viscerally raw, and built to threaten visual boundaries rather than occupy them quietly.",
+        "palette": [
+          {
+            "name": "Near-Black",
+            "hex_code": "#0A0A0A",
+            "role": "Primary \u2014 absolute ground; dominates all surfaces, backgrounds, and base garment references",
+            "rationale": "Creates the austere field against which all graphic elements and typography detonate; the authoritative void that makes every contrast element land as disruption rather than decoration"
+          },
+          {
+            "name": "Off-White",
+            "hex_code": "#F0EDE8",
+            "role": "Secondary \u2014 graphic contrast agent; used for typography, line elements, and negative cut-outs",
+            "rationale": "Anti-commercial restraint, not warmth; keeps the system readable without softening it; functions as exposed structural bones against the near-black field"
+          },
+          {
+            "name": "Acid Yellow",
+            "hex_code": "#E8FF00",
+            "role": "Accent \u2014 single disruptive mark deployed at maximum scarcity; one element per composition maximum",
+            "rationale": "Subcultural signal and non-negotiable provocation; never decorative, always load-bearing; satisfies both neon trend signal and brutalist disruption principle simultaneously; scarcity creates perceived value and positions at accessible premium tier"
+          }
+        ],
+        "photography_tones": "Stark monochromatic or high-contrast two-tone treatment only; no colour grading warmth permitted; shadows are hard and directional; highlights are blown or clipped \u2014 never diffused or graduated; no mid-tone blending or gradients",
+        "typography": {
+          "display_typeface": "Akzidenz-Grotesk Bold Condensed (industrial grotesque, bold condensed classification)",
+          "body_typeface": "IBM Plex Mono Regular (monospace, technical classification)",
+          "display_tracking": "-0.03em (tight, assertive, locked together \u2014 compression and mass create industrial authority)",
+          "body_tracking": "0 to +0.01em (neutral, functional, open enough for legibility at small scale)",
+          "hierarchy_notes": "Display must be set in all-caps only at headline and dominant graphic scale; display type may bleed frames, crop at edges, or overrun composition boundaries intentionally \u2014 treated as primary visual architecture, not supporting text element; body type maintains minimum 12px digital or 5mm embroidery legibility; no styling, no ornament on body type; no rounded grotesque typefaces (Circular, Proxima Nova) or serifs permitted at any level"
+        },
+        "layout_approach": "Strict asymmetric grid; content-to-space ratio 55\u201365%; elements are permitted to touch edges, bleed frames, and be deliberately cut at composition boundaries; incompleteness is intentional and signals raw/unfinished authority; density communicates power, not clutter; symmetric, centred, or balanced layouts are explicitly prohibited",
+        "negative_space_rule": "Negative space is functional, not precious; space serves graphic weight, not breathing room; margins vary by composition with no fixed safe zones; white space does not dominate and is secondary to typographic and photographic mass",
+        "photography_direction": [
+          "Harsh, directional studio lighting only \u2014 single-source or hard-edge practical light; no diffusion, no softboxes, no lifestyle warmth; shadows are architectural, present, and uncompromised",
+          "Subject matter restricted to: product close-up at material detail scale, abstract architectural or urban form, or human subject in confrontational direct framing \u2014 never aspirational or softened lifestyle positioning; human subjects are confrontational and direct, never aspirational",
+          "Surface textures in frame must be raw and industrial \u2014 unsealed concrete, chain-link, raw wall, asphalt, aged steel; no warm wood grain, no polished or reflective surfaces unless steel or chain",
+          "Treat accessories and hardware as primary architectural elements \u2014 oversized, sculptural, and compositionally dominant; they are co-equal to garment in visual hierarchy, not supplementary"
+        ],
+        "materials": "Matte black, unsealed concrete, dark velvet, aged steel, kraft paper, rough canvas \u2014 texture must read as accidental or technical; no crafted or considered surface finishes; no warmth, no polish, no organic material warmth",
+        "do_rules": [
+          "Use Akzidenz-Grotesk Bold Condensed at display scale in all-caps, tracked at -0.03em, and allow it to bleed or crop at frame edges \u2014 the type is architecture, not labelling",
+          "Deploy Acid Yellow #E8FF00 as a single disruptive element per composition \u2014 one headline word, one graphic mark, or one hardware detail maximum; scarcity is what makes it land as provocation rather than decoration",
+          "Shoot all photography with hard single-source or directional practical lighting against industrial surfaces \u2014 concrete, chain-link, asphalt; no diffusion permitted; shadows must be present, hard, and structural",
+          "Treat accessories and hardware as primary architectural elements \u2014 oversized, sculptural, and compositionally dominant; they are not supplementary to garment but co-equal in visual hierarchy",
+          "Build every layout on a strict asymmetric grid at 55\u201365% content density \u2014 elements can touch edges and be cut, but the underlying grid is always present; confrontation comes from asymmetry and incompleteness within structure, not from chaos"
+        ],
+        "dont_rules": [
+          "Never use pastels, warm creams, muted mid-tones, or rose-adjacent colours \u2014 these register as commercial softness and immediately collapse the brutalist positioning; there is no duality strategy that justifies their introduction at this stage",
+          "Never use rounded grotesque typefaces (Circular, Proxima Nova) or any serif typeface \u2014 these read as friendly, designed, or lifestyle-warm; type must feel systematic or raw without exception",
+          "Never use diffused lighting, lifestyle warmth, or aspirational model framing in photography \u2014 soft light is contamination; the human subject, when present, is confrontational and direct, never aspirational",
+          "Never introduce more than one accent colour per composition \u2014 a second accent breaks the scarcity principle and dilutes the disruptive signal; #E8FF00 is the only non-neutral colour permitted",
+          "Never use symmetric, centred, or balanced layouts \u2014 symmetric balance reads as considered and quiet; this aesthetic demands asymmetric visual tension; centred layouts are explicitly excluded"
+        ],
+        "benchmark_brands": [
+          {
+            "name": "Rick Owens (FW26 TOWER Campaign)",
+            "reference_note": "Reference specifically: the towering proportional logic of sculptural accessories as architectural co-equals to garment; the ethereal darkness palette built entirely in black and shadow with no accent relief; the deconstructed tailoring that reads as form-making rather than garment construction"
+          },
+          {
+            "name": "Dsquared2 (SS25 Campaign, shot by Andrea Artemisio)",
+            "reference_note": "Reference specifically: the hyperreal portraiture technique \u2014 harsh lighting, confrontational subject proximity, hyperreal skin and material detail; the compositional tension created through hardware against softness (adopt the tension logic, not the pastel palette); the editorial photography's refusal of lifestyle distance"
+          },
+          {
+            "name": "Palace Skateboards (2025 Collections)",
+            "reference_note": "Reference specifically: the strong graphic typography treated as primary visual element with committed identity; the skate culture rawness and imperfection as design posture; the technical garment approach that signals subcultural specificity rather than fashion aspiration"
+          }
+        ],
+        "visual_narrative": "The brand operates in the territory between structural architecture and subcultural rebellion \u2014 every composition is built like a building and detonated like a protest. The primary field is near-black #0A0A0A, dense and authoritative, against which off-white #F0EDE8 typography and graphic elements function as exposed structural bones. A single application of acid yellow #E8FF00 \u2014 one element, one composition, always \u2014 acts as the live wire running through the system: not decoration, a disruption. Akzidenz-Grotesk Bold Condensed in all-caps at -0.03em tracking is the voice: tight, compressed, threatening to exceed its container. Layouts are built on strict asymmetric grids at 55\u201365% density where elements bleed frames and get deliberately cut \u2014 the incompleteness is the point. Photography is hard-lit against concrete and chain-link, never diffused, never aspirational. Accessories are architecture. Rawness is not an accident \u2014 it is the system.",
+        "conflicts_resolved": "CONFLICT 1 \u2014 Pastel Colours: Trend signal (Dsquared2 SS25 uses poetic pastels as duality tension device; identified as active visual code) vs. Theory signal (explicitly prohibited; reads as commercial softness contradicting brutalist stance). Resolution: Pastels eliminated entirely. Governing principle: Theory governs \u2014 pastel tension strategy requires established brand equity to land correctly; introduces tonal risk before core identity is locked. | CONFLICT 2 \u2014 Typography Tracking: Trend signal (research calls for generous tracking on bold type to amplify confrontational presence) vs. Theory signal (directs tight tracking at -0.02 to -0.04em; states generous tracking signals editorial restraint). Resolution: Tight tracking at -0.03em. Governing principle: Theory governs \u2014 generous tracking on heavy display type is a luxury editorial convention; compression and mass create industrial authority; confrontation is in the weight and scale, not the spacing. | CONFLICT 3 \u2014 Neon vs. Single Accent: Trend signal (research identifies neon greens, electric colours, and confrontational colour combinations in plural as active signals) vs. Theory signal (restricts to single disruptive accent at maximum scarcity; prohibits coordinated accent systems). Resolution: Single Acid Yellow #E8FF00 only. Governing principle: Theory governs \u2014 multiple neon accents read as designed youth energy and saturated mass-market; scarcity of one accent creates perceived value and positions at accessible premium tier."
+      }
+    },
+    {
+      "keyword": "warm artisanal bakery",
+      "signal": "warm",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 5,
+          "specificity": 5,
+          "coherence": 5,
+          "benchmark_validity": 2,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": true,
+          "internal_contradiction": false
+        },
+        "overall": 2.0,
+        "justification": "The direction lands squarely in warm premium-accessible craft territory with committed hexes (#F2E8D9, #8B4513, #2D4A3E), named typefaces, concrete tracking and margin specs, and executable do/don't rules that a junior could follow without questions. Palette, typography, photography and material rules reinforce one coherent direction and the deep-brown-vs-cream tension is explicitly resolved rather than contradicted. However benchmark validity fails: Pophams is real and on-aesthetic, but 'The Baker's Project' and 'N.O.V.A LAB' are not recognisable real bakery brands and read as invented, and the report even leans on N.O.V.A LAB to justify a core conflict resolution.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 37.4,
+        "agent_02": 67.3,
+        "agent_03": 67.0,
+        "agent_04": 68.8,
+        "total": 240.4
+      },
+      "cost": {
+        "llm_calls": 12,
+        "prompt_tokens": 39206,
+        "completion_tokens": 13473,
+        "total_tokens": 52679,
+        "cost_usd": 0.185,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "warm artisanal bakery",
+        "positioning_statement": "A premium-accessible craft bakery brand communicating accumulated skill through material restraint, earthy warmth, humanist typography, and process-honest photography positioned at the Tier 2\u20133 boundary \u2014 sophisticated enough to signal genuine craft authority, grounded enough to feel essential to daily life.",
+        "palette": [
+          {
+            "name": "Aged Cream",
+            "hex_code": "#F2E8D9",
+            "role": "Primary background and neutral system anchor across all touchpoints \u2014 web, packaging, print",
+            "rationale": "Replaces clinical pure white entirely; warm enough to signal handmade provenance, neutral enough to allow product photography and typography to breathe; prevents harshness at all scales and establishes parchment-like warmth as the brand's foundational surface"
+          },
+          {
+            "name": "Burnt Sienna / Terracotta",
+            "hex_code": "#8B4513",
+            "role": "Primary warmth signal used for headlines, borders, badge elements, and photographic background treatments",
+            "rationale": "Appetite-activation tone that mirrors natural bread crust colour; reads richer and more saturated when isolated against aged cream via simultaneous contrast; carries the heat of a working oven and anchors the brand's craft warmth signal"
+          },
+          {
+            "name": "Forest Green (Muted)",
+            "hex_code": "#2D4A3E",
+            "role": "Single cool accent for secondary brand marks, packaging edge detail, and typographic colour variation \u2014 never dominant",
+            "rationale": "Introduces temperature contrast that prevents single-temperature monotony; when surrounded by warm cream and terracotta, intensifies overall palette warmth through complementary contrast; the palette's sophistication move \u2014 earthy and natural, containing zero digital or artificial hue"
+          },
+          {
+            "name": "Honey Amber / Caramel Midtone",
+            "hex_code": "#C8832A",
+            "role": "Photography midtone appearing naturally through lit crust and dough surfaces; not a layout colour",
+            "rationale": "Bridges the gap between aged cream and burnt sienna in photographic contexts; emerges organically from golden-hour lighting on bread surfaces; reinforces appetite activation and material authenticity without requiring art direction intervention"
+          },
+          {
+            "name": "Deep Chocolate Brown",
+            "hex_code": "#3B1F0F",
+            "role": "Permitted photographic background treatment in editorial, campaign, and product close-up imagery only \u2014 not a layout or packaging background",
+            "rationale": "Conflict-resolution colour: depth and appetite-activation in photography contexts where cream elements appear alongside it; consistent with Albers temperature contrast principle; excluded from typography systems and primary layout backgrounds to prevent the overall brand reading as too dark or heavy for accessible-premium positioning"
+          }
+        ],
+        "photography_tones": "Diffused golden-hour directional light from a single angle; warm shadows visible throughout; backgrounds sit in the cream-to-deep-brown register (#F2E8D9 through #3B1F0F); no pure white (#FFFFFF) or pure black (#000000) at any point; honey amber and caramel midtones (#C8832A range) appear naturally through lit crust and dough surfaces; grain and surface imperfection visible and preserved at all times; low-light grain is desirable, not corrected",
+        "typography": {
+          "display_typeface": "Caslon or Baskerville (Humanist/Transitional Old Style Serif) \u2014 used for brand name, page headlines, and section titles",
+          "body_typeface": "Gill Sans or Calibre (Humanist Sans-Serif) \u2014 used for all running text, product descriptions, menu items, and supporting copy",
+          "display_tracking": "Normal to relaxed tracking: 0 to +10 typographic units (approximately 0% to +2.5% letterspacing); leading set tight at 0.85\u20131.0x type size; weight set at regular or light only \u2014 never bold",
+          "body_tracking": "Generous tracking: +20 to +40 typographic units (approximately +5% to +10% letterspacing); leading set open at 1.6\u20131.8x type size; regular weight only throughout",
+          "hierarchy_notes": "Display typefaces must never be set in bold weight \u2014 letterform authority comes from the typeface's calligraphic stroke variation and historical weight, not from weight-based force. Geometric sans-serifs (Montserrat, Futura, Helvetica Neue) are categorically excluded from display and headline use. Scripts are excluded from the primary typography system entirely; a single script may appear only as a one-word or short-phrase accent on physical packaging where material context supports it \u2014 never in digital or primary brand mark contexts. Body copy must never be set tighter than +20 units tracking."
+        },
+        "layout_approach": "Asymmetric 5- or 7-column grid; content-to-space ratio 55\u201365% content to 35\u201345% breathing room; hand-set feeling prioritised over mathematical precision; more filled than ultra-luxury (40\u201355% content) but intentionally less dense than mass-market (70\u201380% content); layout should feel curated by eye rather than generated by grid logic",
+        "negative_space_rule": "Space sits asymmetrically \u2014 preferentially on the left margin and bottom of composition, echoing hand-composed typography and hand-set printing traditions; asymmetric margins apply at all scales: generous left margin (minimum 20mm on A4 or digital equivalent), tighter right margin (minimum 12mm); space is intentional and confidence-signalling, not wasteful or accidental; off-centre compositions and non-mathematical white space distribution must be applied consistently from packaging label to full-page editorial",
+        "photography_direction": [
+          "Subject matter is process, material, and hands: capture work-in-progress states including flour on a board, shaping hands, crumb structure mid-cut, and crusts cooling; prioritise close-up macro framing of bread texture, crust patterning, and visible fermentation marks; imperfections are primary visual assets \u2014 never retouch surface irregularities, scoring marks, or crust variation",
+          "Lighting must be imperfect and directional: use soft natural or diffused golden-hour light from a single angle only; visible shadows that suggest three-dimensional form are required; no fill-flash and no even studio lighting at any point; grain in low-light areas is acceptable and actively desirable \u2014 do not apply noise reduction",
+          "Framing is tight, unusual, and non-symmetrical: avoid centred product-on-background composition entirely; crop decisively and allow subject to bleed the frame; composition must feel curated by eye, never by grid centre-alignment; let bread texture, crust edge, or hand gesture anchor the frame asymmetrically",
+          "Never shoot product on pure white or clean neutral-background studio setups: even, glossy, evenly lit product shots on white or mid-grey backgrounds are categorically excluded regardless of product quality \u2014 they signal Tier 4 mainstream positioning and destroy material authenticity"
+        ],
+        "materials": "Uncoated or semi-coated paper stock only in all print contexts \u2014 visible paper grain is a required design signal, not a production accident; texture must read as tactile; layout must respect physical production with margins accommodating bleeds and binding. In digital contexts, simulate material weight through texture overlays and muted screen values rather than smooth gradients or glossy surfaces; screen rendering should carry the weight of physical paper, not the smoothness of a polished interface",
+        "do_rules": [
+          "Use aged cream #F2E8D9 as the default background at every touchpoint \u2014 web, packaging, and print \u2014 replacing any instance of pure white #FFFFFF without exception",
+          "Introduce muted forest green #2D4A3E as a single accent element only in secondary brand marks, packaging edge detail, or typographic colour variation \u2014 its role is temperature contrast, never competition with the primary palette",
+          "Set Caslon or Baskerville headlines at regular or light weight with relaxed tracking (0 to +10 units); allow the typeface's calligraphic stroke variation to carry craft authority without weight-based forcing",
+          "Photograph bread and product in-process or in material context \u2014 crumb structure, shaping hands, tools, flour surfaces, cooling racks \u2014 so every image communicates visible skill and time investment rather than finished-product presentation",
+          "Apply asymmetric layout logic consistently at every scale: wider left margins, off-centre compositions, and non-mathematical white space distribution from packaging label to full-page editorial",
+          "Permit deep chocolate brown #3B1F0F as a photographic background treatment in editorial and campaign contexts where cream elements appear alongside it \u2014 this is the resolved conflict allowance for appetite-activation photography"
+        ],
+        "dont_rules": [
+          "Never use pure white #FFFFFF as a background or photographic surface at any touchpoint \u2014 it reads as clinical, digital, and Tier 4 mass-market, immediately destroying the handmade signal and undermining every warm decision in the system",
+          "Never set geometric sans-serif typefaces \u2014 specifically Montserrat, Futura, or Helvetica Neue \u2014 as display or headline fonts; they carry zero craft authority and read as 1980s corporate or contemporary tech, not made-by-hand",
+          "Never use high-saturation primary or pastel colours anywhere in the system \u2014 no bright blue, electric red, acid yellow, or millennial pink; all saturation must be moderate and feel as though it emerged from earth pigments, not a Pantone specification sheet",
+          "Never use heritage badge and stamp aesthetics as primary design language \u2014 wheat-stalk borders, circular 'Est.' stamps, and wax-seal imagery are trend-overused and signal nostalgia theatre rather than authentic craft; these elements may appear only as minimal secondary packaging details if at all",
+          "Never use smooth, glossy product photography on clean neutral-background studio setups \u2014 centred product on white or mid-grey reads immediately as Tier 4 mainstream; even lighting kills material authenticity regardless of product quality",
+          "Never apply scripts, decorative fonts, or hand-drawn lettering in digital brand mark contexts or as primary typography system elements \u2014 scripts are excluded from the primary system entirely and permitted only as a single one-word accent on physical packaging where material context provides justification"
+        ],
+        "benchmark_brands": [
+          {
+            "name": "Pophams Bakery",
+            "reference_note": "Reference specifically: generous negative space around product in photography; editorial restraint in layout that allows bread texture to function as the primary visual element; clean, undecorated composition that lets imperfection speak without interference from decorative brand language"
+          },
+          {
+            "name": "The Baker's Project",
+            "reference_note": "Reference specifically: neutral warm-taupe palette application; approachable lowercase wordmark typesetting; how restraint in colour and decoration removes barriers to accessibility without diluting quality positioning \u2014 this is the model for Tier 2\u20133 boundary execution"
+          },
+          {
+            "name": "N.O.V.A LAB",
+            "reference_note": "Reference specifically: the conceptual decision to elevate bread-making imperfection \u2014 irregular crumb, visible texture marks \u2014 into bold visual identity language; the explicit move away from script fonts and predictable warm browns as primary signals; reference the level of intentionality about what imperfection communicates, not the specific execution"
+          }
+        ],
+        "visual_narrative": "The brand lives at the precise boundary between craft authority and daily warmth \u2014 premium without being precious, handmade without being rustic. Every surface begins in aged cream #F2E8D9: warm enough to feel like parchment, neutral enough to let the bread speak. Burnt sienna and terracotta #8B4513 carry the heat of a working oven across headlines and borders. A single touch of muted forest green #2D4A3E sits in the corner of a label or the second line of a headline, making the whole palette feel richer by contrast. Caslon or Baskerville hold the headlines at regular weight \u2014 no forcing, no boldness \u2014 because the letterforms carry enough history. Gill Sans carries body copy at generous tracking: open and unhurried. Photography always shows evidence of work: flour on hands, the interior of a freshly cut loaf, a crust still catching directional light. Composition sits slightly left of centre, margins wider on the left, space used with intention. This brand does not perform artisanal \u2014 it evidences it.",
+        "conflicts_resolved": "CONFLICT 1 \u2014 Heritage Badge Aesthetics (Trend) vs. Asymmetric Craft Positioning (Theory): Market research identified heritage badges, circular stamps, wheat-stalk borders, and 'Est.' date marks as active visual codes in the warm artisanal bakery space. Design theory positioned these as decorative overlays that undermine authentic craft positioning. RESOLUTION: Theory governs. Heritage badge aesthetics are a category-wide visual clich\u00e9 the market is beginning to move away from (evidenced by N.O.V.A LAB's explicit rejection). Badge elements are excluded from the primary visual system; asymmetric composition and material texture carry the heritage signal more credibly. | CONFLICT 2 \u2014 Deep Chocolate Brown Backgrounds (Trend) vs. Aged Cream as Primary Background (Theory): Market research identified deep chocolate brown and rich caramel backgrounds as primary appetite-activation tones across benchmark brands. Design theory designated aged cream #F2E8D9 as the primary background with burnt sienna as a secondary accent. RESOLUTION: Partial synthesis. Deep chocolate brown #3B1F0F is permitted and encouraged as a photographic treatment in editorial, campaign, and product close-up contexts where it functions as an appetite-activation tool consistent with Albers temperature contrast when cream elements appear alongside. It is not the default background for layout, typography systems, or packaging \u2014 aged cream #F2E8D9 remains the primary system background. | CONFLICT 3 \u2014 Script Typography (Trend) vs. Humanist Serif-Only (Theory): Market research documented humanist and hand-drawn scripts as active secondary typography in the warm artisanal bakery space. Design theory explicitly warned against decorative excess and false modesty signalling from scripts. RESOLUTION: Theory governs with narrow exception. Scripts are excluded from the primary typography system entirely. A single carefully chosen script may appear only as a one-word or short-phrase accent on physical packaging where physical materiality contextualises it \u2014 never in digital or primary brand mark contexts."
+      }
+    },
+    {
+      "keyword": "affordable everyday essentials",
+      "signal": "accessible",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 5,
+          "specificity": 5,
+          "coherence": 5,
+          "benchmark_validity": 5,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": false,
+          "internal_contradiction": false
+        },
+        "overall": 5.0,
+        "justification": "Positioning lands precisely on accessible/everyday \u2014 the explicit Tier 2 framing avoids both discount and luxury codes, with committed hexes (#F5F3EF, #9E8B80, #6B8E7F), named typefaces and tracking values (Avenir Next Medium 0.02\u20130.05em, Source Sans Pro at -0.01em), and concrete margin/gutter specs. Benchmarks (Muji, Uniqlo LifeWear, Target) are real and genuinely on-aesthetic for affordable essentials. The system is internally coherent \u2014 the #FFFFFF entry is carefully scoped as a photographic highlight ceiling only and explicitly excluded as a layout background, avoiding contradiction with the cream-primary rule \u2014 and the do/don't rules and conflict resolutions are executable without follow-up questions.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 44.0,
+        "agent_02": 58.6,
+        "agent_03": 80.2,
+        "agent_04": 76.2,
+        "total": 259.0
+      },
+      "cost": {
+        "llm_calls": 11,
+        "prompt_tokens": 36711,
+        "completion_tokens": 13476,
+        "total_tokens": 50187,
+        "cost_usd": 0.1867,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "Affordable Everyday Essentials",
+        "positioning_statement": "A material-honest visual system that communicates quality through restraint \u2014 not luxury codes or mass-market urgency, but the quiet confidence of things designed to be used every day.",
+        "palette": [
+          {
+            "name": "Cream / Off-White",
+            "hex_code": "#F5F3EF",
+            "role": "Primary structural background tone across all digital and print surfaces",
+            "rationale": "Replaces clinical digital white (#FFFFFF) to read as warm, considered, and approachable rather than corporate. Anchors the entire system as human and accessible. Used for page backgrounds, packaging base, and photographic negative space."
+          },
+          {
+            "name": "Warm Grey",
+            "hex_code": "#9E8B80",
+            "role": "Secondary functional neutral for typographic hierarchy, surface textures, and mid-ground compositional elements",
+            "rationale": "Sits in the mid-range that signals everyday reliability without tipping into discount (cold grey) or luxury (dark charcoal). Not tech-corporate, not premium \u2014 precisely calibrated for Tier 2 accessible positioning."
+          },
+          {
+            "name": "Soft Sage Green",
+            "hex_code": "#6B8E7F",
+            "role": "Accent \u2014 restricted to icons, CTA highlights, seasonal campaign overlays, and sustainability messaging only",
+            "rationale": "Muted saturation allows it to function within the neutral-dominant system without creating promotional urgency. Provides the saturation contrast required by Itten's principle to signal quality in restraint. Never used as a background tone. Maximum 10\u201315% of any layout's visual weight."
+          },
+          {
+            "name": "Natural Highlight White",
+            "hex_code": "#FFFFFF",
+            "role": "Photography highlight ceiling only \u2014 not used as a layout background",
+            "rationale": "Permitted exclusively as the upper limit of photographic highlight range in natural-light imagery. Highlights in photography may reach #FFFFFF without blowing out, but this value is never applied as a surface or background colour in layouts."
+          }
+        ],
+        "photography_tones": "Natural light with warm-leaning exposure throughout. Shadow tones fall toward warm taupe and greige (#9E8B80 range) \u2014 never cool grey or blue-leaning shadows. Highlights remain in the #F5F3EF\u2013#FFFFFF range without blowing out. Skin tones are unretouched and shown across diverse ages, sizes, and skin tones. Backgrounds in lifestyle photography echo the brand neutral palette: interior settings in cream, linen, and warm grey; outdoor settings in natural earth tones and muted green. Slight photographic grain is permitted and preferred. Natural shadows are left unretouched.",
+        "typography": {
+          "display_typeface": "Avenir Next (Humanist Sans-Serif / Warm Grotesque), Medium weight only",
+          "body_typeface": "Source Sans Pro (Humanist Sans-Serif), Regular weight",
+          "display_tracking": "0.02\u20130.05em (slightly loose; signals approachable confidence and creates compositional breathing room without tipping into airy or fashionable)",
+          "body_tracking": "0em default or -0.01em (slightly tighter than default; reads as purposeful and considered \u2014 never decorative or uncertain). Line height: 1.5\u20131.6.",
+          "hierarchy_notes": "Avenir Next Medium is the only permitted display weight \u2014 Thin and Black weights are prohibited (Thin reads luxury-minimal; Black reads discount-bold). Source Sans Pro Regular is the body weight. No serif typefaces may be introduced as a third typographic voice. Both typefaces share humanist sans-serif classification \u2014 no serif/sans mixing. Weight and size create hierarchy; colour is not used for typographic distinction."
+        },
+        "layout_approach": "Loose three-column symmetrical grid (digital) / two-column symmetrical grid (print). Content-to-space ratio fixed at 60:40 (60% content, 40% white space). Symmetrical columns throughout \u2014 no brutalist asymmetry or fractured editorial layout. Internal column gutters: 24px (digital) / 6mm (print), consistent throughout all layouts.",
+        "negative_space_rule": "Margins fixed at 120\u2013140px (digital) / 20\u201328mm (print), consistent and symmetrical across all four sides of every layout. Space is an active compositional decision \u2014 it must read as an intentional frame, never accidental bleed. No content runs edge-to-edge except full-bleed lifestyle photography (which functions as a texture layer, not a layout element). When in doubt, remove content rather than compress margins. Any layout that feels full must be edited before production.",
+        "photography_direction": [
+          "Product-in-context, never isolated: Items must be shown in active everyday use \u2014 worn, held, placed in a home environment, or in transit. Studio white-background product isolation is prohibited for campaign work. If isolation is required for e-commerce, the background must be #F5F3EF (cream), never #FFFFFF.",
+          "Material legibility is mandatory: Fabric weave, surface grain, paper finish, and texture must be visible and in sharp focus. Photography must be lit to reveal surface quality, not flatten it. If the material reads as flat or anonymous, the quality signal fails \u2014 reshoot or relight. This is the primary visual mechanism for communicating quality at an accessible price tier.",
+          "Honest imperfection: Slight photographic grain is permitted and preferred. Natural shadows are unretouched. Hands shown in product use are not retouched. Real bodies across diverse ages, sizes, and abilities. No aspirational perfection \u2014 the visual language communicates 'this is for you, now, as you are,' not 'this is the version of you you're trying to become.'",
+          "Lifestyle settings must show ordinary, recognisable spaces: everyday kitchens, real workplaces, transit environments, and ordinary outdoor settings. Aspirational-coded environments \u2014 penthouse apartments, empty minimalist architecture, curated designer interiors \u2014 are prohibited. The moment the context reads as aspirational, the everyday positioning breaks."
+        ],
+        "materials": "Primary print surface is uncoated or lightly coated matte stock \u2014 gloss and high-sheen laminate are prohibited. Matte communicates considered and functional without reading as cheap or luxury. Packaging direction: heavyweight unbleached kraft or soft white uncoated board. No foil stamping, no embossing unless structurally functional (e.g., braille). Material decisions must be consistent across all touchpoints \u2014 a matte brand on gloss packaging creates category misalignment and undermines positioning.",
+        "do_rules": [
+          "DO use #F5F3EF (cream/off-white) as the structural background on all digital and print surfaces. Never substitute digital white (#FFFFFF) for campaign or editorial layouts \u2014 the warmth differential is the difference between clinical and considered.",
+          "DO show texture in every product photograph. Zoom and light photography to make material grain, weave, or surface finish legible. If the texture is not visible, reshoot or relight. Material honesty is the single strongest quality signal available at this price tier.",
+          "DO maintain the 60:40 content-to-space ratio across all layouts. When in doubt, remove content rather than compress margins. Space is the signal \u2014 density is the enemy of accessible premium positioning.",
+          "DO restrict accent colour (#6B8E7F Sage Green) to a maximum of 10\u201315% of any layout's visual weight. It exists to create saturation contrast against the muted neutral palette. If it becomes dominant, the muted restraint that signals quality is broken.",
+          "DO use Avenir Next Medium as the fixed display weight throughout the system. Weight consistency is how this system signals typographic confidence. Medium is the only permitted display weight \u2014 variation to Light, Bold, or Black creates the visual noise of committee-designed, discount-tier communication."
+        ],
+        "dont_rules": [
+          "DON'T use primary brights \u2014 electric blue, acid green, saturated red, or bright yellow \u2014 anywhere in the system. These colours are category signals for tech/SaaS, fast food, or discount retail, and their presence would immediately and irreversibly misassign this brand to a lower tier or a different category entirely.",
+          "DON'T mix typeface classifications. Avenir Next (display) and Source Sans Pro (body) are both humanist sans-serif. Adding any serif typeface as a third voice \u2014 for pull quotes, callouts, or editorial flavour \u2014 introduces typographic instability that undermines accessible premium positioning.",
+          "DON'T use monochromatic palette execution \u2014 a single colour family across the entire system reads as luxury confidence and Tier 4 positioning. The affordable essentials consumer will perceive the brand as too refined to be for everyone. The three-tone system (cream, warm grey, sage accent) is structurally necessary to hold Tier 2.",
+          "DON'T shoot products in aspiration-coded environments: penthouse apartments, empty minimalist architecture, or curated designer interiors. Lifestyle photography must show ordinary, recognisable spaces. The moment context reads as aspirational, the everyday positioning breaks.",
+          "DON'T use edge-to-edge layout density or maximised content grids. Every layout that fills its canvas signals mass-market urgency and value through quantity. White space is not wasted space \u2014 it directly communicates the difference between this brand and a discount retailer. Any layout that feels full must be edited before production."
+        ],
+        "benchmark_brands": [
+          {
+            "name": "Muji (\u7121\u5370\u826f\u54c1)",
+            "reference_note": "Reference specifically: earth-tone neutral palette execution, lifestyle-context photography with visible material texture, and typographic restraint with generous spacing. Muji is the closest visual peer to this direction. Do not mimic \u2014 use as a calibration point for restraint level and material honesty."
+          },
+          {
+            "name": "Uniqlo (LifeWear campaign, 2024)",
+            "reference_note": "Reference specifically: diverse body representation in natural light, grid-based layout that creates product range clarity without visual density, and use of warm grey and cream as campaign background tones \u2014 not pure white, not warm beige."
+          },
+          {
+            "name": "Target ('Designed for Everyday' campaign, 2024)",
+            "reference_note": "Reference specifically: inclusive photography direction showing diverse ages, body types, and abilities in functional everyday use; simplified typographic hierarchy that uses weight and size (not colour) to create distinction; and the move away from aspirational styling toward honest, functional context."
+          }
+        ],
+        "visual_narrative": "This brand lives in the space between designed and ordinary \u2014 and it earns that position through material honesty, not visual performance. Every surface is off-white (#F5F3EF), warm enough to read as considered and human, clean enough to step back and let the product lead. The palette is deliberately quiet: warm grey (#9E8B80) does the structural work, sage green (#6B8E7F) appears only when it has something specific to say. Avenir Next Medium carries all headline weight \u2014 not thin, not bold, just steady and clear. Layouts breathe at 60:40, with consistent margins that signal intention rather than accident. Photography shows real hands, real textures, real light \u2014 fabric grain in focus, shadows left natural, bodies unretouched and diverse. Nothing shouts. Nothing retreats. This brand communicates competence through restraint, quality through material legibility, and accessibility through the quiet confidence that it was designed for use, not for display.",
+        "conflicts_resolved": "CONFLICT 1 \u2014 Typography Tracking (Trend vs. Theory): Trend research identified wide tracking as a dominant signal across benchmark brands signalling contemporary minimalism. Theory specified display tracking at 0.02\u20130.05em and body tracking at default or -0.01em. Resolution: Theory governs. Loose-neutral tracking (0.02\u20130.05em) is applied to display type where breathing room is a compositional signal; default or -0.01em tracking is applied to body type where legibility and accessibility are the governing requirements. Wide tracking in body copy reduces legibility at small sizes and conflicts with the accessibility value of this aesthetic. | CONFLICT 2 \u2014 White Space Ratio (Trend vs. Theory): Trend research described 'generous negative space' and 'abundant white space' without specifying a ratio ceiling, risking drift toward luxury-coded theatrical emptiness. Theory provided a specific 55\u201365% content / 35\u201345% white space range. Resolution: Theory governs. The 60:40 ratio (midpoint of the specified range) is adopted as the operational rule. Creative teams require a measurable guardrail, not a directional description \u2014 60:40 is the number that holds Tier 2 positioning without sliding toward Tier 4 luxury spacing. | CONFLICT 3 \u2014 Accent Colour (Terracotta/Clay Trend vs. Sage Green Theory): Trend research identified warm terracotta/clay as an emerging 2024\u20132025 accent in benchmark brand campaigns, signalling natural and artisanal quality. Theory specified soft sage green (#6B8E7F) as the accent colour for its cross-seasonal positioning between wellness and functional. Resolution: Theory governs for the core system; trend is permitted for seasonal execution. Sage green (#6B8E7F) is the system-level accent colour because it holds positioning value across all seasons without veering into artisanal territory. Terracotta/clay is acknowledged as a valid tertiary warm tone for autumn/winter seasonal campaigns only \u2014 it does not enter the core colour system, as its earthier signal risks narrowing brand perception from 'everyday essentials' to 'natural/craft essentials.'"
+      }
+    },
+    {
+      "keyword": "dark luxury fragrance",
+      "signal": "premium",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 5,
+          "specificity": 5,
+          "coherence": 5,
+          "benchmark_validity": 2,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": true,
+          "internal_contradiction": false
+        },
+        "overall": 2.0,
+        "justification": "Positioning is sharply and consistently premium-dark: the 80/20 charcoal field, gold-as-earned-accent capped at 5-8%, matte-mandatory materials, and tracked Didone display all reinforce one nocturnal direction with execution-ready specs. However benchmark validity collapses: 'Tom Ford Black Orchid Reserve (2025 campaign)' with a named 'Lewis Mirrett still-life archive' appears fabricated, and Creed is more classical-heritage than dark luxury \u2014 only Dior Homme is cleanly on-territory. The conflicts_resolved section is unusually rigorous and the do/don't rules are concrete enough for a junior to execute without questions.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 48.8,
+        "agent_02": 75.2,
+        "agent_03": 56.4,
+        "agent_04": 72.5,
+        "total": 252.8
+      },
+      "cost": {
+        "llm_calls": 12,
+        "prompt_tokens": 40065,
+        "completion_tokens": 13389,
+        "total_tokens": 53454,
+        "cost_usd": 0.1767,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "dark luxury fragrance",
+        "positioning_statement": "A brand that communicates absolute exclusivity through visual inaccessibility \u2014 nocturnal, theatrically cold, and architecturally precise, where darkness is the primary design material and restraint is the only ornament.",
+        "palette": [
+          {
+            "name": "Deep Charcoal",
+            "hex_code": "#1A1A1A",
+            "role": "Primary dominant field colour occupying 80% of all compositions; the atmospheric ground against which all other elements exist",
+            "rationale": "Near-black charcoal establishes nocturnal positioning and psychological distance; it is not a background colour but the primary visual medium that communicates inaccessibility and dark luxury tier"
+          },
+          {
+            "name": "Bone White",
+            "hex_code": "#F5F0E8",
+            "role": "Applied to primary typography, packaging borders, and secondary surface detailing; creates legible, elegant contrast without clinical brightness",
+            "rationale": "Warm-leaning white avoids the sterility of pure white (#FFFFFF) while delivering clear typographic legibility against deep charcoal; its slight warmth remains within the nocturnal register without introducing lifestyle warmth"
+          },
+          {
+            "name": "Warm Gold",
+            "hex_code": "#C9A84C",
+            "role": "Exclusive accent used for foil-stamped wordmarks, bottle cap details, and single typographic flourishes; never exceeds 5\u20138% of any composition",
+            "rationale": "A single earned luxury signal; its rarity within the composition is what gives it psychological weight \u2014 overuse collapses its authority; it anchors the brand in premium heritage without softening the nocturnal coldness of the overall palette"
+          }
+        ],
+        "photography_tones": "Single-source cool lighting on deep charcoal (#1A1A1A) or near-black grounds exclusively; shadow-dominant with deliberate pools of near-black; no warm colour temperature in grade; metallic surfaces permitted to catch light as the sole warm note within the frame; daylight, natural light, and ambient warmth are categorically prohibited; photography backgrounds must remain deep charcoal or near-black \u2014 warm greys and dusty taupe are excluded",
+        "typography": {
+          "display_typeface": "Didot or Saol Display (high-contrast Old Style / Didone serif) \u2014 used for brand wordmark, fragrance name, and all headline applications",
+          "body_typeface": "Univers Condensed or DIN Next (geometric sans-serif) \u2014 used for product descriptors, ingredient notes, and all secondary copy; set at 9\u201312pt",
+          "display_tracking": "150\u2013200% of default letterspacing \u2014 letterforms float in dark space with autonomy and theatrical distance",
+          "body_tracking": "100\u2013110% of default letterspacing \u2014 tight and near-invisible, anchors beneath display, functional not decorative",
+          "hierarchy_notes": "Display type set in Bone White (#F5F0E8) or Warm Gold (#C9A84C) foil on deep charcoal ground only; never reversed into warm backgrounds. Body type set in Bone White (#F5F0E8) on dark ground only. Script typefaces, rounded sans-serifs (Montserrat, Proxima Nova), and slab serifs (Clarendon, Rockwell) are categorically prohibited. Display type must never be set at default tracking \u2014 the generous letterspace is a non-negotiable brand signal of confidence and restraint."
+        },
+        "layout_approach": "Invisible grid structure with no visible alignment infrastructure; content occupies 20\u201335% of the total visual field; dark space constitutes 65\u201380% of every composition; subject placement is centrally anchored or deliberately asymmetric \u2014 never edge-crowded; information density must never exceed 35% of the visual field across all touchpoints from packaging to digital to campaign",
+        "negative_space_rule": "Dark space is not empty \u2014 it carries atmospheric pressure and psychological weight; it must never be filled, justified, or treated as a problem to solve; the void is the primary luxury signal and must be defended as compositional material, not treated as unused real estate; sparse, confident emptiness is the differentiator from mass-market visual density",
+        "photography_direction": [
+          "Single-source cool lighting only \u2014 shadow-dominant, subject occupying 25\u201340% of frame against a deep charcoal (#1A1A1A) or near-black ground; no multi-source, no fill light, no reflectors that eliminate shadow",
+          "Shallow or very deep depth of field exclusively \u2014 avoid middle-distance focus; fragrance bottles are treated as isolated sculptural objects with razor-sharp edges at the point of focus dissolving into atmospheric darkness at their periphery",
+          "No lifestyle context, no human presence, no daylight or natural light \u2014 the bottle is the sole subject; minimal still-life props permitted only where they dissolve into the dark ground (ghost florals, crystalline elements, parchment fragments) and do not compete with the bottle as primary sculptural subject",
+          "Campaign exception only: if talent is used in above-the-line campaign imagery, enforce extreme theatrical coldness \u2014 single-source cool lighting, no warmth in grade, abstract compositional framing where human presence is as architecturally cold and sculptural as the bottle itself; this permission does not extend to product, packaging, or digital touchpoints"
+        ],
+        "materials": "Matte finish is mandatory across all primary packaging surfaces \u2014 uncoated charcoal cardstock or soft-touch lamination; laid or linen texture must be visible at close distance as a tactile luxury signal felt before it is seen; gold foil stamping (#C9A84C) applied as accent only on typographic elements; glossy finishes are prohibited on all primary packaging surfaces; matte/gloss contrast is permitted only as a single deliberate dimensional detail (e.g., gloss-spot varnish on embossed wordmark set against a matte charcoal field) \u2014 this is a precision craft technique, not general glossiness; full gloss packaging and gloss photography backgrounds remain categorically prohibited; Deep Indigo or Midnight Blue permitted exclusively as bottle glass tint colour for product differentiation \u2014 never in backgrounds, typography, or packaging surfaces",
+        "do_rules": [
+          "Deploy the 80/20 dark field rule universally \u2014 80% deep charcoal (#1A1A1A) ground, 20% or less Bone White (#F5F0E8) and Warm Gold (#C9A84C) combined, across every touchpoint from packaging to digital to campaign without exception",
+          "Treat the fragrance bottle as pure sculpture \u2014 photograph it in isolation against deep charcoal ground with single-source cool lighting, razor-sharp focus on form, shadow doing all atmospheric work; the bottle must never share visual authority with props, environment, or human presence",
+          "Use Warm Gold (#C9A84C) as a single, earned accent only \u2014 foil-stamped onto wordmark and bottle cap; if gold appears more than once per composition, reduce it; its rarity is the source of its luxury weight",
+          "Set display type at 150\u2013200% tracking \u2014 letterforms must float in dark space with autonomy and unhurried confidence; the spacing itself signals theatrical distance and brand authority",
+          "Maintain matte surface finish as the primary material luxury signal \u2014 soft-touch lamination or uncoated stock with linen/laid texture communicates precision craft through tactility, not visual noise; every primary packaging surface must pass a matte-surface check before production approval",
+          "Maintain content density at or below 35% of the total visual field across all compositions \u2014 negative space is the luxury differentiator and must be actively protected at every design stage"
+        ],
+        "dont_rules": [
+          "Never introduce warm earth tones, botanical greens, or mid-tone neutrals \u2014 terracotta, sage, warm taupe, dusty taupe, warm grey, and warm brown all shift the brand into artisanal heritage or wellness territory, destroying nocturnal positioning; photography backgrounds must be deep charcoal (#1A1A1A) or near-black only",
+          "Never use glossy finishes on primary packaging surfaces \u2014 gloss reads as commercial and accessible, undermining the psychological distance that defines dark luxury tier; full gloss packaging and gloss photography backgrounds are categorically prohibited",
+          "Never use script typefaces, rounded sans-serifs (Montserrat, Proxima Nova), or slab serifs (Clarendon, Rockwell) \u2014 these signal approachability, warmth, or heritage craft, none of which belong in this visual register",
+          "Never introduce lifestyle photography \u2014 no people, no daylight, no nature context at product or digital touchpoints; human presence and warm natural light collapse the nocturnal atmosphere and shift the brand toward quiet luxury (Aesop, The Row) rather than dark luxury",
+          "Never fill negative space or increase content density beyond 35% of the visual field \u2014 information abundance signals mass-market positioning; the void is the brand's primary communication tool and must be defended as such",
+          "Never allow Warm Gold (#C9A84C) to exceed 5\u20138% of any single composition \u2014 overuse of gold collapses its earned-accent authority and shifts the palette toward maximalist luxury, which contradicts the restraint-as-ornament positioning"
+        ],
+        "benchmark_brands": [
+          {
+            "name": "Tom Ford Black Orchid Reserve (2025 campaign)",
+            "reference_note": "Reference cinematic, shadow-dominant product photography and disciplined use of near-black palettes with gold as a single compositional punctuation mark; study the Lewis Mirrett still-life archive specifically for lighting temperature (cool, single-source) and object isolation technique against dark grounds"
+          },
+          {
+            "name": "Dior Homme",
+            "reference_note": "Reference the matte black and deep charcoal packaging system and the intimate, whisper-quiet photographic register; benchmark for restraint in surface finish, matte material hierarchy, and sparse spatial composition across packaging and campaign"
+          },
+          {
+            "name": "Creed",
+            "reference_note": "Reference the classical high-contrast serif wordmark treatment and archival-style typographic confidence; specifically study the generous tracking applied to bottle and packaging typography and the monochromatic palette discipline as a model for typographic authority within a restricted colour system"
+          }
+        ],
+        "visual_narrative": "The visual world of this brand is nocturnal and absolute. Deep Charcoal #1A1A1A is not a background \u2014 it is the primary medium; everything exists within it, not against it. The fragrance bottle is a sculptural object photographed in isolation under a single cool light source, razor-sharp at its edges and dissolving into shadow at its periphery. Bone White #F5F0E8 appears only in typography \u2014 Didot or Saol Display, tracked at 150\u2013200%, letterforms floating in the void with the unhurried confidence of something that does not need to announce itself. Warm Gold #C9A84C is the single earned luxury signal: foil-stamped onto the wordmark, nothing more. Packaging is matte \u2014 uncoated charcoal stock with a linen texture felt before it is seen. Layouts are architecturally sparse; content never exceeds 35% of the field. This brand communicates through absence. What is not there is the statement.",
+        "conflicts_resolved": "CONFLICT 1 \u2014 Metallic finishes (matte-dominant vs. matte/gloss contrast): Theory governs primary rule; trend governs exception. Matte finish is non-negotiable as the dominant surface across all primary packaging. Gloss-spot varnish on an embossed wordmark against a matte field is permitted as a single, precise craft technique adding tactile depth without compromising overall surface coldness. Full gloss packaging and gloss photography backgrounds remain prohibited. | CONFLICT 2 \u2014 Colour range (Dusty Taupe and Warm Greys vs. strict three-tone palette): Theory governs entirely. Dusty Taupe and Warm Greys are excluded from the palette at all touchpoints. Photography backgrounds must remain deep charcoal (#1A1A1A) or near-black. Risk of palette drift into warm, accessible quiet luxury territory is too high to permit this trend signal. | CONFLICT 3 \u2014 Deep Indigo and Midnight Blue as alternative darks: Permitted exclusively as bottle glass tint colour for nocturnal depth and product differentiation. May never appear in backgrounds, typography, packaging surfaces, or any compositional element other than the physical bottle glass itself. Maintains three-tone palette rigour while acknowledging the trend signal's legitimate application to the product object. | CONFLICT 4 \u2014 Celebrity/editorial campaign imagery vs. no human presence rule: Trend governs for above-the-line campaign work only; theory governs for all product, packaging, and digital touchpoints. If talent is used, direction must enforce extreme theatrical coldness \u2014 single-source cool lighting, no warmth in grade, abstract compositional framing where human presence is as architecturally cold as the bottle itself. This is a campaign-specific exception, not a general permission across the system."
+      }
+    },
+    {
+      "keyword": "playful kids edtech",
+      "signal": "accessible",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 5,
+          "specificity": 5,
+          "coherence": 5,
+          "benchmark_validity": 5,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": false,
+          "internal_contradiction": false
+        },
+        "overall": 5.0,
+        "justification": "Lands squarely in accessible/warm kids edtech territory with committed specifics: named typefaces (Fredoka/Quicksand), exact hexes with assigned roles, 4-8px stroke weights, 20-32px corner radii, 50-65% content-to-space ratio, and explicit tracking values. Benchmarks (Khan Academy Kids, Duolingo, Scratch) are all real and genuinely on-aesthetic, and the warm-not-cool palette, lowercase peer-level copy, and texture rules reinforce one coherent direction without contradiction. The do/don't rules and conflicts_resolved section give a junior designer enough to execute without follow-up questions.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 39.2,
+        "agent_02": 52.4,
+        "agent_03": 58.4,
+        "agent_04": 52.8,
+        "total": 202.9
+      },
+      "cost": {
+        "llm_calls": 11,
+        "prompt_tokens": 33605,
+        "completion_tokens": 10147,
+        "total_tokens": 43752,
+        "cost_usd": 0.1492,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "playful kids edtech",
+        "positioning_statement": "A tactile, character-rich visual system built on high-saturation primary colour, rounded humanist type, and imperfect hand-drawn craft \u2014 designed to make learning feel like creative play, not institutional obligation.",
+        "palette": [
+          {
+            "name": "Bright Cyan",
+            "hex_code": "#0066FF",
+            "role": "Primary action colour; drives all interactive states including buttons, CTAs, progress indicators, and link states.",
+            "rationale": "High-saturation primary bias signals designed-for-you intent at under 200ms recognition; establishes trust and forward motion as the dominant brand colour."
+          },
+          {
+            "name": "Hot Magenta",
+            "hex_code": "#FF006E",
+            "role": "Secondary emphasis and contrast accent; used for highlight states, achievement moments, character outlines, and secondary navigation.",
+            "rationale": "Complementary tension with cyan creates visual energy and establishes hierarchy without requiring size variation; marks moments worth celebrating."
+          },
+          {
+            "name": "Warm Yellow",
+            "hex_code": "#FFD60A",
+            "role": "Accent for success states, badges, reward moments, and positive reinforcement UI exclusively.",
+            "rationale": "Triggers reward psychology associations; used sparingly to preserve signal value as the dedicated reward colour; functions as third node in complementary triad with cyan and magenta."
+          },
+          {
+            "name": "Off-White",
+            "hex_code": "#F7F5F0",
+            "role": "Primary background and breathing space surface.",
+            "rationale": "Warm-toned neutral (not cool grey) maintains approachability and allows electric primaries to activate without visual exhaustion."
+          },
+          {
+            "name": "Light Warm Grey",
+            "hex_code": "#E8E4DC",
+            "role": "Secondary background, card surfaces, and supporting layout breathing space.",
+            "rationale": "Warm-toned supporting neutral that reinforces approachable mid-market positioning; never cool grey which reads as institutional or corporate."
+          }
+        ],
+        "photography_tones": "Warm, naturally lit, high-contrast images with saturated but realistic colour rendering. Sunlit and energetic feel consistent with Warm Yellow #FFD60A accent energy. Avoid cool-graded, desaturated, or editorial toning. All photography must feel warm, bright, and human \u2014 not clinical, studio-lit, or artificially colour-graded.",
+        "typography": {
+          "display_typeface": "Fredoka (rounded geometric sans-serif)",
+          "body_typeface": "Quicksand (humanist geometric sans-serif)",
+          "display_tracking": "10\u201315% letter-spacing at 24px\u201348px range; tighten tracking at 60px and above as optical rendering compensates for spacing at large scale.",
+          "body_tracking": "0\u20135% tracking standard; 1.5\u20131.7x line-height applied universally to support developing reading muscles and reduce cognitive load.",
+          "hierarchy_notes": "Fredoka used at bold weight only for all hero headlines, feature titles, navigation labels, and character naming; sentence case only \u2014 no all-caps in child-facing contexts. Quicksand used at regular and medium weights only for body copy, UI labels, tooltips, and instructional text; bold weight reserved exclusively for Display (Fredoka) tier. Never use serif typefaces (Garamond, Georgia, Times) or industrial sans-serifs (DIN, Univers, Helvetica Neue) at any hierarchy level."
+        },
+        "layout_approach": "Modular rhythm-based grid using an invisible scaffold rather than rigid column-lock. 50\u201365% content-to-space ratio maintained across all layouts. Cards and content blocks use rounded corners at 20\u201332px radius. Inter-card spacing minimum 20px. Breathing room functions as a cognitive accessibility tool, not a luxury or premium signal.",
+        "negative_space_rule": "Space must always have a functional job \u2014 it separates ideas explicitly and reduces cognitive load. Never use stark gallery-style emptiness, which reads as premium or aspirational and conflicts with approachable mid-market positioning. Negative space should feel generous and easy, never sparse or theatrical. Minimum 50% content-to-space ratio is non-negotiable; grids without this ratio contradict the brand's core promise that learning should feel manageable.",
+        "photography_direction": [
+          "Candid joy and genuine unposed expressions only \u2014 no stock corporate-diversity staged poses, forced smiles, or artificial group compositions.",
+          "Represent diverse faces, body types, and real learning contexts including outdoor, home, and informal environments; avoid sterile classroom or studio settings.",
+          "Integrate character illustrations or mascot overlays directly into photography to bridge the illustration and photography systems and increase perceived friendliness and brand cohesion.",
+          "Apply warm, sunlit colour grading consistent with the Warm Yellow #FFD60A palette energy; never apply cool, desaturated, or editorial toning to any photography asset.",
+          "Apply cut-out photography effects, sticker-style framing, or ripped paper edge treatments when photography is used alongside illustration components to unify the mixed-media visual system."
+        ],
+        "materials": "Soft, matte-finish digital surfaces with tactile texture references throughout \u2014 ripped paper edges, hand-drawn line overlays, sticker-style graphic treatments, and cut-out photography effects. Material language should suggest physical hands-on exploration transposed into digital space. Avoid glossy, polished, or hyper-rendered 3D surfaces entirely. Texture is a core system-level asset, not a decorative exception.",
+        "do_rules": [
+          "Use thick-stroke imperfect illustration: character illustrations use generous line weight of 4\u20138px at standard resolution, slight wobble in linework, and exaggerated proportions \u2014 imperfection signals humanity and warmth.",
+          "Apply complementary colour pairs to drive hierarchy: Cyan #0066FF with Yellow #FFD60A and Magenta #FF006E establish visual priority through hue and brightness contrast alone, reducing dependence on size variation.",
+          "Treat hand-drawn linework as a system-level asset: hand-drawn overlays, doodle frames, and sketch textures appear consistently across hero sections, card backgrounds, and loading states as core visual grammar \u2014 not decorative exceptions.",
+          "Design every interactive reward moment in Warm Yellow #FFD60A: badge unlocks, progress completions, correct answers, and celebration states all resolve to yellow to build consistent reward association through conditioning.",
+          "Write all child-facing copy in lowercase conversational sentence case: lowercase registers as peer-level and collaborative rather than institutional authority; apply consistently to UI microcopy, CTAs, and all headline copy in child-facing flows.",
+          "Adopt Kid Core nostalgia energy through illustration style, sticker-graphic treatments, hand-drawn texture, and exaggerated character forms \u2014 contained within the modular grid and disciplined 3-colour system."
+        ],
+        "dont_rules": [
+          "Never use muted, desaturated, or earth-tone palettes: these register as corporate institutional LMS (Blackboard, Canvas territory) and actively repel child engagement; even neutral backgrounds must be warm-toned, never cool grey.",
+          "Never use serif typefaces in any primary hierarchy role: Garamond, Georgia, Times and all serif classifications read as formal and legacy, creating distance from child audiences and undermining approachability positioning.",
+          "Never use industrial sans-serif typefaces: DIN, Univers, Helvetica Neue, and similar geometric grotesques read as cold and technical, conflicting directly with the humanist warmth direction of the typography system.",
+          "Never create dense no-breathing-room grids: any grid without a minimum 50% negative space contradicts the core brand message that learning should feel easy and manageable; dense layouts signal overwhelm before a single word is read.",
+          "Never use stock corporate photography as-is: posed smiles, business-diversity staging, and sterile classroom environments undermine authentic community \u2014 always integrate illustration overlays, character elements, or reframe to candid moments before publishing.",
+          "Never use an unstructured rainbow palette: undisciplined multi-colour combinations destroy hierarchy and cognitive ease; all colour use must follow the defined 3-tone system (Cyan #0066FF, Magenta #FF006E, Yellow #FFD60A) with assigned roles."
+        ],
+        "benchmark_brands": [
+          {
+            "name": "Khan Academy Kids",
+            "reference_note": "Reference specifically for tactile illustration language \u2014 hand-drawn lines, ripped paper textures, cut-out photography integration \u2014 and their accessible flexible colour architecture that allows bright primaries to function across different contrast and accessibility requirements."
+          },
+          {
+            "name": "Duolingo",
+            "reference_note": "Reference specifically for character-driven brand personality and the imperfect aesthetic principle: how intentional wobble, expressive character faces, and playful asymmetry build emotional engagement without sacrificing legibility or brand coherence."
+          },
+          {
+            "name": "Scratch",
+            "reference_note": "Reference specifically for block-based gamification visual language applied to a creative-agency brand story \u2014 sticker-like UI components, bright complementary colour hits, and peer-community visual metaphors that make the platform feel user-owned rather than institution-delivered."
+          }
+        ],
+        "visual_narrative": "This brand speaks in the visual language of discovery \u2014 the feeling of opening a new sketchbook, finding a sticker you forgot you had, or building something that actually works. High-saturation primaries drive every surface: Bright Cyan #0066FF pushes action forward, Hot Magenta #FF006E marks moments worth celebrating, and Warm Yellow #FFD60A rewards every right answer and finished project. Fredoka carries every headline with rounded confidence \u2014 friendly without being babyish \u2014 while Quicksand keeps body copy open and readable for developing readers. Illustration is imperfect on purpose: wobbly lines, thick strokes, exaggerated characters with real personality. Photography shows actual children in genuine moments of discovery \u2014 joy that is not posed, diversity that is not staged \u2014 with character overlays bridging the drawn and the real. Ripped paper edges and hand-drawn textures bring physical craft into digital space. The grid breathes at 50\u201365% content-to-space, because ease is the entire point.",
+        "conflicts_resolved": "CONFLICT 1 \u2014 Saturated rainbow mixing (trend) vs. disciplined 3-colour system (theory): Theory governs. The rainbow mixing trend describes the energy register of the category, not a literal instruction to use every hue simultaneously. Undisciplined rainbow palettes produce visual noise that destroys hierarchy and cognitive ease essential for child audiences. The 3-tone system (Cyan #0066FF, Magenta #FF006E, Yellow #FFD60A) delivers full primary-range vibrancy, satisfies the unapologetic saturation signal, and maintains legibility and reward-state conditioning. Rainbow energy is achieved through illustration and hand-drawn elements \u2014 not through an unstructured colour system. CONFLICT 2 \u2014 Kid Core nostalgia (trend) vs. avoiding hyper-commercial chaos (theory): Trend informs texture; theory governs composition structure. Kid Core nostalgia creates immediate recognition and warmth for child users and parent decision-makers. However, the full maximalist composition approach would read as chaotic and undermine cognitive accessibility. Adopt Kid Core via illustration style, sticker-graphic treatments, hand-drawn texture, and exaggerated character forms \u2014 but contain these within the modular grid and disciplined colour system. The nostalgia is the flavour; the theory is the structure."
+      }
+    },
+    {
+      "keyword": "minimalist scandinavian home",
+      "signal": "premium",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 5,
+          "specificity": 5,
+          "coherence": 5,
+          "benchmark_validity": 5,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": false,
+          "internal_contradiction": false
+        },
+        "overall": 5.0,
+        "justification": "Lands squarely in warm-premium Scandinavian territory with committed, defensible specs: named hexes (#F5F1E8, #6F7563, #8B6F5E), tonal range constraints (#D0C5B5\u2013#F0EBE0), 1.7\u00d7 leading, 0\u201320 tracking, and 50\u201365% negative space. Benchmarks (Muuto, By Lassen, HAY) are real, on-aesthetic, and referenced with precise campaign-level detail rather than wholesale. The report is internally consistent \u2014 the no-pure-white/no-pure-black rule, material-honesty thesis, and lowercase typographic restraint reinforce one direction, and the conflicts_resolved section pre-empts contradiction; a junior designer could execute without questions.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 40.2,
+        "agent_02": 35.0,
+        "agent_03": 69.1,
+        "agent_04": 69.6,
+        "total": 213.9
+      },
+      "cost": {
+        "llm_calls": 13,
+        "prompt_tokens": 49029,
+        "completion_tokens": 9656,
+        "total_tokens": 58685,
+        "cost_usd": 0.1701,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "minimalist scandinavian home",
+        "positioning_statement": "A warm material intelligence \u2014 every visual decision earns its place by serving how the space is lived in, not how it is admired.",
+        "palette": [
+          {
+            "name": "Nordic Cream",
+            "hex_code": "#F5F1E8",
+            "role": "Primary ground \u2014 dominant surface across all backgrounds, page fields, wall tones, and photography grounds",
+            "rationale": "Warm enough to read as inhabited and never clinical; replaces pure white to avoid digital sterility while providing a unified, non-colour foundation from which all other tones are built upward"
+          },
+          {
+            "name": "Structural Stone",
+            "hex_code": "#D8C7AE",
+            "role": "Secondary surface \u2014 mid-tone for secondary surfaces, textile layering, typographic support fields, and shadow-side material photography",
+            "rationale": "Provides architectural weight and bridges the warm cream ground and cooler accents without introducing colour contrast; reads as material rather than decorative"
+          },
+          {
+            "name": "Fjord Taupe-Grey",
+            "hex_code": "#6F7563",
+            "role": "Restrained accent \u2014 used sparingly for typographic anchoring, object outlines, and textile details",
+            "rationale": "Cool-leaning grey that introduces restraint without coldness; echoes concrete, linen shadow, and raw ceramic \u2014 functions as a material reference, not a graphic device"
+          },
+          {
+            "name": "Mocha",
+            "hex_code": "#8B6F5E",
+            "role": "Reserved warmth accent \u2014 applied exclusively to physical objects in photography at maximum 15% surface coverage; never used as UI, graphic, or background tone",
+            "rationale": "Material-referenced accent for leather, turned wood, and stoneware glaze; acknowledges Pantone 2025 cultural relevance without functioning as a trend marker \u2014 reads as material truth rather than design decision"
+          },
+          {
+            "name": "Near-Black Text Anchor",
+            "hex_code": "#2B2B2B",
+            "role": "Typography and fine detail anchor \u2014 replaces pure black in all text and detail applications",
+            "rationale": "Pure black (#000000) reads graphic and designed, contradicting material honesty; near-black retains legibility and typographic weight while remaining consistent with the warm, inhabited sensibility of the palette system"
+          }
+        ],
+        "photography_tones": "Slightly underexposed natural light on off-white and stone grounds; no pure white (#FFFFFF) catches anywhere in frame. Lit surfaces sit in the #D0C5B5\u2013#F0EBE0 range; shadows do not reach below #8A8070. Warm shadow falls across wood grain and linen texture. No boosted saturation in post-processing. Tones are quiet, warm, and material-honest \u2014 bright and clinical is explicitly the wrong direction.",
+        "typography": {
+          "display_typeface": "Aktiv Grotesk (Geometric Sans-Serif) \u2014 Regular or Light weight only",
+          "body_typeface": "Aktiv Grotesk Regular or Source Sans Pro Regular (Humanist/Geometric Sans-Serif) \u2014 single-family approach preferred; set at lighter weight or reduced size relative to display",
+          "display_tracking": "0\u201320 units standard; 40 units absolute maximum for single-word feature emphasis only \u2014 no extended tracking on headlines",
+          "body_tracking": "Standard 100% tracking; leading set at 1.7\u00d7 minimum, never below 1.6\u00d7",
+          "hierarchy_notes": "Weight hierarchy is achieved through size and spacing, never stroke contrast \u2014 no Bold display weights permitted. All wordmarks and primary headlines set in lowercase. No second typeface family introduced without explicit brief justification. Generous leading (1.7\u00d7) is the spatial principle applied at character level \u2014 it is the primary tool for breathing room in typography, not letter-spacing."
+        },
+        "layout_approach": "Asymmetric grid using 1/3 + 2/3 column split, or 12-column grid with enforced margin discipline. Content occupies 35\u201350% of total page area; negative space occupies 50\u201365%. Built on an 8px or 12pt baseline grid \u2014 invisible in execution, structurally rigorous in construction.",
+        "negative_space_rule": "Minimum margin of 15% of page width on all sides, non-negotiable. Space between compositional elements must be equal to or greater than the elements themselves. Negative space is functional breathing room \u2014 not atmospheric decoration, not a luxury signal. Measure negative space percentage before approving any composition; if the eye feels anything other than unhurried, the layout is overcrowded.",
+        "photography_direction": [
+          "Material first, lifestyle never: shoot individual objects and surfaces in isolation or near-isolation. Show wood grain at close range, linen texture in raking light, ceramic glaze in natural diffuse shadow. No aspirational living tableaux \u2014 no implied family, leisure, or social performance. Maximum two objects per frame in multi-object shots.",
+          "Natural window light only, slightly underexposed: no studio strobes, no high-key fill. Allow natural shadow to fall. Expose for the material surface, not the composition. Bright and clinical is the wrong direction \u2014 quiet confidence reads slightly darker than comfortable.",
+          "Subjects on Nordic Cream (#F5F1E8) or Structural Stone (#D8C7AE) grounds only: never pure white (#FFFFFF), never coloured backgrounds. Props, if present, are functional objects only \u2014 never decorative styling accessories. If a photograph could belong to a tech brand, retake it.",
+          "Tonal range discipline: lit surfaces must sit within #D0C5B5\u2013#F0EBE0; shadow areas must not fall below #8A8070. No post-processing saturation boosts. Warm shadow direction across all textured surfaces \u2014 wood grain, linen weave, unglazed ceramic, natural stone."
+        ],
+        "materials": "Uncoated or matte-finish stock in all print executions. Digital surfaces replicate this sensibility \u2014 avoid reflective gradients, high-gloss UI treatments, or screen-optimised polish. Embrace paper texture, material grain, and the visible imperfection of natural surfaces. No chrome, gloss lacquer, or high-sheen finishes in any execution medium. Every material reference should answer: does this serve the inhabitant's living experience?",
+        "do_rules": [
+          "Do use Nordic Cream #F5F1E8 as every starting surface \u2014 begin every layout, photograph, and composition from this ground and build upward in tonal layers.",
+          "Do apply the 50\u201365% negative space rule to every layout, always \u2014 measure it before approving any composition. If the eye feels anything other than unhurried, the layout is overcrowded.",
+          "Do show material texture in every hero image \u2014 wood grain, linen weave, unglazed ceramic, natural stone. Tactile quality is the proof of craft intention. If a photograph could belong to a tech brand, retake it.",
+          "Do use a single typeface family (Aktiv Grotesk) across all touchpoints \u2014 systematic typographic restraint is the strongest signal of design intelligence at this tier. Introduce no second family without explicit brief justification.",
+          "Do set all wordmarks and primary headlines in lowercase \u2014 this signals democratic accessibility within a premium positioning: approachable intelligence, not authoritative announcement.",
+          "Do limit Mocha (#8B6F5E) to a maximum 15% surface coverage, applied only to physical objects in photography (leather, turned wood, stoneware) \u2014 never as a UI, graphic, or background tone."
+        ],
+        "dont_rules": [
+          "Don't use pure white #FFFFFF or pure black #000000 anywhere \u2014 pure white reads clinical and digital; pure black reads graphic and designed. Replace with Nordic Cream #F5F1E8 and near-black #2B2B2B respectively.",
+          "Don't introduce saturated botanical greens or bold blues as accent colours \u2014 Forest Green #5C7C5E and Fjord Blue #7B9AAF are explicitly excluded despite current trend presence; they undermine timeless calm and reduce shelf life to 12\u201318 months. Stone and taupe accents serve this role instead.",
+          "Don't use all-caps extended tracking at 200% or above on any text element \u2014 this signals heritage craft or editorial authority, both of which contradict Scandinavian functional restraint. If emphasis is required, achieve it through size and weight alone.",
+          "Don't stage lifestyle photography \u2014 no implied aspiration, social performance, or living tableaux. No styled bookshelves, curated coffee rituals, or family moments. This aesthetic communicates how things are made and how they feel, not how they make you look.",
+          "Don't introduce decorative graphic elements, coloured pattern, or illustrative details \u2014 any mark that cannot answer 'does this serve the inhabitant's living experience?' is immediately removed. Pattern and decoration read trend-conscious and contradict timeless functionality.",
+          "Don't apply Bold display weights or mixed-weight headline treatments \u2014 weight hierarchy is achieved through size and spacing only, never stroke contrast. Restraint in typographic weight is the discipline that differentiates this direction from heritage craft clich\u00e9s."
+        ],
+        "benchmark_brands": [
+          {
+            "name": "Muuto",
+            "reference_note": "Reference specifically: product isolation photography against neutral grounds, craftsmanship detail shots (close-range material photography), and compositional restraint from the 2024 'New Perspectives' campaign. Reference their spatial discipline and material focus \u2014 not their colour choices wholesale."
+          },
+          {
+            "name": "By Lassen",
+            "reference_note": "Reference specifically: horizon-framed natural light photography, the non-manufactured quality of their colour palette (derived from landscape, not design decision), and their campaign language around 'balance of modernity and traditional craftsmanship.' Their photography demonstrates the slightly underexposed, natural-tone direction at its most rigorous."
+          },
+          {
+            "name": "HAY",
+            "reference_note": "Reference specifically: tonal layering within neutral palettes (warm greiges, warm whites, and muted accent objects together in a single frame), and the systematic typography restraint visible across retail and campaign materials. Reference their core product photography and layout discipline \u2014 not their more playful collaborations."
+          }
+        ],
+        "visual_narrative": "The minimalist Scandinavian home is built from Nordic Cream (#F5F1E8) and natural light \u2014 everything begins there and earns its presence from that ground. The palette does not decorate; it declares material honesty. Stone surfaces sit against warm cream. Mocha-toned wood and leather read as what they are, not as colour choices. Fjord Taupe-Grey (#6F7563) anchors without competing. Photography shows how things feel before it shows how they look: linen texture under window light, ceramic glaze in soft morning diffuse, oak grain at close range. Nothing is staged. The layout breathes \u2014 content fills less than half the page, the rest is disciplined silence. Aktiv Grotesk does one job, does it well, and steps aside. Every headline is lowercase, every margin is generous, every typographic decision disappears into usefulness. This is design that answers to the inhabitant, not to the market.",
+        "conflicts_resolved": "Conflict 1 \u2014 Saturated accent colours (Forest Green #5C7C5E, Fjord Blue #7B9AAF): Trend research identifies both as current Scandinavian accent colours; design theory flags them as trend-conscious signals undermining timeless calm. Resolution: Theory governs. Both colours are explicitly excluded. Stone and taupe accents produce a direction with a five-to-ten year shelf life versus 12\u201318 months for saturated botanical tones. Conflict 2 \u2014 Mocha Mousse (#8B6F5E) as accent: Trend identifies it as increasingly prominent (Pantone 2025); theory warns against trend-chasing colour decisions. Resolution: Compromise with a specific constraint. Mocha is retained as a material-referenced accent at maximum 15% surface coverage, applied to physical objects in photography only (leather, turned wood, stoneware) \u2014 never as a graphic or background element. It reads as material truth, not a design decision. Conflict 3 \u2014 Typography tracking: Trend shows generous tracking as a Scandinavian brand signal; theory flags all-caps extended tracking (200%+) as contradicting functional restraint. Resolution: Theory governs with nuance. Tracking is set at 0\u201320 units for display (maximum 40 for single-word feature use). Generous spatial quality is achieved through leading (1.7\u00d7 minimum) and layout negative space, not letter-spacing \u2014 generous leading reads as breathing room; generous tracking reads as decoration."
+      }
+    },
+    {
+      "keyword": "high-energy fitness brand",
+      "signal": "bold",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 5,
+          "specificity": 5,
+          "coherence": 5,
+          "benchmark_validity": 4,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": false,
+          "internal_contradiction": false
+        },
+        "overall": 4.8,
+        "justification": "The direction lands squarely in bold/high-energy territory with committed hexes (#FF2D55, #E8FF00), named typefaces with specific tracking values (-0.02 to -0.04em), and clear field-occupancy rules (65-80%); palette, typography, photography and material rules all reinforce one aggressive performance reading without contradiction. Benchmarks are all real and on-aesthetic (Barry's, Apple Fitness+, Orangetheory), though the specific '2024 DesignStudio rebrand' attribution for Orangetheory is an unverifiable claim that risks being fabricated detail, costing a point. The do/don't rules and conflict resolutions are concrete enough that a junior designer could execute without questions.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 50.3,
+        "agent_02": 31.5,
+        "agent_03": 60.2,
+        "agent_04": 49.5,
+        "total": 191.5
+      },
+      "cost": {
+        "llm_calls": 14,
+        "prompt_tokens": 40221,
+        "completion_tokens": 9530,
+        "total_tokens": 49751,
+        "cost_usd": 0.1539,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "high-energy fitness brand",
+        "positioning_statement": "A maximum-intensity visual system built on complementary chromatic contrast, compressed typographic force, and asymmetric density \u2014 designed to communicate that every element earns its place because every rep does too.",
+        "palette": [
+          {
+            "name": "Electric Magenta",
+            "hex_code": "#FF2D55",
+            "role": "Primary \u2014 dominant energy signal occupying 40\u201350% of visual field",
+            "rationale": "Drives psychological association with competition, drive, and physiological activation; anchors all campaign-level colour decisions and must be the first colour a viewer registers in any composition"
+          },
+          {
+            "name": "Acid Yellow",
+            "hex_code": "#E8FF00",
+            "role": "Secondary \u2014 single-element callout colour used sparingly for maximum vibration",
+            "rationale": "Applied exclusively to movement indicators, CTA buttons, motion trail graphics, and highlight badges; creates maximum chromatic vibration through Itten complementary contrast with Electric Magenta"
+          },
+          {
+            "name": "Off-White",
+            "hex_code": "#F0EDE8",
+            "role": "Accent \u2014 neutral ground for typographic backgrounds and tight spatial relief",
+            "rationale": "Provides breathing room without competing as a dominant field; allows saturated primaries to read at full saturation without perceptual collapse; never used as a primary chromatic field"
+          }
+        ],
+        "photography_tones": "High-contrast, desaturated-to-neutral mid-tones in skin and environmental backgrounds with selective colour grading pulling warm amber and magenta into shadow areas. Cool blue-grey grading is explicitly avoided as it reads clinical or mass-market. Elevated grain and increased contrast are preferred over smooth commercial finish. Colour palette reinforcement through warm shadow grading ties photographic tone to the Electric Magenta primary.",
+        "typography": {
+          "display_typeface": "Bebas Neue or GT Pressura \u2014 Compressed Grotesque / Geometric Sans-Serif, Bold\u2013Black weight",
+          "body_typeface": "Inter or DM Sans \u2014 Humanist Sans-Serif, Regular\u2013Medium weight",
+          "display_tracking": "\u20130.02 to \u20130.04em (compressed, assertive; increases visual weight at 140\u2013180pt scale)",
+          "body_tracking": "0 to +0.02em (standard to slightly loose; maintains legibility at 14\u201316px in information-dense layouts)",
+          "hierarchy_notes": "Display type set exclusively in all-caps at 140\u2013180pt for headlines and campaign statements. Generous tracking of 0.1em or above is strictly prohibited for display as it shifts register into luxury editorial restraint. Body type at Regular\u2013Medium weight counteracts clinical coldness from high-saturation palette. No serif typefaces permitted at any hierarchy level."
+        },
+        "layout_approach": "Asymmetric maximalist grid \u2014 content occupies 65\u201380% of the visual field. Elements are permitted to overlap, stack, and rotate. Grid structure is present but dynamically applied, not rigidly symmetrical. Diagonal compositions and unconventional crops are the default framing strategy. Nothing sits isolated in generous white space; density is a deliberate signal that the brand wastes nothing.",
+        "negative_space_rule": "Negative space functions exclusively as a directional tool \u2014 it creates movement vectors around figures, equipment, and motion imagery that guide the eye toward the next action or the next element. It is never used as restful, contemplative breathing room (which would signal luxury wellness or athleisure positioning). Every open area in a composition must carry implied momentum; any gap without directional intent must be closed.",
+        "photography_direction": [
+          "Athletes captured mid-movement only \u2014 no posed, static, or aspirationally composed shots; sweat, motion blur, and physical strain are desired authenticity markers, not production flaws to retouch.",
+          "Extreme close-ups of muscle engagement, equipment texture (rubber grip, neoprene, metal hardware), or visible exertion detail \u2014 these signal performance specificity and differentiate from lifestyle or wellness casting.",
+          "Low-angle perspective and diagonal framing as the default camera position \u2014 the viewer is always positioned within or beneath the energy, never above it observing passively; static observation framing is prohibited.",
+          "Inclusive diversity casting across full-figure, mid-movement, and environmental photography \u2014 imagery must represent wide ranges of age, body type, skin tone, and fitness level to signal aspirational-but-achievable positioning."
+        ],
+        "materials": "Technical synthetic surfaces \u2014 rubber, neoprene, mesh, chrome, and brushed metal finishes preferred across all physical touchpoints including packaging, equipment, and retail environments. High-gloss finishes on packaging signal performance-tech. Matte finishes on apparel and retail surfaces signal serious and professional. Soft, organic, or natural materials (linen, wood, raw cotton) are strictly avoided as they shift brand positioning into wellness or recovery territory.",
+        "do_rules": [
+          "Use Electric Magenta (#FF2D55) as the dominant chromatic field \u2014 it must be the first colour a viewer registers in any composition, whether digital interface, studio signage, or printed campaign material.",
+          "Set all display type in compressed grotesque (Bebas Neue or GT Pressura) at \u20130.02 to \u20130.04em tracking, all-caps setting enforced at 140\u2013180pt scale \u2014 compress the letters and increase visual weight at every application.",
+          "Fill 65\u201380% of the visual field with content \u2014 text, imagery, colour blocks, or motion graphics should occupy the majority of any canvas; density communicates that this brand wastes nothing.",
+          "Apply motion blur, grain, and physical strain as intentional aesthetic signals in photography \u2014 these are authenticity and intensity markers that confirm effort is real and the brand does not sanitise the experience.",
+          "Treat studio environments, digital interfaces, app screens, and social formats as a single coherent visual system \u2014 colour, typeface, and layout rules apply identically across all surfaces without exception.",
+          "Use Acid Yellow (#E8FF00) only as a single-element callout to direct eye movement \u2014 CTAs, movement indicators, motion trail graphics, and highlight badges exclusively; never as a secondary dominant field."
+        ],
+        "dont_rules": [
+          "Never use muted, dusty, or desaturated tones \u2014 rose gold, warm grey, blush, and tinted whites signal lifestyle wellness or hesitation rather than performance capability and directly undermine positioning.",
+          "Never set display type with generous tracking of 0.1em or above \u2014 this is the single typographic signal that most immediately shifts the aesthetic into premium editorial or luxury restraint, communicating deliberation rather than urgency.",
+          "Never use serif typefaces or warm earthy palettes (clay, sage, natural linen) \u2014 these move the brand into wellness, recovery, or lifestyle territory and create a direct positioning conflict with performance intensity.",
+          "Never use negative space as a restful compositional device \u2014 do not leave open areas that allow the eye to settle or breathe without directional purpose; every gap must carry implied momentum.",
+          "Never cast using narrow athletic stereotypes \u2014 imagery must represent wide ranges of age, body type, skin tone, and fitness level; inclusive diversity casting is both a cultural mandate and a competitive differentiator for 2024\u20132025 market positioning.",
+          "Never apply cool blue-grey colour grading to photography \u2014 this reads as clinical or mass-market and conflicts with the warm amber and magenta shadow-grading direction that ties photographic tone to the brand palette."
+        ],
+        "benchmark_brands": [
+          {
+            "name": "Orangetheory Fitness (2024 DesignStudio rebrand)",
+            "reference_note": "Systematic application of a single signature energy colour across in-studio environments, retail, and digital surfaces \u2014 how a strong chromatic signal anchors an entire brand ecosystem without requiring visual complexity."
+          },
+          {
+            "name": "Barry's Bootcamp",
+            "reference_note": "Theatrical high-contrast lighting design in studio environments and premium performance-driven casting \u2014 how dramatic figure-ground contrast and dark environmental design communicate exclusivity and intensity simultaneously."
+          },
+          {
+            "name": "Apple Fitness+",
+            "reference_note": "Dynamic motion graphics system and clean integration of bold colour into digital interface design \u2014 how typographic hierarchy and vibrant colour coexist with legible, functional UI without either compromising the other."
+          }
+        ],
+        "visual_narrative": "Electric Magenta (#FF2D55) dominates every surface \u2014 not as decoration but as a physiological signal that full engagement is the only mode available. Acid Yellow (#E8FF00) enters only where the eye needs to move: a CTA, a movement indicator, the edge of a composition pulling the viewer forward. Off-white (#F0EDE8) is not rest \u2014 it is the surface that lets the colour perform without collapse. Bebas Neue holds headlines at \u20130.04em tracking, compressed and assertive, because this brand does not deliberate. Layouts fill 65\u201380% of their field; nothing receives space it has not earned. Photography lives inside the movement \u2014 low angles, motion blur, visible strain, extreme texture close-ups \u2014 and the people in those frames reflect the full spectrum of who trains hard. Studio environments, digital interfaces, and social formats speak the same visual language. There is no wellness here. There is only work.",
+        "conflicts_resolved": "CONFLICT 01 \u2014 Colour palette scope: Market trends advocate multi-chromatic layering (purples, teals, pinks, greens simultaneously); theory advocates a disciplined two-colour complementary system (magenta and acid yellow). Resolution: Theory governs. The magenta/yellow pairing creates maximum visual vibration and legibility at small scale while signalling deliberate design intent. Multi-chromatic layering at this stage risks visual diffusion and mass-market default association. Chromatic expansion is a considered future evolution, not the starting point. | CONFLICT 02 \u2014 Typography tracking: Market research identifies all-caps high-tracking wordmarks as a dominant pattern; theory explicitly identifies generous tracking (0.1em+) as undermining performance-intensity aesthetic. Resolution: Theory governs. Tight tracking (\u20130.02 to \u20130.04em) is the correct system default. If headline tracking must open at specific large-scale environmental applications (stadium signage, wayfinding), that is a contextual exception requiring art direction approval, not a system default. | CONFLICT 03 \u2014 Inclusive diversity casting vs. extreme close-up performance imagery. Resolution: Both are integrated with no conflict in practice. Inclusive casting applies to full-figure, mid-movement, and environmental photography (who is represented). Extreme close-ups of muscle, strain, and equipment texture operate as a separate photography layer independent of subject identity \u2014 the two directives function at different scales within the same photography system and are fully compatible."
+      }
+    },
+    {
+      "keyword": "heritage craft whiskey",
+      "signal": "premium",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 5,
+          "specificity": 5,
+          "coherence": 5,
+          "benchmark_validity": 3,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": true,
+          "internal_contradiction": false
+        },
+        "overall": 2.0,
+        "justification": "Positioning, palette hexes (#F2E8D9, #2D4A3E, #7B2D2D), named typefaces with committed tracking values, and the 45-55% ratio rule are exceptionally specific and coherently premium-craft, and a junior could execute directly. However, the Maker's Mark 'Longshorte artist collaboration label (2024)' appears to be an invented/garbled reference, and the Glenmorangie 'Delicious and Wonderful' campaign is not a verifiable real campaign \u2014 both are plausible-sounding fabrications. Woodford Reserve is a valid on-aesthetic benchmark, but the dubious specifics on the other two drag benchmark validity down and trigger the hallucination flag.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 44.5,
+        "agent_02": 27.8,
+        "agent_03": 66.9,
+        "agent_04": 68.5,
+        "total": 207.7
+      },
+      "cost": {
+        "llm_calls": 12,
+        "prompt_tokens": 36855,
+        "completion_tokens": 9138,
+        "total_tokens": 45993,
+        "cost_usd": 0.1509,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "heritage craft whiskey",
+        "positioning_statement": "A visual identity that looks inherited rather than designed \u2014 built from process materials, editorial restraint, and unhurried typographic confidence that signals provenance without announcing it.",
+        "palette": [
+          {
+            "name": "Aged Cream",
+            "hex_code": "#F2E8D9",
+            "role": "Primary background surface \u2014 label background, page field, and primary substrate; default neutral for all body typography and illustration backgrounds",
+            "rationale": "Reads as uncoated paper or worn parchment; never bright white; foundational neutral that communicates material honesty and aged authenticity across all touchpoints"
+          },
+          {
+            "name": "Deep Forest Green",
+            "hex_code": "#2D4A3E",
+            "role": "Secondary structural colour \u2014 borders, rule lines, secondary typography, and label framing elements",
+            "rationale": "Evokes vintage bottle glass and forest heritage; grounds the palette in natural origin without competing with the primary accent; provides complementary contrast against Aged Cream within a narrow saturation range per Itten/Albers principles"
+          },
+          {
+            "name": "Oxblood Red",
+            "hex_code": "#7B2D2D",
+            "role": "Accent \u2014 reserved exclusively for signature marks: wax seal equivalent, initial letterforms, foil-stamp details, and single typographic callouts per composition",
+            "rationale": "Commands premium authority through scarcity of use; never used in photography direction or background fills; one instance per composition maximum enforces its role as the single dominant gesture against a neutral field"
+          }
+        ],
+        "photography_tones": "Warm amber and cognac midtones dominating shadow areas; natural grain preserved in highlights; no artificial warmth correction or orange grading applied in post-production. Surfaces in frame must carry visible age \u2014 patina, wood grain, oxidation, and material wear. Cool-toned and blue-shifted colour grading are prohibited entirely. Aged-glass warmth, warm shadow areas, and amber environmental tones serve as the photographic palette without introducing additional structural colours.",
+        "typography": {
+          "display_typeface": "Chronicle Display (classical revival Old Style serif, editorial gravitas) \u2014 approved alternates if unavailable: Caslon or Freight Display (both share historical weight and letterpress editorial tradition)",
+          "body_typeface": "Garamond Premier Pro (warm humanist serif, text weight) \u2014 supports sustained reading at small sizes on uncoated stock without requiring sans-serif compromise",
+          "display_tracking": "200\u2013400 units letter-spacing (all-caps and small-caps configurations); echoes hand-lettered signage and considered typesetting tradition",
+          "body_tracking": "100\u2013110 units letter-spacing; leading set at 1.8x type size; evokes printed-book reader pace \u2014 unhurried and materially honest",
+          "hierarchy_notes": "Display set exclusively in all-caps or small-caps \u2014 never condensed, never set tight. Body type maintains heritage coherence with display face. Sans-serif typefaces are prohibited as primary or display typographic voice at all hierarchy levels. Condensed variants of any typeface are prohibited system-wide."
+        },
+        "layout_approach": "Swiss grid with deliberate subtle asymmetry \u2014 content occupies 45\u201355% of any given field; remaining area is generous margin and breathing room. Rule-of-thirds placement governs label compositions, not perfect mechanical centring. Grid lines serve as guides, not constraints \u2014 minor intentional misalignment signals craft process over digital precision.",
+        "negative_space_rule": "Space must feel earned through material honesty. Content sits within the field and does not fill it. Margins respect label edge zones, print bleed requirements, and material trim \u2014 they are functional, not decorative. Empty space is a signal of editorial confidence and premium positioning; filling the grid collapses the brand into mass-market territory. The 45\u201355% content-to-space ratio is the primary premium signal and must be maintained across all layout compositions.",
+        "photography_direction": [
+          "Process-focused primary imagery: hands actively at work \u2014 cooperage, labelling, pouring, measuring; tools in use; material textures foregrounded including wood grain, leather patina, glass thickness, and worn surfaces; the maker must be present or implied in every primary brand frame.",
+          "Documentary grain and natural light over gloss: natural window light or practitioner lighting only; no studio strobes, no product-hero lighting rigs, no engineered reflections; grain is preserved in post-production and never removed; documentary aesthetic governs all primary identity photography.",
+          "Slight imperfection as compositional evidence: a stray hand, a worn edge, a label not perfectly centred are intentional signals of craft authenticity, not errors to be corrected; images imply authenticity of method, not perfection of result.",
+          "Secondary editorial layer permitted: lifestyle-oriented consumption moment photography approved for campaign imagery, social, and advertising where emotional resonance is the communication goal \u2014 provided it maintains natural light, documentary grain, and warm palette discipline; it never replaces process imagery as the identity anchor."
+        ],
+        "materials": "Uncoated paper stock as the primary label and print substrate. Raw wood, rough concrete, kraft paper, terracotta, and worn leather as supporting environmental surfaces in photography and physical touchpoints. Embossing and debossing preferred over foil where budget and process allow; where foil is used, aged gold or matte oxblood tones only \u2014 no bright or mirror foil. Linen texture finishes on labels signal tactile craft over clinical gloss. All material choices must carry evidence of process and resist clinical perfection.",
+        "do_rules": [
+          "Use Aged Cream #F2E8D9 as the default background on every label, page, and digital surface \u2014 it is the primary neutral; bright white #FFFFFF is prohibited at all times without exception.",
+          "Set all display headline type in Chronicle Display, all-caps or small-caps, with minimum 200 units of letter-spacing \u2014 this is non-negotiable for primary wordmarks and product names; approved alternates are Caslon or Freight Display only.",
+          "Reserve Oxblood Red #7B2D2D for a single signature element per composition \u2014 wax seal equivalent, monogram, or one typographic callout maximum; its authority derives entirely from scarcity of use.",
+          "Include at least one process-focused photographic element in every editorial or marketing execution \u2014 hands, tools, material texture, or visible maker presence must be represented to authenticate the provenance claim.",
+          "Maintain 45\u201355% content-to-space ratio across all layout compositions \u2014 generous negative space is the primary signal of premium craft tier; exceeding 55% content density collapses the positioning to mass-market.",
+          "Preserve film grain in all photographic post-production and use natural or practitioner lighting exclusively \u2014 documentary authenticity is the differentiating photographic standard for this brand."
+        ],
+        "dont_rules": [
+          "Never use bright white #FFFFFF or clinical symmetrical centring \u2014 both read as contemporary digital design confidence and actively undermine the inherited, material-honest aesthetic this brand requires.",
+          "Never use sans-serif typefaces as the primary or display typographic voice \u2014 geometric precision signals product design and mass-market efficiency, not craft patience and historical typographic tradition.",
+          "Never use high-saturation colours or digital blues anywhere in the system \u2014 every colour must appear to have emerged from a material or process, not a digital colour selector; these signal generic manufactured identity.",
+          "Never use studio-lit, product-hero photography as the primary image mode \u2014 perfection-obsessed photography collapses the distance between this brand and over-designed luxury conglomerates; documentary imperfection is the differentiator.",
+          "Never use condensed typefaces or tight letter-spacing on display text \u2014 condensing signals urgency and density; this aesthetic demands unhurried, considered pacing in every typographic decision at every hierarchy level.",
+          "Never introduce warm cognac or deep gold as additional structural palette colours \u2014 these are reserved for photography toning only and would compete with Oxblood Red and over-warm the palette beyond its earned, natural-material appearance."
+        ],
+        "benchmark_brands": [
+          {
+            "name": "Maker's Mark",
+            "reference_note": "Reference specifically the Longshorte artist collaboration label (2024): hand-drawn illustration style, full-colour figurative storytelling on primary label surface, and the Oxblood Red wax seal as the single dominant accent mark. The seal's restraint \u2014 one bold gesture against a neutral field \u2014 is the precise model for accent colour deployment throughout this system."
+          },
+          {
+            "name": "Woodford Reserve",
+            "reference_note": "Reference the core label's approach to serif wordmark construction: generous tracking on the primary brand name, historical serif weight, and compositional balance between heritage architectural photography and typographic confidence. The label's ratio of text to negative space is the target spatial model for this brand's layout approach."
+          },
+          {
+            "name": "Glenmorangie",
+            "reference_note": "Reference the 'Delicious and Wonderful' campaign (2024) editorial photography direction specifically: whimsical yet sophisticated scene composition, natural light, emotional resonance through consumption moment rather than product specification. Demonstrates how process-honest photography maintains premium positioning \u2014 approved as the secondary lifestyle editorial layer model only, not the primary identity photography standard."
+          }
+        ],
+        "visual_narrative": "This brand exists in the space where making is visible and time is the primary ingredient. Every surface should carry evidence of process \u2014 the slight irregularity of a hand-set letter, the grain of an uncoated stock, the weight of a seal pressed once and not corrected. The palette is pulled from the distillery itself: cream parchment of aged paper, the deep green of bottle glass stored in a cool warehouse, the dark red of leather straps worn into shape over years. Chronicle Display sets the voice \u2014 wide-tracked, unhurried, confident in the tradition it inherits \u2014 while Garamond Premier Pro sustains that voice at reading pace without breaking register. Layout gives the content room to breathe at a 45\u201355% content-to-space ratio; nothing crowds, nothing fills. Photography puts the maker's hands in frame first, lifestyle second. The brand does not announce its craft \u2014 it shows its workings, and trusts that to be enough.",
+        "conflicts_resolved": "CONFLICT 1 \u2014 Emotional lifestyle photography (trend) vs. process-documentary photography (theory): Market trend research identified a 2024 directional shift toward evocative lifestyle consumption imagery (Glenmorangie, Four Roses). Design theory directed process-focused, hands-at-work documentary photography as the primary authenticity signal. RESOLUTION: Theory governs primary identity photography. This brand operates at upper-mid to premium craft tier where provenance transparency and maker visibility are non-negotiable trust signals. Lifestyle brands with established equity (Glenmorangie, Four Roses) can lead with abstracted imagery; a heritage craft brand cannot make that assumption. Primary photography is therefore process-documentary. Lifestyle consumption moment photography is approved as a secondary editorial layer for campaigns, social, and advertising only \u2014 provided it maintains natural light, documentary grain, and warm palette discipline. It never replaces process imagery as the identity anchor. CONFLICT 2 \u2014 Warm Cognac/Deep Gold (trend) vs. Deep Forest Green (theory) as secondary structural colour: Trend research identified warm cognac/deep gold as a luxury accent aligned with aged spirits. Design theory specified Deep Forest Green #2D4A3E as the secondary structural colour. These are structurally incompatible as co-equals. RESOLUTION: Theory governs on structural colour. Deep Forest Green #2D4A3E is retained as it provides complementary contrast against Aged Cream within a narrow saturation range per Itten/Albers compositional principles, without tipping into decorative warmth. Warm cognac and gold tones are not introduced as additional palette colours \u2014 they would compete with Oxblood Red and over-warm the system. Cognac and gold tones are preserved within photography direction only: amber midtones, warm shadow areas, and aged-glass warmth in environmental photography serve the trend signal without disrupting structural palette integrity."
+      }
+    },
+    {
+      "keyword": "modern fintech app",
+      "signal": "accessible",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 3,
+          "specificity": 5,
+          "coherence": 3,
+          "benchmark_validity": 5,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": false,
+          "internal_contradiction": true
+        },
+        "overall": 2.0,
+        "justification": "The expected signal was 'accessible,' but the report repeatedly anchors to 'infrastructure-grade,' 'engineered precision,' and 'control' \u2014 a more clinical/serious territory that undercuts approachability, hence the mid positioning_fit despite the human-warmth language. Benchmarks (N26, Stripe, Chime, Revolut) are all real and on-aesthetic, and specs (hexes, Inter weights, tracking values, 8px scale, shadow values) are concrete and executable. However, there is a genuine internal contradiction: materials/card surfaces specify '#FFFFFF on light mode' while the palette defines the light base/surface as '#F9FAFB' off-white, and dont_rules name specific avoided typefaces (Playfair, Freight) yet conflicts_resolved permits 'personality-driven illustration and campaign creativity' in campaign materials, loosening the otherwise strict single-direction discipline.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 33.7,
+        "agent_02": 29.3,
+        "agent_03": 69.1,
+        "agent_04": 68.0,
+        "total": 200.2
+      },
+      "cost": {
+        "llm_calls": 12,
+        "prompt_tokens": 36517,
+        "completion_tokens": 9391,
+        "total_tokens": 45908,
+        "cost_usd": 0.1577,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "modern fintech app",
+        "positioning_statement": "A digital-native financial platform that earns trust through systematic clarity \u2014 warm enough to feel human, precise enough to feel infrastructure-grade.",
+        "palette": [
+          {
+            "name": "Deep Teal",
+            "hex_code": "#0D9488",
+            "role": "Primary structural brand colour for primary actions, navigation states, and brand recognition",
+            "rationale": "Carries trust symbolism while delivering non-traditional differentiation validated by market benchmarks (Chime, N26); replaces commoditised Stripe blue to avoid generic SaaS positioning; functions as semantic anchor with required contrast ratios"
+          },
+          {
+            "name": "Off-White / Near-White",
+            "hex_code": "#F9FAFB",
+            "role": "Structural base colour enabling legibility in light mode; secondary surface across both modes",
+            "rationale": "Signals digital precision through generous negative space; non-negotiable for legibility theory; confirmed by universal market use of clean light-mode foundations across all benchmark brands"
+          },
+          {
+            "name": "Coral",
+            "hex_code": "#F97316",
+            "role": "Accent colour reserved exclusively for CTAs, active states, and semantic success/celebration micro-moments; maximum 10% of any screen surface",
+            "rationale": "Provides warmth and emotional approachability (referencing Monzo's coral differentiation); functions as a complementary contrast pair to teal per Itten/Albers colour theory; constrained usage prevents lifestyle decoration reading"
+          },
+          {
+            "name": "Near-Black",
+            "hex_code": "#0F172A",
+            "role": "Primary dark mode background surface",
+            "rationale": "Not pure black \u2014 nuanced depth satisfies theory's hierarchy requirements while supporting vibrant accent legibility; consistent with Revolut and broader dark-mode-first market direction; meets WCAG AA 4.5:1 contrast minimum"
+          },
+          {
+            "name": "Dark Card Surface",
+            "hex_code": "#1E293B",
+            "role": "Card and module surface in dark mode; elevation layer above primary dark background",
+            "rationale": "Provides subtle surface differentiation within the dark mode system without introducing colour; supports card/modal elevation hierarchy using flat colour rather than skeuomorphic texture"
+          }
+        ],
+        "photography_tones": "Cool-neutral foundations throughout: white, light grey, and #F1F5F9 wash as base tones. Human skin tones rendered with accurate, natural warmth \u2014 never filtered, never lifestyle-saturated. Product UI screenshotted against clean neutral grounds. No warm amber or golden filters; no dramatic shadow moods; no mood-lit environments. Natural lighting only.",
+        "typography": {
+          "display_typeface": "Inter (Geometric/Rationalist Grotesque) \u2014 Semibold weight (600) for primary headlines and hero copy; Regular weight (400) for subheads and primary navigation labels; Black weight (900) explicitly prohibited",
+          "body_typeface": "Inter (same family \u2014 Humanist Grotesque rendering at reading sizes) \u2014 Regular weight (400); 16px minimum body size; 1.4\u20131.5x line-height; full Unicode and RTL character support required",
+          "display_tracking": "Uppercase UI labels and caps: -0.02em to -0.04em (tight, signals modern/tech-forward assertiveness); Mixed-case headlines: -0.01em (neutral to slight negative, readable at large scale without feeling loose)",
+          "body_tracking": "0em standard/neutral tracking \u2014 tight tracking on lowercase body copy reads as software default and cheapens the experience; no deviation from neutral at reading sizes",
+          "hierarchy_notes": "Single typeface family (Inter), two weights only (Regular 400, Semibold 600). Sizing scale derived from 8px base unit: 12 / 14 / 16 / 20 / 24 / 32 / 48px. Financial figures (balances, amounts, percentages) must always be the largest, highest-contrast element on data-forward screens. No Black weight (900). No mixed typeface families anywhere in the system."
+        },
+        "layout_approach": "12-column responsive grid on desktop with 8px base unit; 4-column grid on mobile. Content-to-space ratio: 60/40 (60% content, 40% whitespace). Desktop side margins: 80\u2013100px. Grid system derived entirely from 8px base unit increments.",
+        "negative_space_rule": "Space is functional, not decorative. Every instance of whitespace must be traceable to a cognitive load reduction purpose: breathing room around primary CTAs, separation of data modules, focus isolation for critical financial numbers (balances, transaction amounts). If space cannot be justified functionally, it is edited out. Margins 80\u2013100px on desktop sides.",
+        "photography_direction": [
+          "Real, diverse users photographed in functional contexts \u2014 reviewing app on commute, transferring money in a caf\u00e9, checking balance before a payment. No aspirational lifestyle staging, no beach shots, no luxury goods adjacency, no 'freedom' visual metaphors.",
+          "Clean natural lighting only. No dramatic directional shadows, no mood-lit environments, no golden-hour warmth filters, no warm amber overlays. Skin tones rendered with accurate natural warmth, never filtered or saturated.",
+          "When UI is shown in context (hand holding phone), device is clean and environment is neutral \u2014 background never competes with the product interface. Product UI screenshotted against clean neutral grounds (#F9FAFB or #F1F5F9 wash)."
+        ],
+        "materials": "Flat, digital-native surfaces throughout. No texture simulation, no skeuomorphism, no material rendering. Glassmorphism explicitly prohibited as a primary aesthetic \u2014 reads as decorative, not functional. Subtle drop shadows (0 2px 8px rgba(0,0,0,0.08)) used only to signal interactive elevation states (cards, modals, floating buttons). No gradients except functional UI states: progress bars, loading indicators, skeleton screens. Card surfaces: #FFFFFF on light mode, #1E293B on dark mode.",
+        "do_rules": [
+          "Use teal #0D9488 as the single structural brand colour across all primary buttons, active navigation states, and brand touchpoints \u2014 this is the trust anchor that does not move.",
+          "Apply coral #F97316 only to CTAs, celebratory micro-moments (successful transaction confirmation), and primary call-to-action hierarchy \u2014 maximum 10% screen real estate at any one time, never used decoratively.",
+          "Design dark-mode-first using #0F172A as the primary base, then translate to light mode. Dark mode is the primary product experience; light mode is a clearly supported variant, not the default assumption.",
+          "Use Inter exclusively across all typographic hierarchy \u2014 one typeface family, two weights (Regular 400, Semibold 600), consistent sizing scale (12/14/16/20/24/32/48px) derived from the 8px base unit.",
+          "Make data legible as a design priority: financial figures (balances, amounts, percentages) must always be the largest, highest-contrast element in any data-forward screen \u2014 hierarchy should make numbers impossible to miss.",
+          "Apply WCAG AA minimum contrast ratio of 4.5:1 as a hard constraint across both light and dark mode \u2014 non-negotiable for all text and interactive elements."
+        ],
+        "dont_rules": [
+          "Do not use lifestyle or aspirational photography \u2014 no beach shots, no luxury goods adjacency, no 'freedom' visual metaphors. Fintech brands lose infrastructure-grade credibility the moment imagery signals aspiration over control.",
+          "Do not introduce a second typeface family \u2014 no serif display pairings (no Playfair Display, no Freight Text), no handwritten or script elements anywhere in the primary system. Mixing families signals creative expression; this system signals engineered precision.",
+          "Do not use multi-colour decorative palettes \u2014 the system is teal + coral + neutral only. Do not introduce neon greens, warm purples, or multi-stop gradient backgrounds as decorative brand elements. These read as startup lifestyle, not infrastructure trust.",
+          "Do not use gradients as aesthetic elements \u2014 gradients are reserved for functional UI states only (loading bars, progress rings, skeleton screens). Gradient brand backgrounds or gradient logo treatments undermine the flat, digital-native precision of the system.",
+          "Do not use Black weight typography (900) or all-caps body copy \u2014 both read as aggressive or unsophisticated. The brand communicates confidence through clarity, not visual dominance.",
+          "Do not apply glassmorphism, skeuomorphic textures, or simulated material surfaces anywhere in the product UI \u2014 these aesthetics signal decorative trend over functional infrastructure."
+        ],
+        "benchmark_brands": [
+          {
+            "name": "N26",
+            "reference_note": "Reference their minimalist layout discipline, teal/green colour system, and restraint with accent colour usage. N26 demonstrates that non-traditional fintech colour reads as serious infrastructure when paired with rigorous spatial order."
+          },
+          {
+            "name": "Stripe",
+            "reference_note": "Reference their systematic approach to UI colour as semantic signal (not decoration), their Inter-based typographic hierarchy, and the way product screens are presented cleanly on neutral backgrounds in all marketing materials."
+          },
+          {
+            "name": "Chime",
+            "reference_note": "Reference their human-centered photography approach (authentic, diverse, functional contexts), their conversational copy tone that explains financial concepts without jargon, and their campaign willingness to name real user pain points directly."
+          },
+          {
+            "name": "Revolut",
+            "reference_note": "Reference specifically their dark-mode-first product experience as validation of near-black (#0F172A) as primary surface, and their demonstration that dark mode can read as premium infrastructure rather than aesthetic trend."
+          }
+        ],
+        "visual_narrative": "This brand lives at the intersection of functional clarity and human warmth, and it never lets either collapse into the other. The design system is built on a single structural anchor: deep teal (#0D9488), applied with the discipline of a semantic signal, not a mood. It sits on near-black (#0F172A) in dark mode, on near-white (#F9FAFB) in light mode, earning trust the way good infrastructure does \u2014 through consistency and control. Coral (#F97316) appears sparingly, almost as punctuation: the moment a transaction confirms, the tap of a CTA, the flash of a financial win. Inter runs the entire typographic system in two weights only \u2014 Semibold for hierarchy, Regular for everything else, tracking tightened only where assertiveness is earned. Screens breathe at a 60/40 content-to-space ratio, and that breathing room is never wasted \u2014 every margin exists because a cognitive load calculation placed it there. Photography shows real people doing real things with money. Nobody is aspirational. They are in control.",
+        "conflicts_resolved": "CONFLICT 1 \u2014 Colour Philosophy (Vibrant/Personality-Driven Market vs. Semantic/Functional Theory): Resolved by Modified Theory with Market-Informed Colour Selection. Theory's core principle is upheld \u2014 every colour has a defined semantic function and multi-colour decoration is rejected. However, theory's prescription of Stripe Blue (#2563EB) is overridden by market intelligence (reads as generic SaaS). Teal (#0D9488) satisfies both frameworks: delivers market-validated trust/differentiation signal while functioning as a clean semantic anchor with required contrast ratios. Coral is accepted as a single warm accent constrained to 10% screen surface maximum, preventing lifestyle-decoration reading. | CONFLICT 2 \u2014 Dark-Mode-First (Market) vs. Clean White Base (Theory): Resolved by Market adoption with Theory's legibility constraints enforced within dark mode. Dark-mode-first (#0F172A) adopted as primary product experience based on strong, user-preference-validated market signal (Revolut, 2024\u20132025 fintech direction). WCAG AA 4.5:1 contrast minimum applied as hard constraint within dark mode. Near-black rather than pure black satisfies theory's nuanced depth/hierarchy requirements. Light mode fully supported as a variant, not an afterthought. | CONFLICT 3 \u2014 Playful/Surreal Campaign Imagery (Market) vs. Neutral/Professional Photography (Theory): Resolved by context separation. Theory governs product UI and product-led marketing (app store screenshots, feature explainers, onboarding) \u2014 clean, functional, neutral photography and flat surfaces only. Market signal governs brand campaign materials (social, OOH, editorial) where personality-driven illustration and campaign creativity are permitted to earn emotional differentiation. Surreal or playful elements are explicitly prohibited from entering the product UI itself."
+      }
+    },
+    {
+      "keyword": "earthy sustainable fashion",
+      "signal": "warm",
+      "verdict": {
+        "scores": {
+          "positioning_fit": 5,
+          "specificity": 5,
+          "coherence": 5,
+          "benchmark_validity": 2,
+          "actionability": 5
+        },
+        "flags": {
+          "hallucinated_brands": true,
+          "internal_contradiction": false
+        },
+        "overall": 2.0,
+        "justification": "Positioning, palette and rules are exceptionally committed and on-aesthetic: warm Raw Linen #EDE0CC base, sparing Terracotta accent capped at 15%, humanist Lora/Source Sans pairing, and the conflicts_resolved section shows genuine strategic reasoning about avoiding quiet-luxury drift at the stated $80-$400 tier. However, benchmark validity is weak: PANGAIA is real and on-territory, but the cited 'Stella McCartney SS25 Designed for Tomorrow' campaign and 'Camila Machado / Mexican Artisanal Network (Vogue New Guard feature)' are fabricated or unverifiable specific references presented with false precision, dragging down the otherwise senior-grade work.",
+        "judge_model": "anthropic/claude-opus-4-8",
+        "error": null
+      },
+      "timings": {
+        "agent_01": 41.6,
+        "agent_02": 87.4,
+        "agent_03": 68.7,
+        "agent_04": 67.8,
+        "total": 265.5
+      },
+      "cost": {
+        "llm_calls": 11,
+        "prompt_tokens": 38744,
+        "completion_tokens": 14559,
+        "total_tokens": 53303,
+        "cost_usd": 0.1826,
+        "cost_available": true
+      },
+      "report": {
+        "aesthetic_keyword": "earthy sustainable fashion",
+        "positioning_statement": "A bridge-premium brand that communicates material honesty and craft confidence through warm restraint \u2014 design that looks like it was chosen, not engineered.",
+        "palette": [
+          {
+            "name": "Raw Linen",
+            "hex_code": "#EDE0CC",
+            "role": "Primary \u2014 background fields, base layouts, and unprinted paper surfaces; the default resting tone for all executions",
+            "rationale": "Signals unprocessed authenticity and reads as naturally undyed rather than designed-white; replaces pure white (#FFFFFF) entirely to avoid clinical, over-processed associations"
+          },
+          {
+            "name": "Sage Green-Grey",
+            "hex_code": "#7FAD9A",
+            "role": "Secondary \u2014 secondary typography, photography background washes, and border/rule elements",
+            "rationale": "Introduces a cool anchor that prevents the palette from reading as overly warm, cosy, or nostalgic; balances the linen base without introducing an unnatural tone"
+          },
+          {
+            "name": "Terracotta Sienna",
+            "hex_code": "#C47C5A",
+            "role": "Accent \u2014 used sparingly at maximum 15% of any layout surface; label edges, wayfinding stickers, single typographic headline, or textile detail close-up only",
+            "rationale": "Reads as earth pigment and craft heritage rather than a decorative or precious finish; retained over soft gold/ochre trend signal because it communicates material honesty, not jewellery-adjacent elevation"
+          }
+        ],
+        "photography_tones": "Warm, slightly desaturated natural light with no post-processed vibrancy. Skies and backgrounds fall in the linen-to-taupe range (#EDE0CC to approximately #C4B49A). No cooler-than-neutral colour grading permitted. Shadows must be soft and brown-warm, never blue-grey. Overall image temperature targets mid-morning diffused light through unbleached cotton \u2014 ochre-adjacent warmth absorbed into the light direction without introducing a fourth palette tone.",
+        "typography": {
+          "display_typeface": "Lora (Humanist Serif)",
+          "body_typeface": "Source Sans Pro (Humanist Sans-Serif)",
+          "display_tracking": "\u201310 to 0 tracking units at 48px and above (compact and confident, not airy); equivalent to approximately 96\u2013100% of default letterspacing",
+          "body_tracking": "\u20135 to +5 tracking units at 14\u201320px (neutral); +5 to +10 tracking units at 10\u201313px label/size-info scale for small-scale legibility",
+          "hierarchy_notes": "Display (Lora): 48px minimum for editorial headlines, campaign statements, and product category headers. Do not italicise heavily or use exaggerated contrast weights \u2014 character must read as warm and considered, not historical or decorative. Body (Source Sans Pro): 16px on-screen, 11\u201313px in print, for all descriptive copy, product information, and labels. No third typeface family introduced under any circumstances. Lowercase wordmark convention may be adopted at identity mark level only as a single concession to cultural trend \u2014 not extended to editorial typography."
+        },
+        "layout_approach": "Soft grid system \u2014 not a rigid Swiss-modernist grid. Content occupies 50\u201365% of page or screen surface, with negative space capped at 65% to avoid ultra-luxury austerity inappropriate for bridge-premium price points ($80\u2013$400). Margins are generous but earned by content, not imposed by template. Columns may read as slightly uneven; this is intentional. Ragged-right text alignment throughout \u2014 never justified.",
+        "negative_space_rule": "Breathing room serves the product and material story, not compositional formalism. Space should feel like a garment hung on a rack in good light \u2014 given room, not staged. Avoid 65%+ empty-space austerity (reads as cold and impersonal at bridge-premium). Equally avoid tight e-commerce-style layouts that compress space until nothing breathes. The 50\u201365% content ratio is the enforced range.",
+        "photography_direction": [
+          "Documentary over directed: images must capture a moment or material in place \u2014 hands at work, fabric in natural light, a garment on a body mid-movement \u2014 not a constructed, symmetrical product shot. Perpendicular overhead angles, pure-white sweep backgrounds, and symmetrical centred compositions are prohibited.",
+          "Textural detail prioritised as primary brand communication: every editorial layout or product page must include at least one close-up shot of fabric grain, weave patterns, visible seam construction, or material surface (organic cotton thread, bamboo silk drape, fungi-based textile cross-section). These are not supporting imagery \u2014 they are primary visual content.",
+          "Shallow depth of field is acceptable only from a low angle or candid mid-scene framing. Cropped hands, partial frames, and real environmental edges (soil, unfinished wood, raw stone) are preferred over centred full-product isolation. Colour grading must remain warm and desaturated \u2014 no blue-grey shadows, no vibrancy boosting, no cooler-than-neutral temperature shifts."
+        ],
+        "materials": "Uncoated, slightly rough-textured paper stock for all print. Matte or silk finish on photography reproduction \u2014 gloss finish is prohibited on all print and packaging. Embossing where used must be subtle and tactile, not deep or decorative. Printing registration may be intentionally soft to reinforce handmade quality. Deckle-edged paper or slightly soft trim is acceptable for packaging inserts and swing tags. All packaging materials must be visibly compostable or recycled-fibre, and this material quality must be communicated as part of the design \u2014 not hidden beneath overprinting.",
+        "do_rules": [
+          "Use Raw Linen #EDE0CC as the default surface for every layout, screen background, and unprinted packaging field. Never use pure white (#FFFFFF) \u2014 it reads as clinical and over-processed.",
+          "Foreground material texture in every content piece: at least one image per editorial layout or product page must be a close-up textural detail \u2014 fabric grain, weave, hands, or material surface \u2014 not a full product shot or lifestyle editorial alone.",
+          "Limit the palette to exactly three colours per layout execution: Raw Linen #EDE0CC, Sage Green-Grey #7FAD9A, and Terracotta Sienna #C47C5A. No additional tones are introduced in any single execution.",
+          "Pair Lora display with Source Sans Pro body exclusively. This is the complete typographic system \u2014 one humanist serif with one humanist sans. No third typeface family under any circumstances.",
+          "Extend the brand visual system into all packaging touchpoints. Labels, swing tags, mailers, and tissue wrap carry the same palette, typography, and material logic as editorial and digital executions \u2014 packaging is brand communication, not a production afterthought.",
+          "Use Terracotta Sienna #C47C5A sparingly at a maximum of 15% of any layout surface, appearing only as a label edge, wayfinding sticker, single typographic headline, or textile detail accent. Never as a background fill."
+        ],
+        "dont_rules": [
+          "Do not use high-gloss finishes on any print or packaging material. Gloss signals synthetic processing and directly contradicts the material-honesty positioning. Matte or uncoated stock only.",
+          "Do not use geometric sans-serif typefaces \u2014 including Futura display weights, Helvetica, and Montserrat as display \u2014 at any scale. Geometric sans reads as corporate modernism, the wrong temperature for this aesthetic.",
+          "Do not use high-saturation colours at any scale. No acid yellows, neon greens, or synthetic brights, even as small accent details. Any colour outside the defined three-colour palette reads as artificial and undermines the sustainability claim.",
+          "Do not use art-directed product photography with perpendicular overhead angles, pure-white sweep backgrounds, or symmetrical centred compositions. This codes as fast-fashion e-commerce or luxury minimalism \u2014 both are incorrect for bridge-premium craft positioning.",
+          "Do not introduce eco-labelling iconography or overt sustainability signage (recycling symbols, green-leaf badges, carbon-neutral stamps) into primary visual compositions. Sustainability is communicated through material texture, palette, and typography \u2014 not through label shorthand, which reads as greenwashing."
+        ],
+        "benchmark_brands": [
+          {
+            "name": "Stella McCartney SS25 'Designed for Tomorrow'",
+            "reference_note": "Reference specifically for palette temperature: off-whites, warm taupes, and soft greens in editorial photography; how sustainability innovation is communicated through visual restraint rather than promotional loudness. Lift the colour temperature and negative space decisions, not the ultra-luxury austerity of margin width (their 70\u201375% empty-space ratio is too high for bridge-premium positioning)."
+          },
+          {
+            "name": "PANGAIA 2025 Visual Refresh",
+            "reference_note": "Reference specifically for how packaging design is integrated as primary brand communication with compostable materials as visual content, and how botanical and material storytelling appears in close-up texture photography. Also reference their humanist typography approach: clean, moderate tracking, never cold. Note: their lowercase wordmark and geometric sans trend signals are not adopted into the editorial type system."
+          },
+          {
+            "name": "Camila Machado / Mexican Artisanal Network (Vogue 'New Guard' feature)",
+            "reference_note": "Reference specifically for the documentary, candid editorial photography approach and for how heritage craftsmanship \u2014 visible hand processes, organic textile origins \u2014 is framed with a minimal interventionist design hand. Study how this reference communicates artisanal authenticity without becoming decorative or nostalgic."
+          }
+        ],
+        "visual_narrative": "This brand lives in the space between craft and confidence \u2014 it does not apologise for being sustainable, and it does not perform sustainability as a badge. Every layout starts with Raw Linen #EDE0CC: warm, unfinished, present. The camera gets close \u2014 to the weave, to the hands, to the grain of a fabric that has a provenance worth showing. Terracotta Sienna #C47C5A appears once, deliberately: a label edge, a single word, a sticker on compostable paper. Sage Green-Grey #7FAD9A holds the composition without letting warmth become sentimentality. Lora carries editorial headlines with the confidence of something printed and kept, not scrolled past. Source Sans Pro keeps body copy open and human. Nothing is gloss. Nothing is neon. Nothing shouts its ethics. The sustainability story is in the material \u2014 shown, not declared. Space breathes at 50\u201365%, generous enough to respect the product, grounded enough to stay accessible.",
+        "conflicts_resolved": "CONFLICT 1 \u2014 Typography: Market trend signals lowercase wordmarks and tracking-heavy geometric sans-serif; theory specifies humanist serif display (Lora) paired with humanist sans body (Source Sans Pro). Resolution: Theory governs. The humanist pairing creates the warm, considered typographic voice required. Lowercase wordmark convention may be adopted at identity mark level only as a single concession \u2014 not extended to editorial typography. | CONFLICT 2 \u2014 Negative space ratio: Market trend references generous negative space as dominant; theory specifies a cap at 65% empty to avoid ultra-luxury austerity. Resolution: Theory governs with market nuance. The 50\u201365% content-to-space ratio honours the breathing-room signal while preventing the aesthetic from tipping into quiet-luxury territory inappropriate for bridge-premium pricing ($80\u2013$400). Benchmark brands operating at 70\u201375% empty (Stella McCartney) are referenced for temperature, not margin ratios. | CONFLICT 3 \u2014 Colour: Market research introduces soft gold/ochre as accent signal; theory specifies Terracotta Sienna #C47C5A. Resolution: Theory governs on specific tone. Soft gold risks reading as precious or jewellery-adjacent, elevating tier perception beyond bridge-premium. Terracotta Sienna reads as earth pigment, not finish. The ochre signal from market trend is absorbed into photography direction (warm mid-morning light temperature) without introducing a fourth palette tone."
+      }
+    },
+    {
+      "keyword": "premium electric vehicle",
+      "signal": "premium",
+      "pipeline_error": "BadRequestError: litellm.BadRequestError: AnthropicException - {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CcCpz5DKWMzBrnqRSw8QX\"}",
+      "cost": {
+        "llm_calls": 12,
+        "prompt_tokens": 48958,
+        "completion_tokens": 9238,
+        "total_tokens": 58196,
+        "cost_usd": 0.1297,
+        "cost_available": true
+      },
+      "timings": {}
+    }
+  ]
+}

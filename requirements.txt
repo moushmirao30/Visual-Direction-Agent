@@ -1,0 +1,32 @@
+# ── Core framework ────────────────────────────────────────────────────────────
+crewai==0.80.0
+# crewai-tools removed — incompatible with crewai 0.80.0 (structured_tool module moved)
+# All tools implemented as native @tool decorated functions using provider SDKs directly
+
+# ── LLM ───────────────────────────────────────────────────────────────────────
+anthropic>=0.40.0
+langchain-anthropic>=0.3.0
+
+# ── Web search (Agent 01) ─────────────────────────────────────────────────────
+tavily-python>=0.5.0
+
+# ── RAG stack (Agent 02) ──────────────────────────────────────────────────────
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+
+# ── Validation / guardrails (Agent 04) ────────────────────────────────────────
+pydantic>=2.0.0
+
+# ── API layer ─────────────────────────────────────────────────────────────────
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+
+# ── UI ────────────────────────────────────────────────────────────────────────
+streamlit>=1.40.0
+httpx>=0.27.0
+
+# ── Observability ─────────────────────────────────────────────────────────────
+langsmith>=0.2.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
