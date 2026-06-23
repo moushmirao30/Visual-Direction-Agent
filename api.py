@@ -214,37 +214,11 @@ def _run_pipeline(job_id: str, keyword: str, use_cache: bool, skip_moodboard: bo
         stop_run_log(_log)
 
 
-# ── FLUX warm-up ──────────────────────────────────────────────────────────────
-
-def _warmup_flux() -> None:
-    """
-    Fires a minimal FLUX.1-schnell inference call on API startup.
-    Eliminates the 30-60s cold-start delay on the first real moodboard request.
-    Runs in the background thread pool — does not block startup.
-    """
-    hf_token = os.getenv("HF_TOKEN")
-    if not hf_token:
-        print("[WARN] HF_TOKEN not set — skipping FLUX warm-up")
-        return
-    try:
-        from huggingface_hub import InferenceClient
-        print("[INFO] Pre-warming FLUX.1-schnell (background)...")
-        client = InferenceClient(
-            model="black-forest-labs/FLUX.1-schnell",
-            token=hf_token,
-            timeout=120,
-        )
-        client.text_to_image("abstract minimal texture", width=256, height=256)
-        print("[INFO] FLUX warm-up complete — first image generation will be fast.")
-    except Exception as e:
-        print(f"[WARN] FLUX warm-up failed (non-fatal): {e}")
-
-
-@app.on_event("startup")
-async def startup_event() -> None:
-    """Kicks off FLUX warm-up in the background immediately on API start."""
-    loop = asyncio.get_event_loop()
-    loop.run_in_executor(_executor, _warmup_flux)
+# ── (Removed) FLUX warm-up ────────────────────────────────────────────────────
+# The HuggingFace FLUX warm-up was removed Jun 23. Image generation moved to
+# Cloudflare Workers AI (a hosted API with no cold start), and the HF endpoint now
+# returns 402, so the warm-up was both useless and a 402-warning on every boot.
+# See HANDOFF §6.
 
 
 # ── Endpoints ─────────────────────────────────────────────────────────────────
@@ -359,3 +333,4 @@ if __name__ == "__main__":
         reload=False,   # reload=True breaks the thread pool
         log_level="info",
     )
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

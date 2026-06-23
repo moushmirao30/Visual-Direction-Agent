@@ -36,14 +36,26 @@ Setup:
 
 FREE-PRIMARY MODE (run with NO Anthropic credit spend):
   Set FREE_PRIMARY in .env to flip a free provider to PRIMARY so `anthropic/` is
-  never called. The other free provider becomes the fallback (only if its key is set).
+  never called. The OTHER free providers (those whose keys are set) become fallbacks,
+  in the order nvidia -> groq -> gemini.
+    FREE_PRIMARY=hybrid   -> RECOMMENDED. Per-tier split: strong agents (03 synthesiser,
+                             04 report) on Gemini for quality; fast agents (01, 02, 05) on
+                             NVIDIA so the run never exhausts Gemini's ~20 req/day free quota
+                             (a single-provider Gemini run blows it and crashes Agent 05).
+                             Per-tier overrides: FREE_PRIMARY_FAST / FREE_PRIMARY_STRONG.
+    FREE_PRIMARY=gemini   -> primary = Gemini 2.5 Flash (needs GEMINI_API_KEY from
+                             aistudio.google.com; free tier is Flash/Flash-Lite only —
+                             2.5 Pro left the free tier ~Apr 2026). ⚠ ~20 req/day free quota
+                             on this project — too small for a full single-provider run; use
+                             "hybrid" instead. nvidia/groq attached as fallbacks.
     FREE_PRIMARY=nvidia   -> primary = the validated NVIDIA NIM 70B (reuses NVIDIA_API_KEY)
-    FREE_PRIMARY=groq     -> primary = Groq 70B (needs GROQ_API_KEY; daily-reset free tier)
+    FREE_PRIMARY=groq     -> primary = Groq 70B (needs GROQ_API_KEY; daily-reset free tier,
+                             small token cap — exhausts in ~1-2 full runs)
   Unset (default) -> original Anthropic-primary behaviour, untouched. Use that for
   graded evals; use FREE_PRIMARY for the no-top-up demo path. Agent 04's JSON schema
   guardrail still validates whatever the free model produces, so keep Agent 04 on a
-  70B-class model (both defaults are 70B).
-  Optional Groq model overrides: GROQ_FAST, GROQ_STRONG.
+  capable model (all defaults are 70B-class or Gemini Flash).
+  Optional model overrides: GROQ_FAST/GROQ_STRONG, GEMINI_FAST/GEMINI_STRONG.
 """
 
 import os
@@ -66,6 +78,23 @@ _STRONG_FALLBACK = os.getenv("NVIDIA_FALLBACK_STRONG", "nvidia_nim/meta/llama-3.
 _FREE_PRIMARY = os.getenv("FREE_PRIMARY", "").strip().lower()
 _GROQ_FAST = os.getenv("GROQ_FAST", "groq/llama-3.3-70b-versatile")
 _GROQ_STRONG = os.getenv("GROQ_STRONG", "groq/llama-3.3-70b-versatile")
+
+# Gemini (Google AI Studio) free-tier text models. As of 2026 only Flash / Flash-Lite
+# are free (2.5 Pro left the free tier ~Apr 2026), so both tiers default to Flash.
+# litellm's gemini provider reads GEMINI_API_KEY directly (key starts "AIza", ~39 chars
+# — get one at aistudio.google.com). Stronger reasoning than the Llama-70B fallbacks,
+# but tighter per-minute RPM, so nvidia/groq stay attached as fallbacks.
+_GEMINI_FAST = os.getenv("GEMINI_FAST", "gemini/gemini-2.5-flash")
+_GEMINI_STRONG = os.getenv("GEMINI_STRONG", "gemini/gemini-2.5-flash")
+
+# Per-tier free-primary override + hybrid preset. The pipeline tags each agent "fast" or
+# "strong"; "hybrid" routes them to DIFFERENT providers so the cheap reasoning agents get
+# Gemini quality while the call-heavy tool agents stay on NVIDIA — keeping Gemini under its
+# ~20 req/day free quota (a full single-provider Gemini run blows that and crashes Agent 05,
+# verified Jun 22 run_20260622_215322). Override per tier with FREE_PRIMARY_FAST/STRONG.
+_FREE_PRIMARY_FAST = os.getenv("FREE_PRIMARY_FAST", "").strip().lower()
+_FREE_PRIMARY_STRONG = os.getenv("FREE_PRIMARY_STRONG", "").strip().lower()
+_HYBRID_MAP = {"fast": "nvidia", "strong": "gemini"}
 
 
 # ── Served-model capture (provenance stamp) ─────────────────────────────────
@@ -178,22 +207,53 @@ def _groq_key() -> str | None:
     return os.getenv("GROQ_API_KEY")
 
 
+def _gemini_key() -> str | None:
+    """litellm's gemini (Google AI Studio) provider reads GEMINI_API_KEY directly."""
+    return os.getenv("GEMINI_API_KEY")
+
+
+def _primary_for_tier(tier: str) -> str:
+    """
+    Which free provider is PRIMARY for this tier.
+      - FREE_PRIMARY_FAST / FREE_PRIMARY_STRONG override per tier when set.
+      - FREE_PRIMARY=hybrid  -> fast=nvidia, strong=gemini (see _HYBRID_MAP): Gemini quality
+        on the cheap reasoning agents (03/04), NVIDIA on the call-heavy tool agents (01/02/05)
+        so a run never exhausts Gemini's ~20/day free quota.
+      - otherwise the single FREE_PRIMARY value applies to BOTH tiers.
+    """
+    explicit = _FREE_PRIMARY_STRONG if tier == "strong" else _FREE_PRIMARY_FAST
+    if explicit:
+        return explicit
+    if _FREE_PRIMARY == "hybrid":
+        return _HYBRID_MAP.get(tier, "nvidia")
+    return _FREE_PRIMARY
+
+
 def _build_free_primary(tier: str, **overrides):
     """
     Build an LLM whose PRIMARY is a free provider, so no Anthropic call happens.
-    The other free provider is attached as fallback ONLY when its key exists, so we
-    never point a fallback at an unauthenticated provider.
+    The OTHER free providers (those whose keys exist) are attached as fallbacks in a
+    fixed preference order, so a primary hiccup (rate limit, 5xx) is transparently
+    retried on another free provider instead of crashing — and we never point a
+    fallback at an unauthenticated provider.
     """
     strong = tier == "strong"
-    nvidia_model = _STRONG_FALLBACK if strong else _FAST_FALLBACK
-    groq_model = _GROQ_STRONG if strong else _GROQ_FAST
+    # provider -> (model string for this tier, api key or None)
+    providers = {
+        "gemini": (_GEMINI_STRONG if strong else _GEMINI_FAST, _gemini_key()),
+        "nvidia": (_STRONG_FALLBACK if strong else _FAST_FALLBACK, _nvidia_key()),
+        "groq":   (_GROQ_STRONG if strong else _GROQ_FAST, _groq_key()),
+    }
+    # Fallback preference AFTER the chosen primary. nvidia first (validated, generous
+    # token limits), then groq, then gemini. Keeping nvidia/groq ahead of gemini means
+    # the existing nvidia-primary and groq-primary first-fallback behaviour is unchanged
+    # — gemini is only ever appended.
+    order = ["nvidia", "groq", "gemini"]
 
-    if _FREE_PRIMARY == "groq":
-        primary, primary_key = groq_model, _groq_key()
-        alt, alt_key = nvidia_model, _nvidia_key()
-    else:  # "nvidia" (or any other value) -> the already-validated NIM path
-        primary, primary_key = nvidia_model, _nvidia_key()
-        alt, alt_key = groq_model, _groq_key()
+    primary_name = _primary_for_tier(tier)
+    if primary_name not in providers:
+        primary_name = "nvidia"
+    primary, primary_key = providers[primary_name]
 
     _record_configured(primary)  # deterministic provenance, regardless of return path
 
@@ -203,7 +263,8 @@ def _build_free_primary(tier: str, **overrides):
               f"surface a clear auth error rather than silently using Anthropic.")
         return primary
 
-    fallbacks = [alt] if alt_key else []
+    fallbacks = [providers[n][0] for n in order
+                 if n != primary_name and providers[n][1]]
 
     from crewai import LLM
     try:
@@ -237,7 +298,7 @@ def build_llm(model: str, tier: str = "fast", **overrides) -> Union[str, "object
 
     # Free-primary mode wins when opted in: never touch Anthropic, run on a free
     # provider as primary. Default (unset) falls through to the original path below.
-    if _FREE_PRIMARY:
+    if _FREE_PRIMARY or _FREE_PRIMARY_FAST or _FREE_PRIMARY_STRONG:
         return _build_free_primary(tier, **overrides)
 
     # Anthropic-primary path: the configured primary IS `model` (any NVIDIA model is
@@ -266,3 +327,4 @@ def build_llm(model: str, tier: str = "fast", **overrides) -> Union[str, "object
               f"({type(e).__name__}: {e}). Using Anthropic-only for '{model}'. "
               f"If unexpected, run inside the venv (crewai 0.80.0).")
         return model
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

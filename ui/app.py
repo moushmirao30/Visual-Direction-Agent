@@ -183,7 +183,7 @@ def _render_panel(panels: list, idx: int, col) -> None:
             except Exception:
                 st.warning(f"Could not load: {filename}")
         else:
-            st.warning(f"No image for: {label}")
+            st.warning("⚠ Image generation unavailable (backend failed) — prompt below.")
         st.markdown(f'<p class="panel-label">{label}</p>', unsafe_allow_html=True)
         with st.expander("Prompt", expanded=False):
             st.caption(p.get("prompt", ""))
@@ -652,4 +652,4 @@ elif st.session_state.status == "complete" and st.session_state.result:
             _, mid, _ = st.columns([0.15, 0.7, 0.15])
             _render_panel(panels, 4, mid)
         else:
-            st.info("No moodboard panels generated. Re-run with skip_moodboard unchecked.")
+            st.info("No moodboard panels genera

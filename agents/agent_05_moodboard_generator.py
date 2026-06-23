@@ -34,7 +34,7 @@ import os
 from dotenv import load_dotenv
 from crewai import Agent, Task, Crew, Process
 
-from tools.image_gen_tool import get_image_gen_tool
+from tools.image_gen_tool import generate_images_batch, IMAGE_BACKEND
 from utils.llm import build_llm
 
 load_dotenv()
@@ -43,16 +43,14 @@ load_dotenv()
 # ── Agent definition ──────────────────────────────────────────────────────────
 
 def build_moodboard_generator() -> Agent:
-    """Constructs the Moodboard Generator CrewAI agent."""
-    image_tool = get_image_gen_tool()
-
+    """Constructs the Moodboard Generator CrewAI agent (prompt-only — no tools)."""
     return Agent(
         role="Visual Moodboard Generator",
         goal=(
-            "Craft 5 precise, dimension-specific image generation prompts from "
-            "a validated visual direction report, generate each image, and return "
-            "all 5 image URLs in a structured list. Each prompt must target a "
-            "different visual dimension of the brand direction."
+            "Craft 5 precise, dimension-specific image generation prompts from a "
+            "validated visual direction report and return them in the exact structured "
+            "format requested. Each prompt must target a different visual dimension. You "
+            "do NOT generate images or produce URLs — generation happens downstream in code."
         ),
         backstory=(
             "You are a creative director who specialises in translating brand "
@@ -62,14 +60,14 @@ def build_moodboard_generator() -> Agent:
             "vessel on raw limestone surface, diffuse morning light, charcoal and "
             "warm cream tones, extreme negative space, matte finish, editorial "
             "photography style' generates a reference a designer can actually use. "
-            "You craft prompts for five visual dimensions separately, then generate "
-            "each one. You never combine multiple brand dimensions into a single prompt."
+            "You craft prompts for five visual dimensions separately. You never combine "
+            "multiple brand dimensions into one prompt, and you NEVER invent image URLs, "
+            "links, or file paths — you output only the prompts."
         ),
-        tools=[image_tool],
         llm=build_llm("anthropic/claude-haiku-4-5-20251001", tier="fast"),  # NVIDIA NIM fallback if key set
         verbose=True,
         allow_delegation=False,
-        max_iter=6,  # one tool call per image (5) + final answer
+        max_iter=3,  # prompt-only: no tool loop needed
     )
 
 
@@ -97,31 +95,25 @@ def build_moodboard_task(agent: Agent, report_summary: str) -> Task:
             "PANEL 5 — BRAND ATMOSPHERE:\n"
             "  Prompt must show: the overall brand feeling in an abstract or environmental scene.\n"
             "  This is the mood image — not the product, not the type — the world the brand lives in.\n\n"
-            "For each panel:\n"
-            "1. Write the prompt following this structure:\n"
-            "   [subject], [material/surface], [lighting], [colour palette], [composition style], [mood]\n"
-            "2. Call generate_moodboard_image with that prompt\n"
-            "3. Record the returned URL\n\n"
-            "Do not combine multiple panels into one prompt. Generate each separately."
+            "For each panel, write ONE prompt following this structure:\n"
+            "   [subject], [material/surface], [lighting], [colour palette], [composition style], [mood]\n\n"
+            "Do NOT call any tool. Do NOT invent URLs, links, or file paths — output ONLY the\n"
+            "five prompts in the format below. Image generation happens downstream in code.\n"
+            "Do not combine multiple panels into one prompt."
         ),
         expected_output=(
-            "A structured list of 5 generated images in this exact format:\n\n"
+            "The 5 prompts in this exact format (NO URLs — prompts only):\n\n"
             "MOODBOARD PANELS:\n"
             "1. PALETTE REFERENCE\n"
-            "   Prompt: [the exact prompt used]\n"
-            "   URL: [the returned URL]\n\n"
+            "   Prompt: [the exact prompt]\n\n"
             "2. MATERIAL + TEXTURE\n"
-            "   Prompt: [the exact prompt used]\n"
-            "   URL: [the returned URL]\n\n"
+            "   Prompt: [the exact prompt]\n\n"
             "3. PHOTOGRAPHY STYLE\n"
-            "   Prompt: [the exact prompt used]\n"
-            "   URL: [the returned URL]\n\n"
+            "   Prompt: [the exact prompt]\n\n"
             "4. TYPOGRAPHIC MOOD\n"
-            "   Prompt: [the exact prompt used]\n"
-            "   URL: [the returned URL]\n\n"
+            "   Prompt: [the exact prompt]\n\n"
             "5. BRAND ATMOSPHERE\n"
-            "   Prompt: [the exact prompt used]\n"
-            "   URL: [the returned URL]"
+            "   Prompt: [the exact prompt]"
         ),
         agent=agent,
     )
@@ -139,7 +131,6 @@ def parse_moodboard_output(raw_output: str) -> list[dict]:
     import re
     panels = []
 
-    # Extract panel names
     panel_names = [
         "PALETTE REFERENCE",
         "MATERIAL + TEXTURE",
@@ -148,37 +139,20 @@ def parse_moodboard_output(raw_output: str) -> list[dict]:
         "BRAND ATMOSPHERE",
     ]
 
-    # Extract prompt lines
+    # Extract ONLY the prompts. We deliberately do NOT parse URLs from the model output:
+    # the agent is prompt-only now, and trusting model-reported URLs is exactly what let it
+    # fabricate fake links (e.g. https://moodboard.com/...). URLs are filled by code in
+    # run_moodboard_generator after real image generation.
     prompt_pattern = re.compile(r'Prompt:\s*(.+?)(?=\n\s*URL:|\n\s*\d+\.|\Z)', re.DOTALL)
     prompts = [p.strip() for p in prompt_pattern.findall(raw_output)]
 
-    # Match all path formats the agent may write in its Final Answer:
-    #   file:///C:\Users\Moushmi Rao\...\panel.png (browser-style file URL — most common)
-    #   FILE::C:\Users\Moushmi Rao\...\panel.png   (tool output prefix)
-    #   C:\Users\Moushmi Rao\...\panel.png          (bare Windows path)
-    #   /home/user/.../panel.png                    (bare Unix path)
-    url_line_pattern = re.compile(
-        r'URL:\s*((?:FILE::|file:///)?(?:[A-Za-z]:[/\\]|/)[^\n"]+\.png)',
-        re.IGNORECASE
-    )
-    url_lines = [u.strip() for u in url_line_pattern.findall(raw_output)]
-    # Strip FILE:: or file:/// prefix so all entries are bare file paths
-    url_lines = [re.sub(r'^(?:FILE::|file:///)', '', u, flags=re.IGNORECASE) for u in url_lines]
-
-    # Also catch FILE:: paths that appear outside URL: lines (tool output sections)
-    file_pattern = re.compile(r'FILE::([^\n"]+\.png)', re.IGNORECASE)
-    file_paths = file_pattern.findall(raw_output)
-
-    # Priority: url_lines from Final Answer (most reliable) > file_paths from tool output
-    all_urls = url_lines if url_lines else file_paths
-
     for i, name in enumerate(panel_names):
-        panel = {
+        panels.append({
             "panel": name,
             "prompt": prompts[i] if i < len(prompts) else "",
-            "url": all_urls[i] if i < len(all_urls) else "",
-        }
-        panels.append(panel)
+            "url": "",          # filled by code after real generation
+            "source": "pending",
+        })
 
     return panels
 
@@ -230,6 +204,23 @@ def run_moodboard_generator(report_summary: str = None) -> tuple[list[dict], str
 
     raw_output = str(crew.kickoff())
     panels = parse_moodboard_output(raw_output)
+
+    # Generate images in code from the agent's prompts — never trust the model to report
+    # URLs (it fabricated fake links like https://moodboard.com/... when the backend failed).
+    # Every panel URL now reflects reality: a real local path on success, or "" on failure
+    # (the UI then shows an honest "generation unavailable" state instead of phantom panels).
+    prompts = [p.get("prompt", "") for p in panels]
+    results = generate_images_batch(prompts)
+    for panel, res in zip(panels, results):
+        panel["url"] = res.get("path", "")
+        panel["source"] = res.get("source", "error")
+
+    ok = sum(1 for p in panels if p["url"])
+    print(f"[AGENT 05] Image generation: {ok}/{len(panels)} panels produced a file "
+          f"(backend={IMAGE_BACKEND})")
+    if ok == 0:
+        print("[AGENT 05] ⚠ 0 images — the image backend is unavailable (e.g. HF 402). "
+              "Prompts are still valid; wire a working IMAGE_BACKEND to render panels.")
     return panels, raw_output
 
 
