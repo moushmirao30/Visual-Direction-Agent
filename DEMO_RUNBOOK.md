@@ -15,7 +15,7 @@ If you only get one sentence out before something breaks: it's the held-out 4.5/
 
 ## 1. Pre-flight — the evening before (do NOT skip)
 
-The Gemini free tier throws frequent 503 "high demand" errors that don't fail the run but balloon it (one run hit 10× 503 on Agent 03, 30s → 188s). **You de-risk this by warming the cache the night before and running the demo from cache (~120s).**
+The Gemini free tier throws frequent 503 "high demand" errors that don't fail the run but balloon it. **Measured on this machine (June 23 dry run): a genuinely fresh run takes 11–15 minutes** (`quiet luxury wellness` 648s, `boho luxury resort` 907s) — dominated by Gemini 503 retries + a slow NVIDIA Agent 01 (400–525s). A **cached** run is ~25s. So warming the cache the night before is **mandatory, not optional** — a cold run live is unwatchable. Budget ~40 min for the warm-up itself.
 
 Night-before checklist:
 
