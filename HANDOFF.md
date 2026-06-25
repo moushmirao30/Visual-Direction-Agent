@@ -5,7 +5,7 @@
 **Due:** July 4, 2026 (Capstone Day) · Orientation June 28, 2026 · Today's baseline: June 23, 2026.
 **Phase:** Demo prep (see [Remaining Work](#remaining-work)).
 
-> Last verified full run: `run_20260623_212303` ("floral cute cafe") — 5/5 moodboard images, valid report.
+> Last verified: 3-input dry run on 2026-06-23 (~23:11–23:25) — quiet luxury wellness, floral cute cafe, boho luxury resort — all 5/5 moodboard images, valid reports, hybrid routing confirmed. Repo pushed; demo prep functionally complete (see §11).
 
 ---
 
@@ -183,15 +183,17 @@ Judge defaults to `claude-opus-4-8` (different/stronger than the generator, avoi
 
 | Item | Status |
 |------|--------|
-| README.md | ✅ **done** (good quality; untracked — needs commit) |
-| Demo script (timed dry run) | ✅ **done** → `DEMO_RUNBOOK.md` (run-of-show, 3 inputs, recovery playbook) |
+| README.md | ✅ **done** — committed + pushed |
+| Demo script (timed dry run) | ✅ **done** → `DEMO_RUNBOOK.md` (run-of-show, 3 inputs, recovery playbook); timings corrected to measured fresh-run numbers |
 | AURU side-by-side assets | ✅ **done** → side-by-side table in `DEMO_RUNBOOK.md` §5 (manual vs de-leaked agent, 4.5/5) |
-| Commit locally (`.env` confirmed gitignored — `git check-ignore .env` → 0) | ⬜ ready; README + ~18 modified files staged |
-| Push to GitHub | ⬜ **needs user**: create remote repo + `git remote add` + `git push` (auth is user's) |
-| Test all 3 demo inputs end-to-end (quiet luxury wellness / floral cute cafe / boho luxury resort) | ⬜ **needs user's Windows machine** — can't run venv from sandbox |
-| LangSmith trace URL captured for submission | ⬜ **needs live run** (do during night-before warm-up) |
+| Commit locally + push to GitHub | ✅ **done** — repo: https://github.com/moushmirao30/Visual-Direction-Agent · `.env` confirmed absent on remote · remote URL updated after repo rename |
+| Test all 3 demo inputs end-to-end | ✅ **done** (2026-06-23 ~23:11–23:25): quiet luxury wellness 5/5 imgs / hybrid / 648s · floral cute cafe 5/5 / cache hit / 25s · boho luxury resort 5/5 / hybrid / 907s. All valid reports, web search grounded, no fabrication. ⚠ fresh runs 11–15 min → **warm cache before demo** |
+| LangSmith trace captured for submission | ✅ **done** — screenshots + trace in `SUBMISSION.md`. ⚠ **TODO before July 4:** replace the private `/o/<org>/…` URL with a **public Share link** (private link won't open for graders + is 7d time-filtered) |
+| `SUBMISSION.md` (graded-submission index) | ✅ **done** — added + pushed |
 | Re-run `eval.run_eval` for post-grounding-fix mean (clear `cache/` first) | ⬜ **blocked on Anthropic credits** (judge is Claude) |
-| Feature freeze + final push | ⬜ |
+| Feature freeze + final push | ⬜ — code is demo-stable; freeze after final demo dry run |
+
+**Open items only:** (1) swap LangSmith private URL → public Share link in `SUBMISSION.md`; (2) eval re-run (blocked on Anthropic credits); (3) optional UI screenshot + exported HTML report for submission; (4) night-before cache warm-up before the June 28 demo.
 
 **Built + working:** all 5 agents, RAG (89 chunks), API, UI, hybrid LLM routing, Cloudflare images, file logging (`logs/run_<ts>_<slug>.log`), provenance stamp, eval harness (held-out 4.5/5 banked), README, **`DEMO_RUNBOOK.md` (run-of-show + AURU side-by-side + Q&A + recovery playbook)**.
 
@@ -203,4 +205,11 @@ Judge defaults to `claude-opus-4-8` (different/stronger than the generator, avoi
 - **litellm `fallbacks` are unreliable** in CrewAI's sync path — proven by live 503s that didn't fail over. Resilience = CrewAI retry + low Gemini call count. (Flash-Lite fallback was added then removed as dead weight.)
 - **Image backends keep dying free:** HF→402, Pollinations→gated, Gemini-image→0, NVIDIA-klein→content-filter. Cloudflare `flux-1-schnell` is the current free, reliable answer.
 - **Agent 05 fabricated URLs** when image gen failed → refactored to prompt-only + code-side generation so failures are honest.
-- **Agent 01 fa
+- **Agent 01 fabricated benchmark brands** → caught by the eval auto-fail, fixed with grounding rules (Agent 01) + schema gate (Agent 04). Post-fix mean not yet re-measured.
+- **LangSmith LLM-call tracing not viable** here — tool spans only; provenance via the served-model stamp.
+
+---
+
+## 13. Paste into the next session
+
+> "Continue from the HANDOFF. Build is complete; running free on hybrid LLM routing (Gemini 03/04, NVIDIA 01/02/05) + Cloudflare images. Phase is demo prep — see §11 Remaining Work and start with whatever's ⬜ and closest to today."
