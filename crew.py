@@ -9,14 +9,20 @@ Entry point for the entire 5-agent system. Called by:
 
 Pipeline flow:
   keyword
-    → Agent 01 (Trend Researcher)    — live web search, Tavily
-    → Agent 02 (Design Theory)       — RAG retrieval, ChromaDB
-    → Agent 03 (Synthesiser)         — merge 01+02, resolve conflicts
-    → Agent 04 (Report Writer)       — structure into validated Pydantic schema
-    → Agent 05 (Moodboard Generator) — craft prompts + generate images via HF FLUX
+    → Agent 01 (Trend Researcher)  ┐  — live web search, Tavily       (run
+    → Agent 02 (Design Theory)     ┘  — RAG retrieval, ChromaDB        concurrently)
+    → Agent 03 (Synthesiser)          — merge 01+02, resolve conflicts
+    → Agent 04 (Report Writer)        — structure into validated Pydantic schema
+    → Agent 05 (Moodboard Generator)  — craft prompts + generate 5 images concurrently
     → {report, formatted_report, moodboard_panels}
 
-Why explicit sequential passing (not CrewAI native context)?
+Concurrency:
+  Agents 01 and 02 are independent (both take only the keyword), so they run in a
+  2-worker thread pool — wall time is max(01, 02), not 01 + 02. Agent 05's 5 image
+  calls are likewise generated concurrently (see tools/image_gen_tool.py). Seeds and
+  output order are preserved, so results are identical to the old sequential version.
+
+Why explicit passing (not CrewAI native context)?
   Agents 01 and 02 have output caching. CrewAI's internal context mechanism
   bypasses those runners and would re-run both agents every time. Explicit
   passing keeps caching intact, makes the data flow visible, and makes

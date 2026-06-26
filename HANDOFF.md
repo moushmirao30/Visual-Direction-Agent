@@ -191,11 +191,12 @@ Judge defaults to `claude-opus-4-8` (different/stronger than the generator, avoi
 | LangSmith trace captured for submission | ✅ **done** — screenshots + trace in `SUBMISSION.md`. ⚠ **TODO before July 4:** replace the private `/o/<org>/…` URL with a **public Share link** (private link won't open for graders + is 7d time-filtered) |
 | `SUBMISSION.md` (graded-submission index) | ✅ **done** — added + pushed |
 | Re-run `eval.run_eval` for post-grounding-fix mean (clear `cache/` first) | ⬜ **blocked on Anthropic credits** (judge is Claude) |
+| Pipeline concurrency (01+02 parallel, Agent 05 images parallel) | ✅ **done** (2026-06-26) — committed `73878af`; measured 55s/~16% saving on a fresh run; self-check `tests/test_batch_order.py` passing. See §12. |
 | Feature freeze + final push | ⬜ — code is demo-stable; freeze after final demo dry run |
 
 **Open items only:** (1) swap LangSmith private URL → public Share link in `SUBMISSION.md`; (2) eval re-run (blocked on Anthropic credits); (3) optional UI screenshot + exported HTML report for submission; (4) night-before cache warm-up before the June 28 demo.
 
-**Built + working:** all 5 agents, RAG (89 chunks), API, UI, hybrid LLM routing, Cloudflare images, file logging (`logs/run_<ts>_<slug>.log`), provenance stamp, eval harness (held-out 4.5/5 banked), README, **`DEMO_RUNBOOK.md` (run-of-show + AURU side-by-side + Q&A + recovery playbook)**.
+**Built + working:** all 5 agents, RAG (89 chunks), API, UI, hybrid LLM routing, Cloudflare images, **pipeline concurrency (01+02 + Agent-05 images run in parallel)**, file logging (`logs/run_<ts>_<slug>.log`), provenance stamp, eval harness (held-out 4.5/5 banked), README, **`DEMO_RUNBOOK.md` (run-of-show + AURU side-by-side + Q&A + recovery playbook)**.
 
 ---
 
@@ -207,6 +208,7 @@ Judge defaults to `claude-opus-4-8` (different/stronger than the generator, avoi
 - **Agent 05 fabricated URLs** when image gen failed → refactored to prompt-only + code-side generation so failures are honest.
 - **Agent 01 fabricated benchmark brands** → caught by the eval auto-fail, fixed with grounding rules (Agent 01) + schema gate (Agent 04). Post-fix mean not yet re-measured.
 - **LangSmith LLM-call tracing not viable** here — tool spans only; provenance via the served-model stamp.
+- **Concurrency where it's free (Jun 26).** Agents 01+02 are independent (both take only the keyword), so `crew.py` runs them in a 2-worker thread pool → wall time `max(01,02)` not `01+02`. Agent 05's 5 image calls run concurrently in `generate_images_batch` (`tools/image_gen_tool.py`) → ~slowest single image, not the sum. Seeds (`42+i*7`) + output order preserved → identical results. Measured fresh-run saving: **55s (~16%)**; scales up when 01/02 are balanced or images are slow, never slower. Self-check: `tests/test_batch_order.py`. Two cosmetic caveats (flagged with `ponytail:` comments): interleaved console logs, and a non-atomic append in the `Served by` provenance lists (worst case a duplicate entry; upgrade path = `threading.Lock`).
 
 ---
 

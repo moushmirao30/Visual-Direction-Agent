@@ -36,28 +36,31 @@ The report is rendered as text on the left of the UI, the moodboard as an image 
 ## Architecture
 
 ```
-keyword
-  │
-  ▼
-Agent 01 — Trend Researcher        live web search (Tavily) → benchmark brands,
-  │                                 visual codes, colour/typography signals
-  ▼
-Agent 02 — Design Theory Analyst   RAG retrieval (ChromaDB) → colour psychology,
-  │                                 typography logic, spatial + positioning theory
-  ▼
+                          keyword
+                             │
+            ┌────────────────┴────────────────┐   (01 + 02 run concurrently —
+            ▼                                 ▼     independent, no shared input)
+Agent 01 — Trend Researcher        Agent 02 — Design Theory Analyst
+  live web search (Tavily) →         RAG retrieval (ChromaDB) → colour
+  benchmark brands, visual           psychology, typography logic,
+  codes, colour/type signals         spatial + positioning theory
+            └────────────────┬────────────────┘
+                             ▼
 Agent 03 — Direction Synthesiser   merges 01 + 02, resolves trend/theory conflicts
-  │                                 (no tools — reasons from context)
-  ▼
+                             │      (no tools — reasons from context)
+                             ▼
 Agent 04 — Report Writer           structures into a validated Pydantic schema
-  │                                 (guardrail: retries on schema failure)
-  ▼
+                             │      (guardrail: retries on schema failure)
+                             ▼
 Agent 05 — Moodboard Generator     crafts 5 dimension-specific prompts →
-  │                                 HuggingFace FLUX.1-schnell → image files
-  ▼
+                             │      5 images generated concurrently → image files
+                             ▼
 { report, formatted_report, moodboard_panels }
 ```
 
 The pipeline passes each agent's output to the next **explicitly** (rather than via CrewAI's native context) so that output caching stays intact, the data flow is visible, and mid-pipeline errors are trivial to debug.
+
+**Concurrency where it's free.** Agents 01 and 02 take only the keyword and never read each other's output, so they run in a 2-worker thread pool — wall time becomes `max(01, 02)` instead of `01 + 02`. Likewise Agent 05's 5 image calls (independent network I/O) run concurrently, so that stage costs roughly the slowest single image, not the sum of five. Seeds and output order are preserved, so results are identical — just faster. Measured saving on a fresh run: 55s (~16%), and it scales up when 01/02 are balanced or the image backend is slow; it can never make a run slower.
 
 ### Tech stack
 
