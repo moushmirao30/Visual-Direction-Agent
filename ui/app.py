@@ -652,4 +652,4 @@ elif st.session_state.status == "complete" and st.session_state.result:
             _, mid, _ = st.columns([0.15, 0.7, 0.15])
             _render_panel(panels, 4, mid)
         else:
-            st.info("No moodboard panels genera
+            st.info("No moodboard panels generated. Re-run with skip_moodboard unchecked.")

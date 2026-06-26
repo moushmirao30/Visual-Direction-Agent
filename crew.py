@@ -26,6 +26,7 @@ Why explicit sequential passing (not CrewAI native context)?
 import sys
 import time
 import hashlib
+from concurrent.futures import ThreadPoolExecutor
 from dotenv import load_dotenv
 
 from utils.observability import setup_langsmith
@@ -110,22 +111,31 @@ def run_visual_direction_pipeline(
 
     _banner(f"Visual Direction Pipeline — '{keyword}'")
 
-    # ── Agent 01 — Trend Researcher ───────────────────────────────────────
+    # ── Agents 01 + 02 — run concurrently ─────────────────────────────────
+    # Both take only the keyword and neither reads the other's output, so they
+    # run in parallel: wall time drops from (01 + 02) to max(01, 02). Each is
+    # 50–300s of network/LLM I/O, so this is a real saving, not GIL theatre.
+    # ponytail caveats (acceptable, both cosmetic):
+    #   - the served-model provenance lists in utils/llm.py use a non-atomic
+    #     check-then-append; worst case is a duplicated "Served by" entry, never
+    #     a crash. Upgrade path: guard _record_* with a threading.Lock.
+    #   - the two agents' console logs interleave; per-agent timings stay correct.
     _step("01", "Trend Researcher", "Live web search via Tavily")
-    t0 = time.time()
-
-    from agents.agent_01_trend_researcher import run_trend_research
-    trend_output = run_trend_research(keyword, use_cache=use_cache)
-    timings["agent_01"] = round(time.time() - t0, 1)
-    _done("01", timings["agent_01"])
-
-    # ── Agent 02 — Design Theory Analyst ─────────────────────────────────
     _step("02", "Design Theory Analyst", "RAG retrieval over knowledge base")
     t0 = time.time()
 
+    from agents.agent_01_trend_researcher import run_trend_research
     from agents.agent_02_design_theory_analyst import run_theory_analysis
-    theory_output = run_theory_analysis(keyword, use_cache=use_cache)
-    timings["agent_02"] = round(time.time() - t0, 1)
+
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        f01 = pool.submit(run_trend_research, keyword, use_cache=use_cache)
+        f02 = pool.submit(run_theory_analysis, keyword, use_cache=use_cache)
+        trend_output = f01.result()
+        theory_output = f02.result()
+
+    # Concurrent: both elapsed times equal the shared wall clock (max of the two).
+    timings["agent_01"] = timings["agent_02"] = round(time.time() - t0, 1)
+    _done("01", timings["agent_01"])
     _done("02", timings["agent_02"])
 
     # ── Agent 03 — Direction Synthesiser ─────────────────────────────────

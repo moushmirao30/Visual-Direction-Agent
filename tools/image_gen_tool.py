@@ -13,6 +13,7 @@ Required env var:
 import os
 import hashlib
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
 
 from crewai.tools import tool
 
@@ -147,4 +148,75 @@ def generate_image(prompt: str, seed: int = 42) -> str | None:
     Single place to swap image providers. Returns a local PNG path, or None on failure.
     Select with IMAGE_BACKEND in .env.
     """
-    if IMAGE_BACKEND
+    if IMAGE_BACKEND == "cloudflare":
+        return generate_via_cloudflare(prompt, seed=seed)
+    if IMAGE_BACKEND == "huggingface":
+        return generate_via_huggingface(prompt, seed=seed)
+    print(f"[WARN] IMAGE_BACKEND={IMAGE_BACKEND!r} not implemented yet — using huggingface.")
+    return generate_via_huggingface(prompt, seed=seed)
+
+
+# ── CrewAI Tool ────────────────────────────────────────────────────────────────
+
+@tool("generate_moodboard_image")
+def generate_moodboard_image(prompt: str) -> str:
+    """
+    Generates a moodboard image from a visual design prompt.
+    Returns a local file path to the generated PNG image.
+
+    Craft a specific, visual prompt using this structure:
+      [subject], [surface/material], [lighting], [colour palette], [composition], [mood/style]
+
+    Example:
+      "single amber glass vessel on raw limestone surface, diffuse morning light,
+       deep charcoal and warm cream colour palette, extreme negative space,
+       matte finish, minimal editorial photography, luxury wellness brand aesthetic"
+
+    Be specific — name surfaces, describe lighting, reference palette colours.
+    Avoid generic terms like 'beautiful' or 'luxury' alone without specifics.
+    """
+    seed = _seed_counter[0]
+    _seed_counter[0] += 7
+
+    result = generate_image(prompt, seed=seed)
+    if result:
+        return f"FILE::{result}"
+
+    return f"ERROR::Image generation failed for prompt: {prompt[:80]}..."
+
+
+def get_image_gen_tool():
+    """Returns the generate_moodboard_image tool for use in agent definitions."""
+    return generate_moodboard_image
+
+
+# ── Batch utility (used by crew.py) ───────────────────────────────────────────
+
+def generate_images_batch(prompts: list[str]) -> list[dict]:
+    """
+    Generates multiple images from a list of prompts, concurrently.
+    Called by crew.py after Agent 05 has crafted the prompts.
+
+    The N calls are independent network I/O (HF / Cloudflare), so a thread pool
+    collapses wall time from the sum of all calls to roughly the slowest single
+    one. Seeds stay deterministic per index (42 + i*7) and pool.map preserves
+    input order, so output is identical to the old sequential version — faster.
+
+    Returns list of:
+      {"prompt": str, "path": str, "source": "<backend>" | "error"}
+    """
+    def _one(i_prompt) -> dict:
+        i, prompt = i_prompt
+        seed = 42 + (i * 7)
+        path = generate_image(prompt, seed=seed)
+        if path:
+            return {"prompt": prompt, "path": path, "source": IMAGE_BACKEND}
+        return {"prompt": prompt, "path": "", "source": "error"}
+
+    if not prompts:
+        return []
+
+    # ponytail: 1 worker per prompt — fine for the 5-panel moodboard. If prompt
+    # count ever grows large, cap max_workers (e.g. min(len, 8)) to bound sockets.
+    with ThreadPoolExecutor(max_workers=len(prompts)) as pool:
+        return list(pool.map(_one, enumerate(prompts)))
