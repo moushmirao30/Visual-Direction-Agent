@@ -2,7 +2,7 @@ services:
   - type: web
     name: visual-direction-agent-api
     env: python
-    plan: starter
+    plan: free
     region: oregon
     buildCommand: pip install -r requirements.txt && python rag/ingest.py
     startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
