@@ -295,6 +295,12 @@ async def serve_moodboard_image(filename: str):
     return FileResponse(path, media_type="image/png")
 
 
+@app.get("/")
+async def root():
+    """Root route — uptime check target."""
+    return {"status": "ok", "service": "visual-direction-agent"}
+
+
 @app.get("/health")
 async def health():
     """Liveness check."""
@@ -328,8 +334,8 @@ if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
         "api:app",
-        host="127.0.0.1",
-        port=8000,
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 8000)),
         reload=False,   # reload=True breaks the thread pool
         log_level="info",
     )

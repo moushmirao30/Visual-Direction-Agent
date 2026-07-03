@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: visual-direction-agent-api
+    env: python
+    plan: starter
+    region: oregon
+    buildCommand: pip install -r requirements.txt && python rag/ingest.py
+    startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: TAVILY_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: NVIDIA_NIM_API_KEY
+        sync: false
+      - key: FREE_PRIMARY
+        sync: false
+      - key: LANGCHAIN_API_KEY
+        sync: false
+      - key: LANGCHAIN_TRACING_V2
+        sync: false
+      - key: LANGCHAIN_PROJECT
+        sync: false
+      - key: IMAGE_BACKEND
+        sync: false
+      - key: CLOUDFLARE_ACCOUNT_ID
+        sync: false
+      - key: CLOUDFLARE_API_TOKEN
+        sync: false
