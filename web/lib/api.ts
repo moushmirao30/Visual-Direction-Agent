@@ -1,7 +1,10 @@
 import type { GenerateRequest, GenerateResponse, StatusResponse } from "./types";
 
+// Default: the deployed Render backend. Local dev overrides via
+// NEXT_PUBLIC_API_BASE_URL=http://localhost:8000 in web/.env.local.
 export const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
+  process.env.NEXT_PUBLIC_API_BASE_URL ??
+  "https://visual-direction-agent-api.onrender.com";
 
 export async function startGeneration(
   request: GenerateRequest
