@@ -103,7 +103,8 @@ export default function Sidebar({
         <div className="rounded-md border border-card-border bg-card p-3 text-sm">
           <p className="font-semibold text-heading">{currentStep || "Queued"}</p>
           <p className="mt-1 text-xs text-secondary">
-            Full pipeline ~4-5 min. Cached run ~2 min.
+            Fresh run can take 15–30 min on free-tier hosting. Repeat keywords
+            finish faster. Leave this tab open — progress updates live.
           </p>
         </div>
       )}

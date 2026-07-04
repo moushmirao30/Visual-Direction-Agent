@@ -46,7 +46,13 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Streamlit runs on a different port
+    allow_origins=[
+        "https://visual-direction-agent.vercel.app",  # production frontend
+        "http://localhost:3000",                      # local Next.js dev
+        "http://localhost:8501",                      # local Streamlit (legacy UI)
+    ],
+    # Vercel preview deploys get per-deploy subdomains under the same project
+    allow_origin_regex=r"https://visual-direction-agent-[a-z0-9]+-moushmi-s\.vercel\.app",
     allow_methods=["*"],
     allow_headers=["*"],
 )
