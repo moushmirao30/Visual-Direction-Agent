@@ -1,5 +1,6 @@
 # ── Core framework ────────────────────────────────────────────────────────────
 crewai==0.80.0
+setuptools>=70.0.0  # crewai telemetry imports pkg_resources; not implicit on py3.12 envs
 # crewai-tools removed — incompatible with crewai 0.80.0 (structured_tool module moved)
 # All tools implemented as native @tool decorated functions using provider SDKs directly
 
