@@ -11,6 +11,33 @@ This is the run-of-show for the live demo. Read it once end-to-end the day befor
 
 If you only get one sentence out before something breaks: it's the held-out 4.5/5.
 
+**The 10-second value hook (say this at 0:00, before the architecture):**
+
+> "A studio charges a brand a multi-thousand-pound, multi-week engagement to land a visual direction — palette, type, benchmarks, the lot. This does the first-draft thinking in about two minutes, and I can prove it didn't just look up my answer."
+
+> ⚠ Swap in a real figure if you have one from your own agency experience — the point is to make the value land for a grader who isn't a designer in the first ten seconds. "Visual direction" is not self-evident the way "customer support" or "financial reporting" is; don't assume the room knows why it matters.
+
+---
+
+## 0.5 Where this sits in the cohort (self-positioning — know this cold)
+
+The other capstones on the institution list (Voicebot/LiveKit, ReAct Research Copilot, FP&A Narrative Reporting, Document Navigator / Transparent RAG, Customer Support Assistant, AI Training Assistant) are — with one exception — **single-purpose copilots over text**. Use these contrasts if asked how yours compares, or to steer your own framing:
+
+| Axis | This project | The rest of the cohort |
+|------|--------------|------------------------|
+| **Agent count** | 5 agents, orchestrated, independently testable | Mostly 1–2 agents / single ReAct loop |
+| **Modality** | Multimodal — produces a 5-panel **image** moodboard, not just text | Text in, text out |
+| **Evaluation** | De-leaked held-out benchmark (4.5/5) — removed my own answer and measured re-derivation | Most will demo "it answered correctly," no adversarial self-eval |
+| **Guardrails** | Pydantic schema gate + anti-fabrication grounding (Agent 01/04) | Varies; rarely a hard schema gate |
+| **Resilience** | Hybrid free-LLM routing around per-provider quota walls | Usually one model, one key |
+
+**Your two structural edges nobody else on the list can match:** (1) it's the only **multimodal** project, and (2) it's the only one with an **adversarial de-leaked eval** — you didn't just show it works, you tried to prove it was cheating and it survived at 4.5/5.
+
+**Where the others legitimately beat you — say so if pressed, it reads as honest:**
+- **Voicebot (LiveKit)** wins on real-time infra — streaming voice is harder and instantly reads as production-grade.
+- **FP&A / Customer Support** win on *legibility* — their business value is obvious in three seconds; yours needs the 10-second hook above to land.
+- **Document Navigator (Transparent RAG)** is your Agent 02 as a whole project. If asked "how's this different from a RAG assistant?": *"RAG is one of my five agents. I don't just retrieve design theory — I run live web research alongside it, synthesise the two, resolve conflicts, validate to a schema, and generate imagery. Retrieval is the input, not the product."*
+
 ---
 
 ## 1. Pre-flight — the evening before (do NOT skip)
@@ -129,6 +156,9 @@ Separation of concerns + a critique boundary: research, theory, synthesis, valid
 
 **"Is the moodboard real or stock?"**
 Generated text-to-image via Cloudflare FLUX-schnell from prompts Agent 05 writes. If generation fails, the panel honestly shows "image unavailable" — earlier it fabricated URLs, which I fixed by moving generation into code.
+
+**"How is this different from the other capstones / from a RAG assistant?"**
+It's the only multimodal project — it produces an image moodboard, not just text — and the only one with an adversarial de-leaked eval: I removed my own answer from the knowledge base and it re-derived the direction at 4.5/5. On the "isn't this just RAG?" angle: retrieval is one of five agents. The system runs live web research *alongside* RAG, synthesises both, resolves conflicts, validates to a schema, and generates imagery. Retrieval is the input, not the product. (I'll happily concede the voicebot wins on real-time infra and the finance/support projects win on instant business legibility — different strengths.)
 
 ---
 

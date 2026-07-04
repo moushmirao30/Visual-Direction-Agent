@@ -36,8 +36,7 @@ Full manual-vs-agent side-by-side: `DEMO_RUNBOOK.md` §5.
 
 **Important:** this setup traces **tool spans only** (web_search / design_knowledge_retrieval / generate_moodboard_image), not LLM calls — litellm's LangSmith logger crashes in the sync CrewAI path. Model provenance comes from the in-run `Served by:` stamp instead. The trace proves the **tool machinery executed**; the proof of *automation* is the de-leaked eval in §1.
 
-- **Public trace link:** _(paste the LangSmith **Share** link here — the raw `/o/<org>/…` URL is private and time-filtered, so a grader can't open it)_
-- **Screenshots (durable, can't expire):**
+- Public trace link: https://smith.langchain.com/public/ee0cc220-f1bd-4157-a52a-024797e80853/r
   - `submission_assets/langsmith_quiet_luxury_spans.png` — span list (Tavily + RAG + moodboard, all green)
   - `submission_assets/langsmith_web_search_detail.png` — one `web_search` span: real query in, real sourced summary out
 - Captured run: `quiet luxury wellness`, 2026-06-23 ~23:11 IST.
