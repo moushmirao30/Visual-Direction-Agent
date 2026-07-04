@@ -18,14 +18,16 @@ Deduplication:
 import os
 from pathlib import Path
 import chromadb
-from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
+from chromadb.utils.embedding_functions import ONNXMiniLM_L6_V2
 
 # ── Paths (must match ingest.py) ──────────────────────────────────────────────
 BASE_DIR = Path(__file__).resolve().parent
 CHROMA_DIR = BASE_DIR / "chroma_db"
 
 COLLECTION_NAME = "visual_direction_kb"
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+# all-MiniLM-L6-v2 via onnxruntime — same model/vectors as the
+# sentence-transformers version but without the PyTorch stack, so it fits
+# the 512MB/0.1-CPU Render free tier (torch import alone stalled health checks).
 
 
 def _excluded_sources() -> list[str]:
@@ -66,8 +68,8 @@ class DesignKnowledgeRetriever:
                 "Run 'python -m rag.ingest' first."
             )
 
-        embedding_fn = SentenceTransformerEmbeddingFunction(
-            model_name=EMBEDDING_MODEL
+        embedding_fn = ONNXMiniLM_L6_V2(
+            preferred_providers=["CPUExecutionProvider"]
         )
         client = chromadb.PersistentClient(path=str(CHROMA_DIR))
         self.collection = client.get_collection(

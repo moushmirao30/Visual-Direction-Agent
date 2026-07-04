@@ -31,7 +31,7 @@ import argparse
 from pathlib import Path
 
 import chromadb
-from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
+from chromadb.utils.embedding_functions import ONNXMiniLM_L6_V2
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 BASE_DIR = Path(__file__).resolve().parent
@@ -40,7 +40,8 @@ CHROMA_DIR = BASE_DIR / "chroma_db"
 
 # ── Config ────────────────────────────────────────────────────────────────────
 COLLECTION_NAME = "visual_direction_kb"
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"  # ~80MB, fast, good semantic similarity
+# all-MiniLM-L6-v2 via onnxruntime (~80MB) — must match retriever.py; the
+# ONNX runtime avoids PyTorch so retrieval fits Render's free-tier memory.
 MIN_CHUNK_LENGTH = 100  # characters — discard chunks shorter than this
 
 
@@ -141,8 +142,8 @@ def ingest(reset: bool = False):
     CHROMA_DIR.mkdir(parents=True, exist_ok=True)
     client = chromadb.PersistentClient(path=str(CHROMA_DIR))
 
-    embedding_fn = SentenceTransformerEmbeddingFunction(
-        model_name=EMBEDDING_MODEL
+    embedding_fn = ONNXMiniLM_L6_V2(
+        preferred_providers=["CPUExecutionProvider"]
     )
 
     # Handle reset
@@ -180,7 +181,7 @@ def ingest(reset: bool = False):
         sys.exit(1)
 
     print(f"\n[INFO] Total chunks to embed and store: {len(all_chunks)}")
-    print("[INFO] Embedding with sentence-transformers (first run downloads ~80MB model)...")
+    print("[INFO] Embedding with ONNX MiniLM (first run downloads ~80MB model)...")
 
     # Add to ChromaDB in batches (avoids memory issues on large collections)
     batch_size = 50

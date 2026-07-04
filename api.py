@@ -214,6 +214,29 @@ def _run_pipeline(job_id: str, keyword: str, use_cache: bool, skip_moodboard: bo
         stop_run_log(_log)
 
 
+# ── RAG warm-up ───────────────────────────────────────────────────────────────
+
+@app.on_event("startup")
+async def _warm_rag() -> None:
+    """
+    Pre-loads the ONNX embedding model in a background thread so the first
+    Agent 02 query doesn't pay the model-load cost mid-pipeline. On Render's
+    free tier (0.1 CPU) that load once stalled the instance long enough to
+    fail health checks; loading at boot keeps it off the request path.
+    """
+    import threading
+
+    def _load():
+        try:
+            from rag.retriever import get_retriever
+            get_retriever().query("warmup", n_results=1)
+            print("[INFO] RAG retriever warmed up")
+        except Exception as e:
+            print(f"[WARN] RAG warm-up failed (will retry lazily): {e}")
+
+    threading.Thread(target=_load, daemon=True).start()
+
+
 # ── (Removed) FLUX warm-up ────────────────────────────────────────────────────
 # The HuggingFace FLUX warm-up was removed Jun 23. Image generation moved to
 # Cloudflare Workers AI (a hosted API with no cold start), and the HF endpoint now

@@ -12,7 +12,7 @@ tavily-python>=0.5.0
 
 # ── RAG stack (Agent 02) ──────────────────────────────────────────────────────
 chromadb>=0.5.0
-sentence-transformers>=3.0.0
+onnxruntime>=1.17.0  # ONNXMiniLM_L6_V2 embeddings — replaces sentence-transformers/PyTorch (too heavy for 512MB Render free tier)
 
 # ── Validation / guardrails (Agent 04) ────────────────────────────────────────
 pydantic>=2.0.0
