@@ -223,17 +223,23 @@ def _build_report_html(report: dict, keyword: str, langsmith_url: str | None = N
     """
     kw = keyword.upper()
 
-    # Palette swatches
+    # Palette swatches — swatch + name/hex, with the schema-required role and
+    # rationale beside it (they were validated; hiding them wasted the guardrail).
     palette_html = ""
     for sw in report.get("palette", []):
         hx = sw.get("hex_code", "#CCC")
-        nm = sw.get("name", "")[:16]
+        nm = sw.get("name", "")
+        role = sw.get("role", "")
+        why = sw.get("rationale", "")
         palette_html += (
-            f'<div style="display:flex;flex-direction:column;align-items:center;">'
-            f'<div style="width:56px;height:56px;border-radius:5px;background:{hx};'
+            f'<div style="display:flex;align-items:flex-start;gap:14px;margin:0 0 0.9rem 0;">'
+            f'<div style="flex-shrink:0;width:56px;height:56px;border-radius:5px;background:{hx};'
             f'border:1px solid rgba(0,0,0,0.12);box-shadow:0 1px 3px rgba(0,0,0,0.08);"></div>'
-            f'<div style="font-size:0.65rem;color:#5A5450;text-align:center;margin-top:4px;'
-            f'font-family:monospace;">{hx}<br>{nm}</div></div>'
+            f'<div><div style="font-size:0.9rem;color:#1A1714;font-weight:600;">{nm} '
+            f'<span style="font-family:monospace;font-weight:400;color:#6A6460;">{hx}</span></div>'
+            f'<div style="font-size:0.75rem;color:#6A6460;text-transform:uppercase;'
+            f'letter-spacing:0.06em;margin:2px 0;">{role}</div>'
+            f'<div style="font-size:0.85rem;color:#2A2520;">{why}</div></div></div>'
         )
 
     # Typography
@@ -241,7 +247,10 @@ def _build_report_html(report: dict, keyword: str, langsmith_url: str | None = N
     typo_html = (
         f'<p style="margin:0.2rem 0;color:#2A2520;">Display: {typo.get("display_typeface","")}</p>'
         f'<p style="margin:0.2rem 0;color:#2A2520;">Body: {typo.get("body_typeface","")}</p>'
-        f'<p style="margin:0.2rem 0;color:#2A2520;">Tracking: {typo.get("display_tracking","")}</p>'
+        f'<p style="margin:0.2rem 0;color:#2A2520;">Tracking: {typo.get("display_tracking","")} (display) / '
+        f'{typo.get("body_tracking","")} (body)</p>'
+        + (f'<p style="margin:0.2rem 0;color:#5A5450;font-size:0.88rem;">{typo.get("hierarchy_notes","")}</p>'
+           if typo.get("hierarchy_notes") else "")
     ) if typo else ""
 
     # Photography
@@ -291,7 +300,7 @@ def _build_report_html(report: dict, keyword: str, langsmith_url: str | None = N
   hr   {{ border: none; border-top: 1px solid #D5CFC8; margin: 1.5rem 0; }}
   blockquote {{ border-left: 3px solid #A8B5A1; background: #EDE8E2; padding: 0.8rem 1rem;
                 border-radius: 0 4px 4px 0; font-style: italic; margin: 0 0 1.5rem 0; }}
-  .swatch-row {{ display: flex; gap: 12px; flex-wrap: wrap; margin: 0.8rem 0 1.5rem 0; }}
+  .swatch-row {{ display: flex; flex-direction: column; margin: 0.8rem 0 1.5rem 0; }}
   .do-dont {{ display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }}
   .label {{ font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
              color: #6A6460; margin-bottom: 0.5rem; }}
@@ -635,21 +644,4 @@ elif st.session_state.status == "complete" and st.session_state.result:
                 file_name=f"visual_direction_{result.get('keyword','report').replace(' ','_')}.html",
                 mime="text/html",
                 use_container_width=True,
-                help="Standalone HTML file — open in any browser for the demo side-by-side.",
-            )
-        else:
-            st.markdown(result.get("formatted_report", ""))
-
-    with right:
-        st.markdown('<h3 style="color:' + TH + ';">Moodboard</h3>', unsafe_allow_html=True)
-        if panels:
-            r1a, r1b = st.columns(2)
-            _render_panel(panels, 0, r1a)
-            _render_panel(panels, 1, r1b)
-            r2a, r2b = st.columns(2)
-            _render_panel(panels, 2, r2a)
-            _render_panel(panels, 3, r2b)
-            _, mid, _ = st.columns([0.15, 0.7, 0.15])
-            _render_panel(panels, 4, mid)
-        else:
-            st.info("No moodboard panels generated. Re-run with skip_moodboard unchecked.")
+                help="Standalone HTML f

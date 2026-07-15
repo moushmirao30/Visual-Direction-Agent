@@ -15,7 +15,7 @@ Why Pydantic validation here?
   - Constraints where relevant (min_length, min_items)
 """
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 from typing import Optional
 import re
 
@@ -44,14 +44,42 @@ class TypographyDirection(BaseModel):
         description="Body/label typeface name and classification"
     )
     display_tracking: str = Field(
-        description="Tracking rule for display text (e.g. '140–160% letterspacing')"
+        description=(
+            "LETTERSPACING rule for display text with an explicit unit — "
+            "e.g. '140–160% letterspacing' or '0.05em tracking'. "
+            "This is tracking (space between letters), NOT line-height."
+        )
     )
     body_tracking: str = Field(
-        description="Tracking rule for body text"
+        description=(
+            "LETTERSPACING rule for body text with an explicit unit "
+            "(%, em, pt or px). NOT line-height."
+        )
     )
     hierarchy_notes: str = Field(
-        description="Additional hierarchy or weight rules"
+        description="Additional hierarchy or weight rules (line-height guidance belongs here)"
     )
+
+    @field_validator("display_tracking", "body_tracking")
+    @classmethod
+    def validate_tracking(cls, v: str) -> str:
+        """
+        Tracking fields shipped real failures: 'Tight line height (0.9x of font
+        size)' (that's line-height, not tracking) and '50-75 units' (units of
+        what?). Both are deterministically rejectable.
+        """
+        low = v.lower()
+        if re.search(r"line[\s-]?height", low):
+            raise ValueError(
+                f"tracking field contains a line-height rule ({v!r}) — tracking is "
+                f"letterspacing. Put line-height guidance in hierarchy_notes."
+            )
+        if not re.search(r"\d+\s*(%|em\b|pt\b|px\b)", low):
+            raise ValueError(
+                f"tracking must state a number with a real unit (%, em, pt or px), "
+                f"got: {v!r} — e.g. '140–160% letterspacing' or '0.05em'."
+            )
+        return v
 
 
 class BenchmarkBrand(BaseModel):
@@ -74,7 +102,11 @@ class VisualDirectionReport(BaseModel):
     )
     positioning_statement: str = Field(
         min_length=20,
-        description="One-sentence design direction statement (not a tagline)"
+        description=(
+            "One-sentence design direction THESIS — a specific stance the brand "
+            "takes visually. Must NOT restate the aesthetic keyword back as "
+            "adjectives; it must add a decision the keyword doesn't contain."
+        )
     )
 
     # ── Colour ────────────────────────────────────────────────────────────────
@@ -94,10 +126,17 @@ class VisualDirectionReport(BaseModel):
 
     # ── Spatial ───────────────────────────────────────────────────────────────
     layout_approach: str = Field(
-        description="Grid type and content-to-space ratio"
+        description=(
+            "Grid type and ONE content-to-space ratio (e.g. '40% content / 60% "
+            "space'). Do not state a second, different ratio anywhere else."
+        )
     )
     negative_space_rule: str = Field(
-        description="Negative space principle for this aesthetic"
+        description=(
+            "Negative space principle for this aesthetic. Must be CONSISTENT "
+            "with the ratio in layout_approach — do not introduce a "
+            "contradictory percentage."
+        )
     )
     photography_direction: list[str] = Field(
         min_length=2,
@@ -110,46 +149,4 @@ class VisualDirectionReport(BaseModel):
 
     # ── Rules ─────────────────────────────────────────────────────────────────
     do_rules: list[str] = Field(
-        min_length=3,
-        max_length=6,
-        description="Concrete design DOs (3–6 items)"
-    )
-    dont_rules: list[str] = Field(
-        min_length=3,
-        max_length=6,
-        description="Concrete design DON'Ts (3–6 items)"
-    )
-
-    # ── References ────────────────────────────────────────────────────────────
-    benchmark_brands: list[BenchmarkBrand] = Field(
-        min_length=2,
-        max_length=4,
-        description="Benchmark brands with specific reference notes (2–4)"
-    )
-
-    # ── Narrative ─────────────────────────────────────────────────────────────
-    visual_narrative: str = Field(
-        min_length=80,
-        description="Cohesive 100–150 word visual direction paragraph"
-    )
-
-    # ── Optional ─────────────────────────────────────────────────────────────
-    conflicts_resolved: Optional[str] = Field(
-        default=None,
-        description="Any trend/theory conflicts that were resolved, and how"
-    )
-
-
-def validate_report(data: dict) -> tuple[VisualDirectionReport | None, str | None]:
-    """
-    Validates a dict against the VisualDirectionReport schema.
-
-    Returns:
-        (report, None)       on success
-        (None, error_string) on validation failure
-    """
-    try:
-        report = VisualDirectionReport(**data)
-        return report, None
-    except Exception as e:
-        return None, str(e)
+        min_length=3

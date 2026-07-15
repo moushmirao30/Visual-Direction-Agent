@@ -32,6 +32,7 @@ from dotenv import load_dotenv
 from crewai import Agent, Task, Crew, Process
 
 from schemas.report_schema import VisualDirectionReport, validate_report
+from utils.color_validator import validate_report_semantics
 from utils.llm import build_llm
 
 load_dotenv()
@@ -127,6 +128,20 @@ Output a single valid JSON object with EXACTLY these fields:
 
 CRITICAL RULES:
 - Every hex_code MUST be in #RRGGBB format (e.g. #2B2B2B, #F5F1E8)
+- Every colour NAME must match its hex VALUE — this is verified in code after
+  you answer. 'Burnt Orange' must actually be dark/burnt (#BF5700-like, NOT
+  #FF9900); 'Deep Teal' must be a dark blue-green (hue 160–200°, NOT a light
+  green like #8BC34A); 'Golden Brown' must be brown (dark, NOT a pale cream
+  like #F5DEB3). If unsure, name the colour what the hex actually is.
+- If any rule claims a colour scheme (analogous / complementary /
+  monochromatic), the palette's actual hue geometry must support it — also
+  verified in code. Analogous means all chromatic hues within ~60–70°.
+- display_tracking / body_tracking are LETTERSPACING with an explicit unit
+  (%, em, pt or px) — never line-height, never unitless "units".
+- positioning_statement must NOT restate the aesthetic keyword back as
+  adjectives — state a thesis: what the brand visually refuses or privileges.
+- State exactly ONE content-to-space ratio; negative_space_rule must agree
+  with it, not introduce a different percentage.
 - Output ONLY the JSON object — no markdown, no backticks, no explanation
 - All list fields must meet minimum length requirements
 - Be specific: name actual typefaces, give actual hex codes, state actual ratios
@@ -201,6 +216,13 @@ def _parse_and_validate(raw_output: str) -> tuple[VisualDirectionReport | None, 
     report, error = validate_report(data)
     if error:
         return None, f"Schema validation error: {error}"
+
+    # Schema proves STRUCTURE; this proves TRUTH where truth is computable —
+    # colour names vs hex values, claimed harmony vs actual hue geometry.
+    # (Added after three real runs shipped '#FF9900 Burnt Orange'-class errors.)
+    semantic_error = validate_report_semantics(data)
+    if semantic_error:
+        return None, f"Semantic validation error(s):\n{semantic_error}"
 
     return report, None
 
@@ -278,6 +300,7 @@ def format_report(report: VisualDirectionReport) -> str:
     ]
     for swatch in report.palette:
         lines.append(f"- {swatch.name} {swatch.hex_code} — {swatch.role}")
+        lines.append(f"  Why: {swatch.rationale}")
     lines.append(f"Photography: {report.photography_tones}")
     lines += [
         "",
@@ -355,29 +378,4 @@ This brand communicates quality through deliberate absence — a visual system b
 
 ## CONFLICTS RESOLVED
 Photography warmth: Light remains diffuse (theory), warmth lives in surfaces not source (trend).
-Typography weight: Light weight humanist sans as the execution of "restrained" (theory governs).
-
-## VISUAL NARRATIVE
-The visual system operates as a study in refusal. Every decision is a removal: colour that doesn't perform, type that doesn't shout, photography that doesn't aspire. The palette is built from three tones — charcoal #2B2B2B, warm cream #F5F1E8, and deep sage #4A5F56 — and their relationships do more work than their individual identities. EB Garamond or Cormorant Garamond carries all display work at generous tracking. Jost Light handles everything functional with quiet competence. Photography is surface and material: a single vessel on stone, diffuse light, no story, no performance. Layouts give 55 to 65 percent of every composition to space. The brand does not decorate. It curates, and then it stops.
-"""
-
-
-# ── Entry point ───────────────────────────────────────────────────────────────
-
-if __name__ == "__main__":
-    keyword = "quiet luxury wellness"
-    print(f"\n{'='*60}")
-    print(f"Running Agent 04 — Report Writer")
-    print(f"Aesthetic keyword: '{keyword}'")
-    print(f"{'='*60}\n")
-
-    report, formatted, error = run_report_writer(keyword, SAMPLE_SYNTHESIS)
-
-    if error:
-        print(f"[ERROR] {error}")
-    else:
-        print("[SUCCESS] Schema validation passed")
-        print(f"\n{'='*60}")
-        print("FORMATTED REPORT:")
-        print(f"{'='*60}")
-        print(formatted)
+Typography weight: Light weight humanist sans as the

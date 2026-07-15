@@ -97,11 +97,7 @@ def get_langsmith_run_url() -> str | None:
 
         if runs:
             run_id = str(runs[0].id)
-            url = f"https://smith.langchain.com/public/{run_id}/r"
-            print(f"[OBSERVABILITY] Run trace URL: {url}")
-            return url
-
-    except Exception as e:
-        print(f"[OBSERVABILITY] Could not fetch run URL ({e}) — using project fallback")
-
-    return fallback
+            # A constructed /public/{run_id}/r URL is NOT public — public links
+            # only exist after share_run() creates one. Anyone clicking a
+            # constructed URL (e.g. from an exported report) got a 404/login
+            # wall. share_run() is idempotent and return

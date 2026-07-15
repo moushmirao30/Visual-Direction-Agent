@@ -167,6 +167,18 @@ def _ensure_callback_registered() -> None:
 
         if not any(type(c).__name__ == "_ServedModelLogger" for c in (litellm.callbacks or [])):
             litellm.callbacks = list(litellm.callbacks or []) + [_ServedModelLogger()]
+
+        # Belt-and-braces: ALSO register on the plain function-callback list.
+        # litellm dispatches litellm.success_callback functions on the sync
+        # completion() path (in a worker thread) even when CustomLogger events
+        # don't fire — which is exactly the CrewAI-sync gap that left the stamp
+        # falling back to "(configured)". Two capture paths, same recorder.
+        def _served_model_fn(kwargs, response_obj, start_time, end_time):
+            _record_served_model(response_obj, kwargs)
+
+        cbs = list(litellm.success_callback or [])
+        if not any(getattr(c, "__name__", "") == "_served_model_fn" for c in cbs):
+            litellm.success_callback = cbs + [_served_model_fn]
         _CALLBACK_REGISTERED = True
     except Exception:
         pass  # litellm not importable in some tooling contexts — stamp stays empty
@@ -315,15 +327,4 @@ def build_llm(model: str, tier: str = "fast", **overrides) -> Union[str, "object
     # where crewai isn't installed (e.g. lightweight tooling/tests).
     from crewai import LLM
 
-    # Defensive: a resilience feature must never REDUCE resilience. If the LLM object
-    # can't be constructed (e.g. running outside the venv against a newer crewai that
-    # needs the 'crewai[anthropic]' extra), do NOT crash every agent — warn and return
-    # the plain Anthropic string so the pipeline still runs (just without NVIDIA
-    # failover). Activate the venv (crewai 0.80.0) to get the fallback back.
-    try:
-        return LLM(model=model, fallbacks=[fallback], **overrides)
-    except Exception as e:
-        print(f"[WARN] utils/llm.build_llm: NVIDIA fallback unavailable "
-              f"({type(e).__name__}: {e}). Using Anthropic-only for '{model}'. "
-              f"If unexpected, run inside the venv (crewai 0.80.0).")
-        return model
+    # Defensive: a resilience feature must never
