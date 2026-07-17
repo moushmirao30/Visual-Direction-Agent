@@ -378,4 +378,29 @@ This brand communicates quality through deliberate absence — a visual system b
 
 ## CONFLICTS RESOLVED
 Photography warmth: Light remains diffuse (theory), warmth lives in surfaces not source (trend).
-Typography weight: Light weight humanist sans as the
+Typography weight: Light weight humanist sans as the execution of "restrained" (theory governs).
+
+## VISUAL NARRATIVE
+The visual system operates as a study in refusal. Every decision is a removal: colour that doesn't perform, type that doesn't shout, photography that doesn't aspire. The palette is built from three tones — charcoal #2B2B2B, warm cream #F5F1E8, and deep sage #4A5F56 — and their relationships do more work than their individual identities. EB Garamond or Cormorant Garamond carries all display work at generous tracking. Jost Light handles everything functional with quiet competence. Photography is surface and material: a single vessel on stone, diffuse light, no story, no performance. Layouts give 55 to 65 percent of every composition to space. The brand does not decorate. It curates, and then it stops.
+"""
+
+
+# ── Entry point ───────────────────────────────────────────────────────────────
+
+if __name__ == "__main__":
+    keyword = "quiet luxury wellness"
+    print(f"\n{'='*60}")
+    print(f"Running Agent 04 — Report Writer")
+    print(f"Aesthetic keyword: '{keyword}'")
+    print(f"{'='*60}\n")
+
+    report, formatted, error = run_report_writer(keyword, SAMPLE_SYNTHESIS)
+
+    if error:
+        print(f"[ERROR] {error}")
+    else:
+        print("[SUCCESS] Schema validation passed")
+        print(f"\n{'='*60}")
+        print("FORMATTED REPORT:")
+        print(f"{'='*60}")
+        print(formatted)

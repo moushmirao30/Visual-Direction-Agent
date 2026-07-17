@@ -100,4 +100,20 @@ def get_langsmith_run_url() -> str | None:
             # A constructed /public/{run_id}/r URL is NOT public — public links
             # only exist after share_run() creates one. Anyone clicking a
             # constructed URL (e.g. from an exported report) got a 404/login
-            # wall. share_run() is idempotent and return
+            # wall. share_run() is idempotent and returns the real share URL.
+            try:
+                url = client.share_run(run_id)
+                print(f"[OBSERVABILITY] Public run trace URL: {url}")
+                return url
+            except Exception as share_err:
+                print(f"[OBSERVABILITY] Could not create public share link ({share_err})")
+                # Private app URL — works for the operator, not for the public.
+                url = f"https://smith.langchain.com/o/default/projects/p/{project}"
+                return url
+
+    except Exception as e:
+        print(f"[OBSERVABILITY] Could not fetch run URL ({e})")
+
+    # No verifiable trace URL. Returning the bare domain put a dead
+    # 'LangSmith trace ↗' link into exported reports — worse than no link.
+    return None

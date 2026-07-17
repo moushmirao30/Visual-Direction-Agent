@@ -149,4 +149,63 @@ class VisualDirectionReport(BaseModel):
 
     # ── Rules ─────────────────────────────────────────────────────────────────
     do_rules: list[str] = Field(
-        min_length=3
+        min_length=3,
+        max_length=6,
+        description="Concrete design DOs (3–6 items)"
+    )
+    dont_rules: list[str] = Field(
+        min_length=3,
+        max_length=6,
+        description="Concrete design DON'Ts (3–6 items)"
+    )
+
+    # ── References ────────────────────────────────────────────────────────────
+    benchmark_brands: list[BenchmarkBrand] = Field(
+        min_length=2,
+        max_length=4,
+        description="Benchmark brands with specific reference notes (2–4)"
+    )
+
+    # ── Narrative ─────────────────────────────────────────────────────────────
+    visual_narrative: str = Field(
+        min_length=80,
+        description="Cohesive 100–150 word visual direction paragraph"
+    )
+
+    # ── Optional ─────────────────────────────────────────────────────────────
+    conflicts_resolved: Optional[str] = Field(
+        default=None,
+        description="Any trend/theory conflicts that were resolved, and how"
+    )
+
+    @model_validator(mode="after")
+    def positioning_must_not_echo_keyword(self) -> "VisualDirectionReport":
+        """
+        Real failure: keyword 'fusion, flavorful food truck' produced
+        'Visuals for this fusion, flavorful food truck are...' — circular,
+        adds nothing. Verbatim echo is deterministically rejectable.
+        """
+        kw = self.aesthetic_keyword.strip().lower()
+        if kw and kw in self.positioning_statement.lower():
+            raise ValueError(
+                f"positioning_statement restates the aesthetic keyword verbatim "
+                f"({self.aesthetic_keyword!r}). Write a thesis about HOW the brand "
+                f"achieves this aesthetic (what it refuses, what it privileges), "
+                f"not a paraphrase of the keyword."
+            )
+        return self
+
+
+def validate_report(data: dict) -> tuple[VisualDirectionReport | None, str | None]:
+    """
+    Validates a dict against the VisualDirectionReport schema.
+
+    Returns:
+        (report, None)       on success
+        (None, error_string) on validation failure
+    """
+    try:
+        report = VisualDirectionReport(**data)
+        return report, None
+    except Exception as e:
+        return None, str(e)

@@ -327,4 +327,15 @@ def build_llm(model: str, tier: str = "fast", **overrides) -> Union[str, "object
     # where crewai isn't installed (e.g. lightweight tooling/tests).
     from crewai import LLM
 
-    # Defensive: a resilience feature must never
+    # Defensive: a resilience feature must never REDUCE resilience. If the LLM object
+    # can't be constructed (e.g. running outside the venv against a newer crewai that
+    # needs the 'crewai[anthropic]' extra), do NOT crash every agent — warn and return
+    # the plain Anthropic string so the pipeline still runs (just without NVIDIA
+    # failover). Activate the venv (crewai 0.80.0) to get the fallback back.
+    try:
+        return LLM(model=model, fallbacks=[fallback], **overrides)
+    except Exception as e:
+        print(f"[WARN] utils/llm.build_llm: NVIDIA fallback unavailable "
+              f"({type(e).__name__}: {e}). Using Anthropic-only for '{model}'. "
+              f"If unexpected, run inside the venv (crewai 0.80.0).")
+        return model

@@ -644,4 +644,21 @@ elif st.session_state.status == "complete" and st.session_state.result:
                 file_name=f"visual_direction_{result.get('keyword','report').replace(' ','_')}.html",
                 mime="text/html",
                 use_container_width=True,
-                help="Standalone HTML f
+                help="Standalone HTML file — open in any browser for the demo side-by-side.",
+            )
+        else:
+            st.markdown(result.get("formatted_report", ""))
+
+    with right:
+        st.markdown('<h3 style="color:' + TH + ';">Moodboard</h3>', unsafe_allow_html=True)
+        if panels:
+            r1a, r1b = st.columns(2)
+            _render_panel(panels, 0, r1a)
+            _render_panel(panels, 1, r1b)
+            r2a, r2b = st.columns(2)
+            _render_panel(panels, 2, r2a)
+            _render_panel(panels, 3, r2b)
+            _, mid, _ = st.columns([0.15, 0.7, 0.15])
+            _render_panel(panels, 4, mid)
+        else:
+            st.info("No moodboard panels generated. Re-run with skip_moodboard unchecked.")
