@@ -1,10 +1,13 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { getStatus, startGeneration } from "@/lib/api";
+import { ApiError, getStatus, startGeneration } from "@/lib/api";
 import type { PipelineResult, JobStatus } from "@/lib/types";
 
 const POLL_INTERVAL_MS = 3000;
+// Transient poll failures tolerated before giving up (network blips,
+// free-tier instance briefly unreachable). A 404 is never transient.
+const MAX_CONSECUTIVE_FAILURES = 3;
 
 export type UiStatus = "idle" | JobStatus;
 
@@ -33,6 +36,7 @@ const initialState: JobState = {
 export function useJobPolling() {
   const [state, setState] = useState<JobState>(initialState);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const failuresRef = useRef(0);
 
   const stopPolling = useCallback(() => {
     if (timerRef.current !== null) {
@@ -47,6 +51,7 @@ export function useJobPolling() {
     async (jobId: string) => {
       try {
         const s = await getStatus(jobId);
+        failuresRef.current = 0;
         setState((prev) => ({
           ...prev,
           status: s.status,
@@ -60,12 +65,28 @@ export function useJobPolling() {
           stopPolling();
         }
       } catch (e) {
-        stopPolling();
-        setState((prev) => ({
-          ...prev,
-          status: "error",
-          error: e instanceof Error ? e.message : String(e),
-        }));
+        // 404 → the backend restarted and its in-memory job store was wiped
+        // (common on the free-tier host). The job is gone; say so plainly.
+        if (e instanceof ApiError && e.httpStatus === 404) {
+          stopPolling();
+          setState((prev) => ({
+            ...prev,
+            status: "error",
+            error:
+              "The backend restarted mid-run and lost this job (free-tier instance was recycled). Please run the pipeline again.",
+          }));
+          return;
+        }
+        // Transient failure — keep polling up to the limit.
+        failuresRef.current += 1;
+        if (failuresRef.current >= MAX_CONSECUTIVE_FAILURES) {
+          stopPolling();
+          setState((prev) => ({
+            ...prev,
+            status: "error",
+            error: e instanceof Error ? e.message : String(e),
+          }));
+        }
       }
     },
     [stopPolling]
@@ -74,6 +95,7 @@ export function useJobPolling() {
   const start = useCallback(
     async (keyword: string, useCache: boolean, skipMoodboard: boolean) => {
       stopPolling();
+      failuresRef.current = 0;
       setState({ ...initialState, status: "queued", keyword });
       try {
         const res = await startGeneration({

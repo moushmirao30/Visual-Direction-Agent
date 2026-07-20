@@ -20,6 +20,7 @@ Why serve moodboard images here?
   endpoint converts file paths → HTTP URLs transparently.
 """
 
+import gc
 import os
 import uuid
 import asyncio
@@ -176,6 +177,9 @@ def _run_pipeline(job_id: str, keyword: str, use_cache: bool, skip_moodboard: bo
         def _tracked_step(num: str, name: str, detail: str) -> None:
             original_step(num, name, detail)
             _update_job(job_id, current_step=f"Agent {num} — {name}")
+            # Free memory between agent stages — on Render's 512MB free tier a
+            # mid-run OOM kills the instance (and the in-memory job store).
+            gc.collect()
 
         crew_module._step = _tracked_step
 
@@ -194,6 +198,7 @@ def _run_pipeline(job_id: str, keyword: str, use_cache: bool, skip_moodboard: bo
             finished_at=datetime.utcnow().isoformat(),
             result=_serialise_result(raw_result),
         )
+        del raw_result
 
     except ValueError as e:
         _update_job(job_id,
@@ -218,6 +223,7 @@ def _run_pipeline(job_id: str, keyword: str, use_cache: bool, skip_moodboard: bo
         )
     finally:
         stop_run_log(_log)
+        gc.collect()
 
 
 # ── RAG warm-up ───────────────────────────────────────────────────────────────

@@ -21,11 +21,23 @@ export async function startGeneration(
   return res.json();
 }
 
+/** Error carrying the HTTP status so callers can distinguish a vanished
+ *  job (404 — backend restarted, in-memory job store wiped) from blips. */
+export class ApiError extends Error {
+  constructor(message: string, public httpStatus: number) {
+    super(message);
+    this.name = "ApiError";
+  }
+}
+
 export async function getStatus(jobId: string): Promise<StatusResponse> {
   const res = await fetch(`${API_BASE}/status/${jobId}`);
   if (!res.ok) {
     const body = await res.json().catch(() => ({}));
-    throw new Error(body.detail ?? `Request failed with status ${res.status}`);
+    throw new ApiError(
+      body.detail ?? `Request failed with status ${res.status}`,
+      res.status
+    );
   }
   return res.json();
 }

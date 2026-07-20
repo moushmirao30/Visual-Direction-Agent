@@ -207,8 +207,12 @@ def _post_generate(keyword: str, use_cache: bool, skip_moodboard: bool):
 
 
 def _get_status(job_id: str):
+    """Returns job dict, "gone" (404 — API restarted, job store wiped),
+    or None (transient failure)."""
     try:
         r = httpx.get(f"{API_BASE}/status/{job_id}", timeout=10)
+        if r.status_code == 404:
+            return "gone"
         r.raise_for_status()
         return r.json()
     except Exception:
@@ -431,6 +435,7 @@ if generate_btn:
             st.session_state.job_id = resp["job_id"]
             st.session_state.polling = True
             st.session_state.status = "queued"
+            st.session_state.poll_failures = 0
             st.session_state.current_step = "Queued"
             st.session_state.result = None
             st.session_state.error = None
@@ -440,9 +445,19 @@ if generate_btn:
 
 if st.session_state.polling and st.session_state.job_id:
     data = _get_status(st.session_state.job_id)
-    if data:
+    if data == "gone":
+        # API restarted mid-run — in-memory job store wiped, job unrecoverable.
+        st.session_state.status = "error"
+        st.session_state.error = (
+            "The API restarted mid-run and lost this job "
+            "(free-tier instance was recycled). Please run again."
+        )
+        st.session_state.polling = False
+        st.rerun()
+    elif data:
         st.session_state.status = data["status"]
         st.session_state.current_step = data.get("current_step", "")
+        st.session_state.poll_failures = 0
         if data["status"] == "complete":
             st.session_state.result = data["result"]
             st.session_state.polling = False
@@ -454,6 +469,18 @@ if st.session_state.polling and st.session_state.job_id:
         else:
             time.sleep(POLL_INTERVAL_S)
             st.rerun()
+    else:
+        # Transient failure — previously this fell through with no rerun,
+        # freezing the UI on "running" forever. Retry up to 3 times.
+        fails = st.session_state.get("poll_failures", 0) + 1
+        st.session_state.poll_failures = fails
+        if fails >= 3:
+            st.session_state.status = "error"
+            st.session_state.error = "Lost contact with the API after 3 attempts."
+            st.session_state.polling = False
+        else:
+            time.sleep(POLL_INTERVAL_S)
+        st.rerun()
 
 # -- Main area ----------------------------------------------------------------
 
