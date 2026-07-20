@@ -180,6 +180,14 @@ def _run_pipeline(job_id: str, keyword: str, use_cache: bool, skip_moodboard: bo
             # Free memory between agent stages — on Render's 512MB free tier a
             # mid-run OOM kills the instance (and the in-memory job store).
             gc.collect()
+            # Peak-RSS stamp: post-mortem evidence for OOM diagnosis in Render
+            # logs. resource is Unix-only; silently skipped on Windows dev.
+            try:
+                import resource
+                peak_mb = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss // 1024
+                print(f"[MEM] peak RSS {peak_mb}MB entering Agent {num} — {name}")
+            except ImportError:
+                pass
 
         crew_module._step = _tracked_step
 
