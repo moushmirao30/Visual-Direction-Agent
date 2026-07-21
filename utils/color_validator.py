@@ -127,8 +127,10 @@ _T = {
     "white":      (None, 0.0, 0.25, 0.92, 1.0),
     "black":      (None, 0.0, 0.60, 0.0, 0.14),
     "charcoal":   (None, 0.0, 0.22, 0.08, 0.30),
-    "grey":       (None, 0.0, 0.15, 0.22, 0.82),
-    "gray":       (None, 0.0, 0.15, 0.22, 0.82),
+    # l_max 0.97 (not 0.82): real greyscale ramps run to near-white — Tailwind
+    # gray-50 is #F9FAFB (98% L). #F7F7F7 "light grey" is standard, not "white".
+    "grey":       (None, 0.0, 0.15, 0.22, 0.97),
+    "gray":       (None, 0.0, 0.15, 0.22, 0.97),
     "silver":     (None, 0.0, 0.15, 0.62, 0.88),
     "ash":        (None, 0.0, 0.15, 0.35, 0.75),
     "stone":      (None, 0.0, 0.22, 0.38, 0.80),
@@ -147,7 +149,7 @@ _MODS = {
     "muted":    (None, 0.55, None, None),
     "dusty":    (None, 0.50, None, None),
     "washed":   (None, 0.50, 0.55, None),
-    "vibrant":  (0.55, None, 0.30, 0.68),
+    "vibrant":  (0.48, None, 0.30, 0.68),
     "vivid":    (0.60, None, 0.30, 0.68),
     "bright":   (0.55, None, 0.35, 0.75),
     "bold":     (0.45, None, 0.20, 0.70),
@@ -301,6 +303,42 @@ def validate_harmony_claims(rules_text: str, palette: list[dict]) -> str | None:
 
 
 # ── Report-level entry point ─────────────────────────────────────────────────
+
+def autocorrect_palette_names(report_dict: dict) -> tuple[dict, list[str]]:
+    """
+    Deterministically repairs colour NAME contradictions in place-safely.
+
+    When a swatch's hex is valid but its name contradicts it, and the lexicon
+    can name that hex, the name is rewritten to the top verified suggestion
+    (every suggestion is guaranteed to pass validate_colour_name for that hex).
+    The hex — the actual design intent — is never touched.
+
+    Returns (new_report_dict, corrections) where corrections is a human-readable
+    log. Issues code cannot repair (hex that no lexicon term fits, harmony-claim
+    geometry) are left untouched for the LLM retry loop to handle.
+    """
+    palette = report_dict.get("palette", [])
+    if not palette:
+        return report_dict, []
+
+    corrections: list[str] = []
+    new_palette = []
+    for sw in palette:
+        name, hex_code = sw.get("name", ""), sw.get("hex_code", "")
+        if validate_colour_name(name, hex_code) is not None:
+            try:
+                sug = suggest_names(*hex_to_hsl(hex_code))
+            except Exception:
+                sug = []
+            if sug:
+                sw = {**sw, "name": sug[0]}
+                corrections.append(f"'{name}' → '{sug[0]}' for {hex_code}")
+        new_palette.append(sw)
+
+    if not corrections:
+        return report_dict, []
+    return {**report_dict, "palette": new_palette}, corrections
+
 
 def validate_report_semantics(report_dict: dict) -> str | None:
     """

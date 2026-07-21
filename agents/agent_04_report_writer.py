@@ -32,7 +32,7 @@ from dotenv import load_dotenv
 from crewai import Agent, Task, Crew, Process
 
 from schemas.report_schema import VisualDirectionReport, validate_report
-from utils.color_validator import validate_report_semantics
+from utils.color_validator import autocorrect_palette_names, validate_report_semantics
 from utils.llm import build_llm
 
 load_dotenv()
@@ -213,13 +213,21 @@ def _parse_and_validate(raw_output: str) -> tuple[VisualDirectionReport | None, 
     except json.JSONDecodeError as e:
         return None, f"JSON parse error: {e}. Output started: {cleaned[:200]}"
 
+    # Deterministic repair BEFORE building the report object: a colour whose hex
+    # is valid but whose name contradicts it is renamed to an accurate lexicon
+    # term (hex preserved). Repairable-in-code issues never reach the LLM retry.
+    data, corrections = autocorrect_palette_names(data)
+    for c in corrections:
+        print(f"[INFO] Agent 04 auto-corrected colour name: {c}")
+
     report, error = validate_report(data)
     if error:
         return None, f"Schema validation error: {error}"
 
     # Schema proves STRUCTURE; this proves TRUTH where truth is computable —
     # colour names vs hex values, claimed harmony vs actual hue geometry.
-    # (Added after three real runs shipped '#FF9900 Burnt Orange'-class errors.)
+    # After auto-correct, only the UNREPAIRABLE remains here (hex no lexicon
+    # term fits, or a false harmony claim) — those still drive the retry loop.
     semantic_error = validate_report_semantics(data)
     if semantic_error:
         return None, f"Semantic validation error(s):\n{semantic_error}"
