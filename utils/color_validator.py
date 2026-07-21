@@ -167,6 +167,32 @@ def _fmt(h, s, l) -> str:
     return f"hue {h:.0f}°, sat {s:.0%}, light {l:.0%}"
 
 
+def suggest_names(h: float, s: float, l: float, limit: int = 4) -> list[str]:
+    """
+    Returns base lexicon terms whose full HSL window contains (h, s, l).
+    Gives the retry loop a concrete rename target instead of asking the LLM
+    to reason about HSL — which is exactly where it thrashes. Base terms only
+    (no modifiers), so suggestions are clean single words.
+    """
+    matches = []
+    for term, (hue_ranges, s_min, s_max, l_min, l_max) in _T.items():
+        if not (s_min <= s <= s_max and l_min <= l <= l_max):
+            continue
+        if hue_ranges is None:          # achromatic term
+            if s <= _ACHROMATIC_S:
+                matches.append(term)
+        elif s < _ACHROMATIC_S or _hue_in(h, hue_ranges):
+            matches.append(term)
+    # Prefer terms whose hue-window centre is closest to the actual hue.
+    def _centre_dist(term: str) -> float:
+        ranges = _T[term][0]
+        if ranges is None:
+            return 999.0
+        return min(_hue_dist(h, (lo + hi) / 2) for lo, hi in ranges)
+    matches.sort(key=_centre_dist)
+    return [t.title() for t in matches[:limit]]
+
+
 def validate_colour_name(name: str, hex_code: str) -> str | None:
     """
     Checks that a colour's name is consistent with its hex value.
@@ -212,10 +238,17 @@ def validate_colour_name(name: str, hex_code: str) -> str | None:
         problems.append(f"lightness {l:.0%} exceeds the {l_max:.0%} '{'/'.join(applied)}' allows")
 
     if problems:
-        return (f"Colour '{name}' = {hex_code} ({_fmt(h, s, l)}) contradicts its name: "
-                + "; ".join(problems)
-                + ". Either rename the colour to what the hex actually is, or "
-                  "change the hex to match the name.")
+        msg = (f"Colour '{name}' = {hex_code} ({_fmt(h, s, l)}) contradicts its name: "
+               + "; ".join(problems) + ". ")
+        suggestions = suggest_names(h, s, l)
+        if suggestions:
+            msg += (f"For this hex, an accurate name would be one of: "
+                    f"{', '.join(suggestions)}. Rename the colour to one of these "
+                    f"(keep the same hex_code), or change the hex to match '{name}'.")
+        else:
+            msg += ("Either rename the colour to what the hex actually is, or "
+                    "change the hex to match the name.")
+        return msg
     return None
 
 

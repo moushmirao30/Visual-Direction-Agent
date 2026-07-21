@@ -13,6 +13,7 @@ import pytest
 
 from utils.color_validator import (
     hex_to_hsl,
+    suggest_names,
     validate_colour_name,
     validate_harmony_claims,
     validate_report_semantics,
@@ -213,3 +214,28 @@ def test_shipped_food_truck_report_fails_semantics():
     # All three mislabeled colours AND the false harmony claim are caught.
     assert "#FF9900" in err and "#F5DEB3" in err and "#1ABC9C" in err
     assert "ANALOGOUS" in err or "analogous" in err
+
+
+# ── Suggester: gives the retry loop a concrete, VALID rename target ───────────
+
+def test_suggest_names_offers_valid_alternatives_for_failing_hex():
+    # #FFC67D (hue 34, sat 100%, light 75%) — the exact case that thrashed 3x.
+    names = suggest_names(*hex_to_hsl("#FFC67D"))
+    assert names, "suggester must offer at least one name"
+    # Every suggested name must itself PASS validation for this hex —
+    # otherwise the retry loop would be sent to another failing label.
+    for n in names:
+        assert validate_colour_name(n, "#FFC67D") is None, f"suggested '{n}' does not validate"
+
+
+def test_failing_colour_error_embeds_suggestions():
+    err = validate_colour_name("Vibrant Orange", "#FFC67D")
+    assert err is not None
+    assert "accurate name would be one of" in err
+    # And the suggestions named in the message must all be valid for the hex.
+    tail = err.split("one of:", 1)[1]
+    named = [w.strip(" .'") for w in tail.split(",")[:3]]
+    for n in named:
+        n = n.split(".")[0].strip()
+        if n:
+            assert validate_colour_name(n, "#FFC67D") is None
