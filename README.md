@@ -3,7 +3,6 @@
 A 5-agent system that turns a single brand-aesthetic keyword — e.g. `"quiet luxury wellness"` — into a structured visual direction report **and** an AI-generated moodboard. It combines live web research, retrieval over a curated design-theory knowledge base, multi-step synthesis, schema-validated reporting, and text-to-image generation, orchestrated with CrewAI.
 
 > **Capstone project** — Generative AI & Agentic AI certification.
-> Build is complete; current phase is demo preparation.
 
 ---
 
