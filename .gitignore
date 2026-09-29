@@ -45,3 +45,4 @@ web/node_modules/
 web/.next/
 web/.env.local
 web/out/
+case_study_content.md

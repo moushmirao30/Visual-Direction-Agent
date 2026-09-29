@@ -4,6 +4,8 @@ A 5-agent system that turns a single brand-aesthetic keyword — e.g. `"quiet lu
 
 > **Capstone project** — Generative AI & Agentic AI certification.
 
+**Live demo:** https://visual-direction-agent.vercel.app
+
 ---
 
 ## The proof (read this first)
@@ -69,8 +71,8 @@ The pipeline passes each agent's output to the next **explicitly** (rather than 
 | Web search | Tavily |
 | Vector store | ChromaDB (persistent, local) |
 | Embeddings | `sentence-transformers` — `all-MiniLM-L6-v2` |
-| LLMs | Claude (Haiku for research/retrieval/prompts, Sonnet for synthesis/reporting) via LiteLLM, with free-provider routing + fallback (see below) |
-| Image generation | HuggingFace `FLUX.1-schnell` |
+| LLMs | Claude (Haiku for research/retrieval/prompts, Sonnet for synthesis/reporting) via LiteLLM by default; free-provider mode routes to Gemini 2.5 Flash / Llama-3.3-70B (NVIDIA NIM, Groq) (see below) |
+| Image generation | `FLUX.1-schnell` via HuggingFace or Cloudflare Workers AI (`IMAGE_BACKEND`) |
 | Validation | Pydantic v2 |
 | API | FastAPI (background task + polling) |
 | UI | Streamlit |
@@ -92,10 +94,10 @@ LiteLLM requires a provider prefix on model strings (`anthropic/claude-sonnet-4-
 LLM construction is centralised in `utils/llm.py` (`build_llm`), which adds two layers of resilience without changing the default path:
 
 - **Automatic fallback** — every agent's primary LLM is built with a LiteLLM `fallbacks=[...]` so a provider failure (rate limit, 5xx, network) transparently retries the same request on a free NVIDIA NIM model instead of crashing the run.
-- **Free-primary mode** — `FREE_PRIMARY=nvidia` (or `groq`) flips a free provider to primary, with the other free provider as fallback. Unset = original Claude-primary behaviour, byte-for-byte unchanged.
+- **Free-primary mode** — `FREE_PRIMARY=nvidia`, `groq` or `gemini` flips a free provider to primary, with the other free providers as fallbacks. `FREE_PRIMARY=hybrid` splits by tier: synthesis and reporting (03, 04) on Gemini 2.5 Flash; research, retrieval and prompts (01, 02, 05) on NVIDIA NIM Llama-3.3-70B, so a run stays inside Gemini's small free quota. Unset = original Claude-primary behaviour, byte-for-byte unchanged.
 - **Provenance stamp** — each run records which model actually served it (`Served by: …` in the run banner and the exported report), so output is never mistaken for a different provider's quality.
 
-> **Honest caveat:** the free fallbacks are open Llama-class models, **not** Claude. If a fallback fires, that agent's output quality differs from the Claude-validated eval scores. For a graded/quality run, use Claude as primary; treat the free path as live-demo insurance.
+> **Honest caveat:** the free providers (Llama-3.3-70B, Gemini 2.5 Flash) are **not** Claude. If a fallback fires, that agent's output quality differs from the Claude-validated eval scores. For a graded/quality run, use Claude as primary; treat the free path as live-demo insurance.
 
 ---
 
@@ -158,11 +160,15 @@ Create a `.env` with your keys (`.env` is gitignored — never commit it):
 ```
 ANTHROPIC_API_KEY=...     # primary LLM (omit + set FREE_PRIMARY to run free)
 TAVILY_API_KEY=...        # web search (Agent 01)
-HF_TOKEN=...              # image generation (Agent 05)
+HF_TOKEN=...              # image generation (Agent 05, IMAGE_BACKEND=huggingface)
 LANGCHAIN_API_KEY=...     # LangSmith observability
 NVIDIA_API_KEY=...        # free fallback / free-primary
 GROQ_API_KEY=...          # free fallback / free-primary
-FREE_PRIMARY=nvidia       # optional: run with no Anthropic spend
+GEMINI_API_KEY=...        # free-primary (gemini / hybrid)
+FREE_PRIMARY=hybrid       # optional: nvidia | groq | gemini | hybrid; no Anthropic spend
+IMAGE_BACKEND=cloudflare  # optional: huggingface (default) | cloudflare
+CLOUDFLARE_ACCOUNT_ID=... # IMAGE_BACKEND=cloudflare
+CLOUDFLARE_API_TOKEN=...  # IMAGE_BACKEND=cloudflare (Workers AI scope)
 ```
 
 ---
@@ -198,7 +204,7 @@ visual-direction-agent/
 ├── crew.py            Pipeline orchestrator (main entry point)
 ├── api.py             FastAPI — background task + polling, image serving
 ├── agents/            Agents 01–05
-├── tools/             Tavily search, ChromaDB RAG, HF FLUX image gen (@tool)
+├── tools/             Tavily search, ChromaDB RAG, FLUX image gen via HF or Cloudflare (@tool)
 ├── rag/               ingest + retriever + knowledge_base/ + chroma_db/
 ├── schemas/           Pydantic report schema + trend-output validation
 ├── utils/             llm routing, caching, observability, run logging
@@ -220,4 +226,4 @@ visual-direction-agent/
 
 ## Credits
 
-Built on CrewAI, ChromaDB, sentence-transformers, Tavily, FastAPI, Streamlit, LiteLLM, LangSmith, and HuggingFace FLUX.1-schnell. Design-theory knowledge base curated from established colour theory (Itten, Albers), editorial typography, Swiss grid systems, and brand-positioning frameworks.
+Built on CrewAI, ChromaDB, sentence-transformers, Tavily, FastAPI, Streamlit, LiteLLM, LangSmith, and FLUX.1-schnell (HuggingFace / Cloudflare Workers AI). Design-theory knowledge base curated from established colour theory (Itten, Albers), editorial typography, Swiss grid systems, and brand-positioning frameworks.
