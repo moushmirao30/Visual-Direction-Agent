@@ -140,7 +140,9 @@ python -m eval.run_eval --benchmark-only            # just the de-leaked AURU pr
 
 - **Held-out AURU convergence: 4.5 / 5** (the headline — see top of this README).
 - First clean full sweep: 12 / 13 cases scored. Per-dimension means were senior-grade (positioning 4.75, specificity 5.0, coherence 4.75, actionability 5.0), but the overall mean was dragged to 3.4 / 5 because the auto-fail cap correctly nuked 6 cases — **the eval caught a real benchmark-fabrication bug before a reviewer could.** That defect is now fixed via the two-layer grounding guardrail; re-running to capture the post-fix mean is the next evaluation step.
-- Measured economics: ~$0.15 / run text-only, ~190s / run (full 13-case sweep ≈ 40 min, ≈ $2).
+- Measured economics, two modes:
+  - **Default (Claude Haiku + Sonnet via LiteLLM):** ~$0.15 / run text-only, ~190s / run (full 13-case sweep ≈ 40 min, ≈ $2).
+  - **Free-provider mode (`FREE_PRIMARY=hybrid`: Gemini 2.5 Flash + NVIDIA NIM Llama-3.3-70B):** $0 / run, inside free-tier quotas. This is the configuration behind the "$0 per run" figure on my portfolio and CV. Hosting is $0 in both modes.
 
 ---
 
